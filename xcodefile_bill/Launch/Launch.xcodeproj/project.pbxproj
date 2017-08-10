@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		087A96961F36102A00DD72C2 /* avator_female01.png in Resources */ = {isa = PBXBuildFile; fileRef = 087A96951F36102A00DD72C2 /* avator_female01.png */; };
 		5A8E3E401F301CDD00B96D0F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8E3E3F1F301CDD00B96D0F /* AppDelegate.swift */; };
 		5A8E3E421F301CDD00B96D0F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8E3E411F301CDD00B96D0F /* ViewController.swift */; };
 		5A8E3E451F301CDD00B96D0F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A8E3E431F301CDD00B96D0F /* Main.storyboard */; };
@@ -15,9 +16,13 @@
 		B39A3F291F3023E90065BF28 /* Swift_logo.svg.png in Resources */ = {isa = PBXBuildFile; fileRef = B39A3F281F3023E90065BF28 /* Swift_logo.svg.png */; };
 		B39A3F2B1F30268F0065BF28 /* btn_開始閱讀.png in Resources */ = {isa = PBXBuildFile; fileRef = B39A3F2A1F30268F0065BF28 /* btn_開始閱讀.png */; };
 		B39A3F2D1F302AEF0065BF28 /* 36MBC5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B39A3F2C1F302AEF0065BF28 /* 36MBC5.jpg */; };
+		B39AF8B41F31578800D04B63 /* video.png in Resources */ = {isa = PBXBuildFile; fileRef = B39AF8B31F31578800D04B63 /* video.png */; };
+		B39AF8B61F3158B900D04B63 /* tab_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = B39AF8B51F3158B900D04B63 /* tab_bg.png */; };
+		B39AF8B81F315C2F00D04B63 /* checkmark.png in Resources */ = {isa = PBXBuildFile; fileRef = B39AF8B71F315C2F00D04B63 /* checkmark.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		087A96951F36102A00DD72C2 /* avator_female01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = avator_female01.png; sourceTree = "<group>"; };
 		5A8E3E3C1F301CDD00B96D0F /* Launch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Launch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A8E3E3F1F301CDD00B96D0F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5A8E3E411F301CDD00B96D0F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -28,6 +33,9 @@
 		B39A3F281F3023E90065BF28 /* Swift_logo.svg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Swift_logo.svg.png; sourceTree = "<group>"; };
 		B39A3F2A1F30268F0065BF28 /* btn_開始閱讀.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_開始閱讀.png"; sourceTree = "<group>"; };
 		B39A3F2C1F302AEF0065BF28 /* 36MBC5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 36MBC5.jpg; sourceTree = "<group>"; };
+		B39AF8B31F31578800D04B63 /* video.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = video.png; sourceTree = "<group>"; };
+		B39AF8B51F3158B900D04B63 /* tab_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tab_bg.png; sourceTree = "<group>"; };
+		B39AF8B71F315C2F00D04B63 /* checkmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checkmark.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +68,10 @@
 		5A8E3E3E1F301CDD00B96D0F /* Launch */ = {
 			isa = PBXGroup;
 			children = (
+				087A96951F36102A00DD72C2 /* avator_female01.png */,
+				B39AF8B71F315C2F00D04B63 /* checkmark.png */,
+				B39AF8B51F3158B900D04B63 /* tab_bg.png */,
+				B39AF8B31F31578800D04B63 /* video.png */,
 				B39A3F2C1F302AEF0065BF28 /* 36MBC5.jpg */,
 				B39A3F2A1F30268F0065BF28 /* btn_開始閱讀.png */,
 				B39A3F281F3023E90065BF28 /* Swift_logo.svg.png */,
@@ -133,11 +145,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				B39A3F291F3023E90065BF28 /* Swift_logo.svg.png in Resources */,
+				087A96961F36102A00DD72C2 /* avator_female01.png in Resources */,
 				B39A3F2D1F302AEF0065BF28 /* 36MBC5.jpg in Resources */,
 				B39A3F2B1F30268F0065BF28 /* btn_開始閱讀.png in Resources */,
 				5A8E3E4A1F301CDD00B96D0F /* LaunchScreen.storyboard in Resources */,
+				B39AF8B61F3158B900D04B63 /* tab_bg.png in Resources */,
 				5A8E3E471F301CDD00B96D0F /* Assets.xcassets in Resources */,
+				B39AF8B41F31578800D04B63 /* video.png in Resources */,
 				5A8E3E451F301CDD00B96D0F /* Main.storyboard in Resources */,
+				B39AF8B81F315C2F00D04B63 /* checkmark.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
