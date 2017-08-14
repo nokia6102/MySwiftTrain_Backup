@@ -19,6 +19,7 @@
 		B39AF8B41F31578800D04B63 /* video.png in Resources */ = {isa = PBXBuildFile; fileRef = B39AF8B31F31578800D04B63 /* video.png */; };
 		B39AF8B61F3158B900D04B63 /* tab_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = B39AF8B51F3158B900D04B63 /* tab_bg.png */; };
 		B39AF8B81F315C2F00D04B63 /* checkmark.png in Resources */ = {isa = PBXBuildFile; fileRef = B39AF8B71F315C2F00D04B63 /* checkmark.png */; };
+		B3BE12F11F4149D800B097FF /* ClassListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BE12F01F4149D800B097FF /* ClassListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		B39AF8B31F31578800D04B63 /* video.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = video.png; sourceTree = "<group>"; };
 		B39AF8B51F3158B900D04B63 /* tab_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tab_bg.png; sourceTree = "<group>"; };
 		B39AF8B71F315C2F00D04B63 /* checkmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checkmark.png; sourceTree = "<group>"; };
+		B3BE12F01F4149D800B097FF /* ClassListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 				B39A3F281F3023E90065BF28 /* Swift_logo.svg.png */,
 				5A8E3E3F1F301CDD00B96D0F /* AppDelegate.swift */,
 				5A8E3E411F301CDD00B96D0F /* ViewController.swift */,
+				B3BE12F01F4149D800B097FF /* ClassListViewController.swift */,
 				5A8E3E431F301CDD00B96D0F /* Main.storyboard */,
 				5A8E3E461F301CDD00B96D0F /* Assets.xcassets */,
 				5A8E3E481F301CDD00B96D0F /* LaunchScreen.storyboard */,
@@ -164,6 +167,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3BE12F11F4149D800B097FF /* ClassListViewController.swift in Sources */,
 				5A8E3E421F301CDD00B96D0F /* ViewController.swift in Sources */,
 				5A8E3E401F301CDD00B96D0F /* AppDelegate.swift in Sources */,
 			);

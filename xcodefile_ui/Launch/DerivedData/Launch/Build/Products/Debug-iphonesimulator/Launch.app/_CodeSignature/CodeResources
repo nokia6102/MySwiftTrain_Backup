@@ -10,7 +10,7 @@
 		</data>
 		<key>Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
 		<data>
-		W7xXl7dFj2jpNke/cjozP8DF8Ww=
+		N0eMeC7LzQE9hIjU70AGsxBf0XM=
 		</data>
 		<key>Base.lproj/LaunchScreen.storyboardc/Info.plist</key>
 		<data>
@@ -18,19 +18,27 @@
 		</data>
 		<key>Base.lproj/LaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib</key>
 		<data>
-		az16bVN5j5TcEOgG5sFvkUoaOj4=
+		itJiTx/bcRWXYaO2W22NwjWohAU=
 		</data>
 		<key>Base.lproj/Main.storyboardc/BYZ-38-t0r-view-8bC-Xf-vdC.nib</key>
 		<data>
-		JMgg/SEbjEw0BOfZEq3ECa/ntEI=
+		5VsyQWDrH+tRPn0CU1lgr/CjDSk=
+		</data>
+		<key>Base.lproj/Main.storyboardc/ClassListViewController.nib</key>
+		<data>
+		esu77YVYcAcg4ne0TJhVNnyqCYE=
 		</data>
 		<key>Base.lproj/Main.storyboardc/Info.plist</key>
 		<data>
-		MDrKFvFWroTb0+KEbQShBcoBvo4=
+		KneeGkOUcH6RL3lTigS8AyPnkRI=
 		</data>
-		<key>Base.lproj/Main.storyboardc/UIViewController-BYZ-38-t0r.nib</key>
+		<key>Base.lproj/Main.storyboardc/QfB-fg-TpE-view-H9R-jR-BnF.nib</key>
 		<data>
-		U2JM1c6zrWC9cy1E6k3D6lp6Jiw=
+		F1i49ejHJq3s7Xyhfj2jxKNuWzg=
+		</data>
+		<key>Base.lproj/Main.storyboardc/ViewController.nib</key>
+		<data>
+		uSECE+2h+IBOo2ny0ucp69srzM4=
 		</data>
 		<key>Frameworks/libswiftCore.dylib</key>
 		<data>
@@ -64,6 +72,10 @@
 		<data>
 		TwXz6pt2XOZ1uyCc1Z7GUIjZoTw=
 		</data>
+		<key>Frameworks/libswiftSwiftOnoneSupport.dylib</key>
+		<data>
+		FwVYs8LmJB0KEEa0+KEam0u8u/Q=
+		</data>
 		<key>Frameworks/libswiftUIKit.dylib</key>
 		<data>
 		HHzfAlju0uFBW7MCw4/6q6Wila4=
@@ -79,6 +91,10 @@
 		<key>Swift_logo.svg.png</key>
 		<data>
 		5p5xNu1NPOB3jiJLOOc1lT73J3c=
+		</data>
+		<key>avator_female01.png</key>
+		<data>
+		MTqSE9W06jsx9OlUrKHSJuvsgcc=
 		</data>
 		<key>btn_開始閱讀.png</key>
 		<data>
@@ -118,11 +134,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			W7xXl7dFj2jpNke/cjozP8DF8Ww=
+			N0eMeC7LzQE9hIjU70AGsxBf0XM=
 			</data>
 			<key>hash2</key>
 			<data>
-			swacD6ZiDjItA0Zw4EkdOIz8+dM/nOuEdBsKl8MOk/s=
+			XbqBuhM2vKD82S6eiVZ5psvrfFmOC/6VXbEBHwG7lhY=
 			</data>
 		</dict>
 		<key>Base.lproj/LaunchScreen.storyboardc/Info.plist</key>
@@ -140,44 +156,66 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			az16bVN5j5TcEOgG5sFvkUoaOj4=
+			itJiTx/bcRWXYaO2W22NwjWohAU=
 			</data>
 			<key>hash2</key>
 			<data>
-			prs1JoZ2/wxD5GeO/Q0+9OhcxEGM7krPIgtqbnVl5XE=
+			IXhgBPbesULo/2KYbAMxFLxCn9wtxtwdkUxqs7By/CI=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/BYZ-38-t0r-view-8bC-Xf-vdC.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			JMgg/SEbjEw0BOfZEq3ECa/ntEI=
+			5VsyQWDrH+tRPn0CU1lgr/CjDSk=
 			</data>
 			<key>hash2</key>
 			<data>
-			4aXxL0C+V1SJCXoJq+nFEd1MrjyZhgOdf56nmxD+9dE=
+			b+ObedIyMVgNdEbdU1RNusBs05pzVsvmZalGcaTTu3I=
+			</data>
+		</dict>
+		<key>Base.lproj/Main.storyboardc/ClassListViewController.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			esu77YVYcAcg4ne0TJhVNnyqCYE=
+			</data>
+			<key>hash2</key>
+			<data>
+			fZTiGa3GMskReUC0oS+qrSitjdJOZbPdWMBGBJ0P3YE=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/Info.plist</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			MDrKFvFWroTb0+KEbQShBcoBvo4=
+			KneeGkOUcH6RL3lTigS8AyPnkRI=
 			</data>
 			<key>hash2</key>
 			<data>
-			PpvapAjR62rl6Ym4E6hkTgpKmBICxTaQXeUqcpHmmqQ=
+			n3Drmduj2Fw63XfHQh6qpVWIp/Lr19m1ZAwhksKQuuA=
 			</data>
 		</dict>
-		<key>Base.lproj/Main.storyboardc/UIViewController-BYZ-38-t0r.nib</key>
+		<key>Base.lproj/Main.storyboardc/QfB-fg-TpE-view-H9R-jR-BnF.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			U2JM1c6zrWC9cy1E6k3D6lp6Jiw=
+			F1i49ejHJq3s7Xyhfj2jxKNuWzg=
 			</data>
 			<key>hash2</key>
 			<data>
-			MF9TomAZNT22OzjXBPO/1SMkQtI2o1iiUcFoD+2ZrAw=
+			m2iPHiq5P6gYHKoT4cEEBzuOL3mCyumJEm+t0Z/xkmc=
+			</data>
+		</dict>
+		<key>Base.lproj/Main.storyboardc/ViewController.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			uSECE+2h+IBOo2ny0ucp69srzM4=
+			</data>
+			<key>hash2</key>
+			<data>
+			rRCCOpiSLWbhgt+SHvj8th66dpSW2WjNkCoMPQbxjAw=
 			</data>
 		</dict>
 		<key>Frameworks/libswiftCore.dylib</key>
@@ -268,6 +306,17 @@
 			fenV0oyafo6WELkDIcXi9bWQ3B5oVOojBSvsCXCVk4Q=
 			</data>
 		</dict>
+		<key>Frameworks/libswiftSwiftOnoneSupport.dylib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			FwVYs8LmJB0KEEa0+KEam0u8u/Q=
+			</data>
+			<key>hash2</key>
+			<data>
+			ZfFgvQ5HFcCpYwA35z9SOUUvpRGW7/jLJiilpTfslRM=
+			</data>
+		</dict>
 		<key>Frameworks/libswiftUIKit.dylib</key>
 		<dict>
 			<key>hash</key>
@@ -288,6 +337,17 @@
 			<key>hash2</key>
 			<data>
 			mHznC8yAcDPi89YlIBtBp/Q4dmVEhTrY9RB8jILiTBI=
+			</data>
+		</dict>
+		<key>avator_female01.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			MTqSE9W06jsx9OlUrKHSJuvsgcc=
+			</data>
+			<key>hash2</key>
+			<data>
+			7UKXFLWcLkePbpuHR7BZQufJQh1e9y4fHF3xJ7xm1bE=
 			</data>
 		</dict>
 		<key>btn_開始閱讀.png</key>
