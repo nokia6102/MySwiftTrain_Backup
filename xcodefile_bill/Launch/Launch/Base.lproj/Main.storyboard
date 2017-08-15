@@ -168,7 +168,7 @@
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="hNX-7F-F9f" kind="show" id="ToU-cU-LMP"/>
+                                    <segue destination="2fC-RH-g9k" kind="show" id="ToU-cU-LMP"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -225,6 +225,9 @@
                                 <state key="normal" title="問答（12）">
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="2fC-RH-g9k" kind="show" id="9b8-L6-Hwa"/>
+                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="65" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BBp-ka-7qA">
                                 <rect key="frame" x="0.0" y="400" width="414" height="336"/>
@@ -262,12 +265,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y9D-er-aif" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1630" y="122"/>
+            <point key="canvasLocation" x="1593" y="-227"/>
         </scene>
-        <!--View Controller-->
+        <!--問答(99)-->
         <scene sceneID="UeM-JK-SFP">
             <objects>
-                <viewController id="hNX-7F-F9f" sceneMemberID="viewController">
+                <viewController id="hNX-7F-F9f" customClass="QAViewController" customModule="Launch" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="UPV-H5-qQn"/>
                         <viewControllerLayoutGuide type="bottom" id="jAV-iO-WgS"/>
@@ -282,6 +285,9 @@
                             <navigationBar alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bE3-yS-kqp">
                                 <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="問答(99)" id="RJz-Vq-ttJ"/>
+                                </items>
                             </navigationBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="問答（99）" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dmj-TV-UDn">
                                 <rect key="frame" x="144" y="32" width="126" height="21"/>
@@ -289,16 +295,16 @@
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="18"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yIX-ho-kOo">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="119" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yIX-ho-kOo">
                                 <rect key="frame" x="0.0" y="64" width="414" height="672"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="60" id="g7h-bC-dEE">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="60"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="QACell" rowHeight="119" id="g7h-bC-dEE" customClass="QATableViewCell" customModule="Launch" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="119"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="g7h-bC-dEE" id="3BS-an-elR">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="118.66666666666667"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="也多想想怎樣做才是比較適當的吧！" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pba-v5-MCe">
@@ -317,8 +323,15 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="hi0-ah-sE1" kind="show" id="QJs-nB-sZZ"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="hNX-7F-F9f" id="aNc-ed-5mU"/>
+                                    <outlet property="delegate" destination="hNX-7F-F9f" id="DsT-9j-Ipg"/>
+                                </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QDw-Gi-uG3">
                                 <rect key="frame" x="20" y="28" width="51" height="30"/>
@@ -359,15 +372,16 @@
                             <constraint firstItem="ns5-1O-901" firstAttribute="leading" secondItem="x57-3P-vrI" secondAttribute="leading" id="zse-Lb-l3p"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="問答(99)" id="u6b-GF-zag"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fah-hg-k14" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2320" y="123"/>
+            <point key="canvasLocation" x="3150.7246376811595" y="121.46739130434784"/>
         </scene>
-        <!--View Controller-->
+        <!--提出問題-->
         <scene sceneID="VnN-be-QFc">
             <objects>
-                <viewController id="hi0-ah-sE1" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="partialCurl" id="hi0-ah-sE1" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="XwO-9u-Im4"/>
                         <viewControllerLayoutGuide type="bottom" id="dbU-Mi-kJ2"/>
@@ -379,31 +393,6 @@
                             <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="36MBC5.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="9hO-dx-zB5">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
-                            <navigationBar alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0aX-8F-TQW">
-                                <rect key="frame" x="0.0" y="20" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="提出問題" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WWi-xs-4Oi">
-                                <rect key="frame" x="144" y="32" width="126" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="18"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6vc-OY-F4l">
-                                <rect key="frame" x="20" y="28" width="51" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="取消">
-                                            <attributes>
-                                                <color key="NSColor" red="0.59209048748016357" green="0.59219515323638916" blue="0.59208387136459351" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <font key="NSFont" size="16" name=".PingFangTC-Regular"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                </state>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uqy-i2-9pI">
                                 <rect key="frame" x="319" y="27" width="75" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -464,12 +453,23 @@
                             <constraint firstItem="dbU-Mi-kJ2" firstAttribute="top" secondItem="9hO-dx-zB5" secondAttribute="bottom" id="wcP-cz-Cd4"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="提出問題" id="kkC-L7-MKR">
+                        <barButtonItem key="leftBarButtonItem" title="取消" id="O4f-zp-8MS"/>
+                        <barButtonItem key="rightBarButtonItem" title="儲存" id="1qq-zC-hEC">
+                            <connections>
+                                <segue destination="iia-F7-Qim" kind="show" id="Ax9-bM-uKV"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="iia-F7-Qim" kind="show" id="yHs-UG-Eyf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4I9-7h-Lcz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3039" y="117"/>
+            <point key="canvasLocation" x="3951" y="123"/>
         </scene>
-        <!--View Controller-->
+        <!--問題-->
         <scene sceneID="Hs2-Ot-t1S">
             <objects>
                 <viewController id="iia-F7-Qim" sceneMemberID="viewController">
@@ -592,6 +592,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="WAS-WB-XQ4" kind="show" id="zoN-1s-9I7"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -620,12 +623,20 @@
                             <constraint firstItem="Vn0-sO-7fx" firstAttribute="top" secondItem="ajh-7D-FmH" secondAttribute="bottom" id="iOH-A5-KKQ"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="問題" id="usW-JM-KnU">
+                        <barButtonItem key="leftBarButtonItem" title="問答列表" id="vBZ-VT-E9O"/>
+                        <barButtonItem key="rightBarButtonItem" title="回應問題" id="i6Q-oa-Vck">
+                            <connections>
+                                <segue destination="WAS-WB-XQ4" kind="show" id="gZt-hZ-imF"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aww-Z4-jiD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3782.608695652174" y="116.57608695652175"/>
+            <point key="canvasLocation" x="4689.8550724637689" y="116.57608695652175"/>
         </scene>
-        <!--View Controller-->
+        <!--回應問題-->
         <scene sceneID="zNw-Jx-2ya">
             <objects>
                 <viewController id="WAS-WB-XQ4" sceneMemberID="viewController">
@@ -735,10 +746,32 @@
                             <constraint firstItem="oQL-18-7QY" firstAttribute="top" secondItem="VTZ-uu-pah" secondAttribute="top" id="vgw-bz-T9C"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="回應問題" id="XUd-44-BiL">
+                        <barButtonItem key="leftBarButtonItem" title="取消" id="jA0-bk-fCt"/>
+                        <barButtonItem key="rightBarButtonItem" title="儲存" id="1FF-Od-ycR"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sMV-fi-E0Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4536" y="117"/>
+            <point key="canvasLocation" x="5442.0289855072469" y="116.57608695652175"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="CL3-kU-Lpd">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2fC-RH-g9k" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qaR-M4-TmB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="hNX-7F-F9f" kind="relationship" relationship="rootViewController" id="6Um-Ve-G8F"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="exL-Fo-1uq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2357.971014492754" y="121.46739130434784"/>
         </scene>
     </scenes>
     <resources>
@@ -749,4 +782,9 @@
         <image name="tab_bg.png" width="40" height="50"/>
         <image name="video.png" width="375" height="238"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="9b8-L6-Hwa"/>
+        <segue reference="yHs-UG-Eyf"/>
+        <segue reference="zoN-1s-9I7"/>
+    </inferredMetricsTieBreakers>
 </document>
