@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -304,7 +305,7 @@
                                         <rect key="frame" x="0.0" y="28" width="414" height="119"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="g7h-bC-dEE" id="3BS-an-elR">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="118.66666666666667"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="119"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="也多想想怎樣做才是比較適當的吧！" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pba-v5-MCe">
@@ -381,7 +382,7 @@
         <!--提出問題-->
         <scene sceneID="VnN-be-QFc">
             <objects>
-                <viewController modalTransitionStyle="partialCurl" id="hi0-ah-sE1" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="partialCurl" id="hi0-ah-sE1" customClass="TQViewController" customModule="Launch" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="XwO-9u-Im4"/>
                         <viewControllerLayoutGuide type="bottom" id="dbU-Mi-kJ2"/>
@@ -408,9 +409,8 @@
                                     </attributedString>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qc7-Jr-hlx">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qc7-Jr-hlx">
                                 <rect key="frame" x="20" y="81" width="84" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
                                         <fragment content="選擇問題分類">
@@ -424,13 +424,19 @@
                                     </attributedString>
                                 </state>
                             </button>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7XD-Ze-xs9">
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7XD-Ze-xs9">
                                 <rect key="frame" x="0.0" y="113" width="414" height="216"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="216" id="YDM-XO-NwA"/>
+                                    <constraint firstAttribute="width" constant="414" id="hSi-ZG-FY3"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="hi0-ah-sE1" id="4FO-Mt-bA8"/>
+                                    <outlet property="delegate" destination="hi0-ah-sE1" id="Ap2-az-0eI"/>
+                                </connections>
                             </pickerView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="z4Z-VH-QjR">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="z4Z-VH-QjR">
                                 <rect key="frame" x="20" y="330" width="140" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
                                         <fragment content="請在此處輸入問題描述">
@@ -447,10 +453,17 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="7XD-Ze-xs9" firstAttribute="top" secondItem="qc7-Jr-hlx" secondAttribute="bottom" id="AGG-hM-2Fg"/>
                             <constraint firstItem="9hO-dx-zB5" firstAttribute="leading" secondItem="ElP-nN-K73" secondAttribute="leading" id="J97-EL-uUO"/>
+                            <constraint firstItem="qc7-Jr-hlx" firstAttribute="top" secondItem="XwO-9u-Im4" secondAttribute="bottom" constant="17" id="Llv-Ed-rNC"/>
+                            <constraint firstItem="qc7-Jr-hlx" firstAttribute="leading" secondItem="z4Z-VH-QjR" secondAttribute="leading" id="P3Y-2z-XPn"/>
+                            <constraint firstItem="z4Z-VH-QjR" firstAttribute="top" secondItem="7XD-Ze-xs9" secondAttribute="bottom" constant="1" id="WoS-p1-zO6"/>
                             <constraint firstItem="9hO-dx-zB5" firstAttribute="top" secondItem="ElP-nN-K73" secondAttribute="top" id="gGL-i8-3Q6"/>
+                            <constraint firstItem="7XD-Ze-xs9" firstAttribute="leading" secondItem="ElP-nN-K73" secondAttribute="leading" id="hEF-PG-jtp"/>
                             <constraint firstAttribute="trailing" secondItem="9hO-dx-zB5" secondAttribute="trailing" id="ilr-Q9-hrq"/>
+                            <constraint firstAttribute="trailing" secondItem="7XD-Ze-xs9" secondAttribute="trailing" id="keS-cP-441"/>
                             <constraint firstItem="dbU-Mi-kJ2" firstAttribute="top" secondItem="9hO-dx-zB5" secondAttribute="bottom" id="wcP-cz-Cd4"/>
+                            <constraint firstItem="qc7-Jr-hlx" firstAttribute="leading" secondItem="ElP-nN-K73" secondAttribute="leadingMargin" id="z66-js-uAR"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="提出問題" id="kkC-L7-MKR">
@@ -721,22 +734,13 @@
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m9d-BL-kPt">
-                                <rect key="frame" x="20" y="350" width="140" height="32"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="請輸入想要回應的描述" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="tvJ-kC-HjJ">
+                                <rect key="frame" x="20" y="352" width="374" height="192"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="請輸入想要回應的描述">
-                                            <attributes>
-                                                <color key="NSColor" red="0.60789000000000004" green="0.60780000000000001" blue="0.60792000000000002" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                                <font key="NSFont" size="14" name="PingFangTC-Regular"/>
-                                                <real key="NSKern" value="0.0"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                </state>
-                            </button>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -747,7 +751,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="回應問題" id="XUd-44-BiL">
-                        <barButtonItem key="leftBarButtonItem" title="取消" id="jA0-bk-fCt"/>
+                        <barButtonItem key="leftBarButtonItem" title="回問題" id="jA0-bk-fCt"/>
                         <barButtonItem key="rightBarButtonItem" title="儲存" id="1FF-Od-ycR"/>
                     </navigationItem>
                 </viewController>

@@ -1,19 +1,18 @@
-//
-//  TQViewController.swift
-//  Launch
-//
-//  Created by MaxCheng on 2017/8/15.
-//  Copyright © 2017年 com.USSwiftCoda. All rights reserved.
-//
 
 import UIKit
 
-class TQViewController: UIViewController {
-
+class TQViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource {
+    var list1 = [String]()      //此處書上原為let，必須改為var，否則無法加入陣列元素
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        //準備第一個陣列元素
+        list1.append("1")
+        list1.append("2")
+        list1.append("3")
+        list1.append("4")
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,7 +20,18 @@ class TQViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return  list1.count
+    }
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return list1[row]
+    }
+    
     /*
     // MARK: - Navigation
 
