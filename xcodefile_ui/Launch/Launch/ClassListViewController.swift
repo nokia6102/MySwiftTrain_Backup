@@ -7,15 +7,15 @@
 //
 
 import UIKit
-import AVFoundation
-import AVKit
+//import AVFoundation
+//import AVKit
+import WebKit
 
 class ClassListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource
 {
-    @IBOutlet weak var videoView: VideoUIView!
+
+    @IBOutlet weak var videoView: UIWebView!
     
-    // 生成UIRefreshControl
-    let myRefreshControl = UIRefreshControl() // 生成UIRefreshControl
     
     //建立要顯示的資料，存在陣列裡面
     let noArray = ["1", "2", "3", "4", "5", "6"]
@@ -56,15 +56,43 @@ class ClassListViewController: UIViewController, UITableViewDelegate, UITableVie
         return cell
     }
     
-    
-    
-    
-    
-
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        //<方法一>讀取網頁的影片位置
+//        let address = "https://youtu.be/k-gSySYQCx0"
+//        let addressURL = URL(string: address)
+//        if let url = addressURL
+//        {
+//            let request = URLRequest(url: url)
+//            videoView.loadRequest(request)
+//        }
+        
+        //<方法二>讀取本地端的影片位置
+//        let videoPath = Bundle.main.path(forResource: "HipHop", ofType: "mp4")
+//        let url = URL(fileURLWithPath: videoPath!)
+//        videoView.loadRequest(URLRequest(url: url))
+        
+        //<方法三>使用WKWebView，讀取網頁的影片位置
+        let wkWebViewFrame = CGRect(x: 0, y: 0, width: view.frame.width, height: 266)
+        let videoView = WKWebView(frame: wkWebViewFrame)
+        let webAddress = "https://youtu.be/k-gSySYQCx0"
+        let webURL = URL(string: webAddress)
+        if let url = webURL
+        {
+            let request = URLRequest(url: url)
+            videoView.load(request)
+        }
+        view.addSubview(videoView)
+        
+        //<方法四>使用WKWebView，讀取本地端的影片位置
+//        let wkWebViewFrame = CGRect(x: 0, y: 0, width: view.frame.width, height: 266)
+//        let videoView = WKWebView(frame: wkWebViewFrame)
+//        let videoPath = Bundle.main.path(forResource: "HipHop", ofType: "mp4")
+//        let url = URL(fileURLWithPath: videoPath!)
+//        videoView.load(URLRequest(url: url))
+//        view.addSubview(videoView)
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -86,36 +114,13 @@ class ClassListViewController: UIViewController, UITableViewDelegate, UITableVie
     //MARK: Action Button
     @IBAction func btnMovie(_ sender: UIButton)
     {
-        let videoURL = Bundle.main.url(forResource: "HipHop", withExtension: "mp4")
-        let videoPlayer = AVPlayer(url: videoURL!)
-        let videoPlayController = AVPlayerViewController()
-        videoPlayController.player = videoPlayer
-//        videoPlayController.view.frame = CGRect(origin: CGPoint(x: 0, y: 0), size: CGSize(width: 50, height: 30))
-        let avview = UIView.
-        videoView.addSubview(<#T##view: UIView##UIView#>)
-        //present(videoPlayController, animated: true, completion: nil)
-        videoPlayer.play()
-        
 //        let videoURL = Bundle.main.url(forResource: "HipHop", withExtension: "mp4")
-//        let player = AVPlayer(url: videoURL!)
-//        let playerController = AVPlayerViewController()
-//        playerController.player = player
-//        playerController.view.frame = CGRectMake(0, 50, screenSize.width, 240)
-//        self.view.addSubview(playerController.view)
-//        self.addChildViewController(playerController)
-//        player.play()
+//        let videoPlayer = AVPlayer(url: videoURL!)
+//        let videoPlayController = AVPlayerViewController()
+//        videoPlayController.player = videoPlayer
+//        present(videoPlayController, animated: true, completion: nil)
+//        videoPlayer.play()
         
-//        let videoURL = Bundle.main.url(forResource: "HipHop", withExtension: "mp4")
-//        let player = AVPlayer(URL: videoURL!)
-//        let playerLayer = AVPlayerLayer(player: player)
-//        let view = UIView(frame: CGRectMake(0, 0, screenSize.width, screenSize.height))
-//        
-//        self.view.layer.borderWidth = 1
-//        self.view.layer.borderColor = UIColor(red:222/255.0, green:225/255.0, blue:227/255.0, alpha: 1.0).CGColor
-//        self.view.layer.addSublayer(playerLayer)
-//        
-//        playerLayer.frame = view.bounds
-//        player.play()
         
     }
     

@@ -88,14 +88,14 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Swift直通車" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0VT-aD-69W">
-                                <rect key="frame" x="20" y="284" width="199" height="34"/>
+                                <rect key="frame" x="20" y="294" width="199" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="醒獅團" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nQM-EU-vIo">
-                                <rect key="frame" x="20" y="322" width="199" height="20"/>
+                                <rect key="frame" x="20" y="332" width="199" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="16"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -157,36 +157,33 @@
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <view contentMode="scaleToFill" restorationIdentifier="VideoUIView" translatesAutoresizingMaskIntoConstraints="NO" id="aNL-F8-aVx" customClass="VideoUIView" customModule="Launch" customModuleProvider="target">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="video.png" translatesAutoresizingMaskIntoConstraints="NO" id="3Pv-SJ-MTI">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="266"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="video.png" translatesAutoresizingMaskIntoConstraints="NO" id="3Pv-SJ-MTI">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="266"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Xv-qw-eYz">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="266"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <connections>
-                                            <action selector="btnMovie:" destination="QfB-fg-TpE" eventType="touchUpInside" id="LYR-fm-bzE"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Xv-qw-eYz">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="266"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="btnMovie:" destination="QfB-fg-TpE" eventType="touchUpInside" id="LYR-fm-bzE"/>
+                                </connections>
+                            </button>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1uf-nS-Ax4">
+                                <rect key="frame" x="0.0" y="20" width="414" height="266"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="266" id="u5v-Ek-HWv"/>
+                                    <constraint firstAttribute="height" constant="266" id="vls-F6-i76"/>
                                 </constraints>
-                            </view>
+                            </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="aNL-F8-aVx" secondAttribute="trailing" id="A49-g1-8cF"/>
-                            <constraint firstItem="aNL-F8-aVx" firstAttribute="leading" secondItem="H9R-jR-BnF" secondAttribute="leading" id="UUu-XW-AId"/>
-                            <constraint firstItem="aNL-F8-aVx" firstAttribute="top" secondItem="H9R-jR-BnF" secondAttribute="top" id="iZD-SF-Dhg"/>
+                            <constraint firstItem="1uf-nS-Ax4" firstAttribute="leading" secondItem="H9R-jR-BnF" secondAttribute="leading" id="Gu9-EJ-BNI"/>
+                            <constraint firstItem="1uf-nS-Ax4" firstAttribute="top" secondItem="H9R-jR-BnF" secondAttribute="top" constant="20" id="Mzk-d3-TFd"/>
+                            <constraint firstAttribute="trailing" secondItem="1uf-nS-Ax4" secondAttribute="trailing" id="cge-iW-iNf"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="videoView" destination="aNL-F8-aVx" id="2LB-ni-WDc"/>
+                        <outlet property="videoView" destination="1uf-nS-Ax4" id="OlF-ED-YhG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zHs-tU-5RQ" userLabel="First Responder" sceneMemberID="firstResponder"/>

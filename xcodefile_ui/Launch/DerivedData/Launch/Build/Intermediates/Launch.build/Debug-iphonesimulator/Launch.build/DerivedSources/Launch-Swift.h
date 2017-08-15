@@ -154,7 +154,7 @@ SWIFT_CLASS("_TtC6Launch11AppDelegate")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class UIRefreshControl;
+@class UIWebView;
 @class UITableView;
 @class UITableViewCell;
 @class UIButton;
@@ -163,7 +163,7 @@ SWIFT_CLASS("_TtC6Launch11AppDelegate")
 
 SWIFT_CLASS("_TtC6Launch23ClassListViewController")
 @interface ClassListViewController : UIViewController <UIScrollViewDelegate, UITableViewDataSource, UITableViewDelegate>
-@property (nonatomic, readonly, strong) UIRefreshControl * _Nonnull myRefreshControl;
+@property (nonatomic, weak) IBOutlet UIWebView * _Null_unspecified videoView;
 @property (nonatomic, readonly, copy) NSArray<NSString *> * _Nonnull noArray;
 @property (nonatomic, readonly, copy) NSArray<NSString *> * _Nonnull titleArray;
 @property (nonatomic, readonly, copy) NSArray<NSString *> * _Nonnull timeArray;
