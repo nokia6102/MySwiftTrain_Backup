@@ -132,7 +132,7 @@
                                         <rect key="frame" x="0.0" y="28" width="414" height="62"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ERI-nb-Obh" id="bOO-Cm-f7a">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="61.666666666666664"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="62"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xm3-Zv-gij">
@@ -180,10 +180,10 @@
             </objects>
             <point key="canvasLocation" x="849" y="123"/>
         </scene>
-        <!--View Controller-->
+        <!--Player Controller-->
         <scene sceneID="LLh-PL-7Qn">
             <objects>
-                <viewController modalTransitionStyle="flipHorizontal" id="hNW-Ez-vkm" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="flipHorizontal" id="hNW-Ez-vkm" customClass="PlayerController" customModule="Launch" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Jgy-Ls-YMz"/>
                         <viewControllerLayoutGuide type="bottom" id="Ktt-hp-bJq"/>
@@ -235,7 +235,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="62" id="p6G-mp-tkR">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PlayerCell" rowHeight="62" id="p6G-mp-tkR" customClass="PlayerTableViewCell" customModule="Launch" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="62"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="p6G-mp-tkR" id="9fZ-FO-26M">
@@ -251,9 +251,21 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="lblSubtitle" destination="FkA-vY-QdU" id="3kg-uV-IPr"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="hNW-Ez-vkm" id="P0C-2p-1Fu"/>
+                                    <outlet property="delegate" destination="hNW-Ez-vkm" id="9ap-Ch-DEg"/>
+                                </connections>
                             </tableView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ehv-3H-6Ns" customClass="YTPlayerView">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="266"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -263,10 +275,13 @@
                             <constraint firstAttribute="bottom" secondItem="XfF-0j-sO4" secondAttribute="bottom" id="sQt-iE-qyK"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="playerView" destination="ehv-3H-6Ns" id="riN-AD-ETR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y9D-er-aif" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1593" y="-227"/>
+            <point key="canvasLocation" x="1532" y="121"/>
         </scene>
         <!--問答(99)-->
         <scene sceneID="UeM-JK-SFP">
@@ -467,7 +482,6 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="提出問題" id="kkC-L7-MKR">
-                        <barButtonItem key="leftBarButtonItem" title="取消" id="O4f-zp-8MS"/>
                         <barButtonItem key="rightBarButtonItem" title="儲存" id="1qq-zC-hEC">
                             <connections>
                                 <segue destination="iia-F7-Qim" kind="show" id="Ax9-bM-uKV"/>
@@ -751,7 +765,6 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="回應問題" id="XUd-44-BiL">
-                        <barButtonItem key="leftBarButtonItem" title="回問題" id="jA0-bk-fCt"/>
                         <barButtonItem key="rightBarButtonItem" title="儲存" id="1FF-Od-ycR"/>
                     </navigationItem>
                 </viewController>
@@ -762,6 +775,7 @@
         <!--Navigation Controller-->
         <scene sceneID="CL3-kU-Lpd">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="exL-Fo-1uq" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2fC-RH-g9k" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="qaR-M4-TmB">
@@ -773,7 +787,6 @@
                         <segue destination="hNX-7F-F9f" kind="relationship" relationship="rootViewController" id="6Um-Ve-G8F"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="exL-Fo-1uq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2357.971014492754" y="121.46739130434784"/>
         </scene>
@@ -787,8 +800,8 @@
         <image name="video.png" width="375" height="238"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ToU-cU-LMP"/>
         <segue reference="yHs-UG-Eyf"/>
+        <segue reference="9b8-L6-Hwa"/>
         <segue reference="zoN-1s-9I7"/>
     </inferredMetricsTieBreakers>
 </document>
