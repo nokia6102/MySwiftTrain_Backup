@@ -22,6 +22,8 @@
 		B3BE12F11F4149D800B097FF /* ClassListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BE12F01F4149D800B097FF /* ClassListViewController.swift */; };
 		B3BE12F31F41813100B097FF /* HipHop.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = B3BE12F21F41813100B097FF /* HipHop.mp4 */; };
 		B3BE12F51F41820E00B097FF /* VideoUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BE12F41F41820E00B097FF /* VideoUIView.swift */; };
+		B3C945DB1F4431D6005994A5 /* QAListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C945DA1F4431D6005994A5 /* QAListViewController.swift */; };
+		B3C945DD1F443838005994A5 /* QAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C945DC1F443838005994A5 /* QAViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 		B3BE12F01F4149D800B097FF /* ClassListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassListViewController.swift; sourceTree = "<group>"; };
 		B3BE12F21F41813100B097FF /* HipHop.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = HipHop.mp4; sourceTree = "<group>"; };
 		B3BE12F41F41820E00B097FF /* VideoUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoUIView.swift; sourceTree = "<group>"; };
+		B3C945DA1F4431D6005994A5 /* QAListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QAListViewController.swift; sourceTree = "<group>"; };
+		B3C945DC1F443838005994A5 /* QAViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QAViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +89,8 @@
 				5A8E3E3F1F301CDD00B96D0F /* AppDelegate.swift */,
 				5A8E3E411F301CDD00B96D0F /* ViewController.swift */,
 				B3BE12F01F4149D800B097FF /* ClassListViewController.swift */,
+				B3C945DA1F4431D6005994A5 /* QAListViewController.swift */,
+				B3C945DC1F443838005994A5 /* QAViewController.swift */,
 				5A8E3E431F301CDD00B96D0F /* Main.storyboard */,
 				5A8E3E461F301CDD00B96D0F /* Assets.xcassets */,
 				5A8E3E481F301CDD00B96D0F /* LaunchScreen.storyboard */,
@@ -176,7 +182,9 @@
 			files = (
 				B3BE12F51F41820E00B097FF /* VideoUIView.swift in Sources */,
 				B3BE12F11F4149D800B097FF /* ClassListViewController.swift in Sources */,
+				B3C945DB1F4431D6005994A5 /* QAListViewController.swift in Sources */,
 				5A8E3E421F301CDD00B96D0F /* ViewController.swift in Sources */,
+				B3C945DD1F443838005994A5 /* QAViewController.swift in Sources */,
 				5A8E3E401F301CDD00B96D0F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
