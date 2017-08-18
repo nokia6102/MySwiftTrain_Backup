@@ -212,8 +212,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1RR-PH-IXv">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="108"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="233"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="Mask.png"/>
+                                <connections>
+                                    <action selector="tapPlay:" destination="hNW-Ez-vkm" eventType="touchUpInside" id="6Le-vQ-exx"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="視頻- 00:30 分鐘" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VPd-Zq-idb">
                                 <rect key="frame" x="20" y="322" width="199" height="20"/>
@@ -248,7 +252,7 @@
                                         <rect key="frame" x="0.0" y="28" width="414" height="62"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="p6G-mp-tkR" id="9fZ-FO-26M">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="61.666666666666664"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="62"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="書必員會的人熱領間對那研世清，的化候量風你看變近希" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FkA-vY-QdU">
@@ -280,6 +284,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="btnPlay" destination="1RR-PH-IXv" id="97j-SP-cJf"/>
                         <outlet property="playerView" destination="ehv-3H-6Ns" id="riN-AD-ETR"/>
                     </connections>
                 </viewController>
@@ -797,6 +802,7 @@
     </scenes>
     <resources>
         <image name="36MBC5.jpg" width="1920" height="1440"/>
+        <image name="Mask.png" width="414" height="226"/>
         <image name="Swift_logo.svg.png" width="2000" height="1800"/>
         <image name="avator_female01.png" width="150" height="150"/>
         <image name="btn_開始閱讀.png" width="315" height="48"/>
