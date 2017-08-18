@@ -9,22 +9,22 @@ class PlayerController: UIViewController,UITableViewDelegate,UITableViewDataSour
     @IBOutlet weak var btnPlay: UIButton!
 //    let playerVars = ["playsinline": 1]
                                         //   加uiview中文放                     字幕                  放完不放連結
-      let playerVars: [AnyHashable: Any]  = [ "playsinline": 1, "autoplay": 1 ,"cc_load_policy":1 ,"rel":0,
+      let playerVars: [AnyHashable: Any]  = [ "playsinline": 1 ,"cc_load_policy":1 ,"rel":0,
 //                                            一用就會出現youtube水印
                                                  "showinfo":1,
     "modestbranding":1 ]
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        
-        self.playerView.load(withVideoId: "S9xzKII9yRw", playerVars: playerVars)
+     
+        self.playerView.load(withVideoId: "yFSF8rRrz9o", playerVars: playerVars)
         self.playerView.delegate = self
     }
     
     @IBAction func tapPlay(_ sender: UIButton)
     {
         playerView.playVideo()
-        btnPlay.isHidden = true
+      
     }
     
     @IBAction func btnLoadList(_ sender: UIButton)
@@ -48,10 +48,10 @@ class PlayerController: UIViewController,UITableViewDelegate,UITableViewDataSour
         print ("playTime :\(playTime)")
       
                
-        if Int(playTime) >= Int (playerView.duration())
-        {
-              btnPlay.isHidden = false
-        }
+//        if Int(playTime) >= Int (playerView.duration())
+//        {
+//              btnPlay.isHidden = false
+//        }
     }
     
     func playerView(_ playerView: YTPlayerView, didChangeTo state: YTPlayerState) {

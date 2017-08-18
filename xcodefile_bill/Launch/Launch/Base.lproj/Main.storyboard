@@ -211,10 +211,9 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1RR-PH-IXv">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="233"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1RR-PH-IXv">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="77"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="Mask.png"/>
                                 <connections>
                                     <action selector="tapPlay:" destination="hNW-Ez-vkm" eventType="touchUpInside" id="6Le-vQ-exx"/>
                                 </connections>
@@ -802,7 +801,6 @@
     </scenes>
     <resources>
         <image name="36MBC5.jpg" width="1920" height="1440"/>
-        <image name="Mask.png" width="414" height="226"/>
         <image name="Swift_logo.svg.png" width="2000" height="1800"/>
         <image name="avator_female01.png" width="150" height="150"/>
         <image name="btn_開始閱讀.png" width="315" height="48"/>
@@ -810,8 +808,8 @@
         <image name="video.png" width="375" height="238"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="yHs-UG-Eyf"/>
         <segue reference="9b8-L6-Hwa"/>
+        <segue reference="yHs-UG-Eyf"/>
         <segue reference="zoN-1s-9I7"/>
     </inferredMetricsTieBreakers>
 </document>
