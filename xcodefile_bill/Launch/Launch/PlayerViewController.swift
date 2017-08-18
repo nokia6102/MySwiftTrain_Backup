@@ -47,8 +47,7 @@ class PlayerController: UIViewController,UITableViewDelegate,UITableViewDataSour
     func playerView(_ playerView: YTPlayerView, didPlayTime playTime: Float) {
         print ("playTime :\(playTime)")
       
-        
-        
+               
         if Int(playTime) >= Int (playerView.duration())
         {
               btnPlay.isHidden = false
