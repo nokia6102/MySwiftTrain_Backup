@@ -28,6 +28,7 @@
 		B39AF8B41F31578800D04B63 /* video.png in Resources */ = {isa = PBXBuildFile; fileRef = B39AF8B31F31578800D04B63 /* video.png */; };
 		B39AF8B61F3158B900D04B63 /* tab_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = B39AF8B51F3158B900D04B63 /* tab_bg.png */; };
 		B39AF8B81F315C2F00D04B63 /* checkmark.png in Resources */ = {isa = PBXBuildFile; fileRef = B39AF8B71F315C2F00D04B63 /* checkmark.png */; };
+		DB577DC81F480B630054452E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DB577DC71F480B630054452E /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +56,7 @@
 		B39AF8B31F31578800D04B63 /* video.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = video.png; sourceTree = "<group>"; };
 		B39AF8B51F3158B900D04B63 /* tab_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tab_bg.png; sourceTree = "<group>"; };
 		B39AF8B71F315C2F00D04B63 /* checkmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checkmark.png; sourceTree = "<group>"; };
+		DB577DC71F480B630054452E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F1C6D5695E88FA1FC6E18FA4 /* Pods-Launch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Launch.release.xcconfig"; path = "Pods/Target Support Files/Pods-Launch/Pods-Launch.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -99,6 +101,7 @@
 		5A8E3E3E1F301CDD00B96D0F /* Launch */ = {
 			isa = PBXGroup;
 			children = (
+				DB577DC71F480B630054452E /* GoogleService-Info.plist */,
 				5AA1EC141F46D0AF0032CBDD /* Mask.png */,
 				087A96951F36102A00DD72C2 /* avator_female01.png */,
 				B39AF8B71F315C2F00D04B63 /* checkmark.png */,
@@ -200,6 +203,7 @@
 				B39A3F2D1F302AEF0065BF28 /* 36MBC5.jpg in Resources */,
 				B39A3F2B1F30268F0065BF28 /* btn_開始閱讀.png in Resources */,
 				5A8E3E4A1F301CDD00B96D0F /* LaunchScreen.storyboard in Resources */,
+				DB577DC81F480B630054452E /* GoogleService-Info.plist in Resources */,
 				B39AF8B61F3158B900D04B63 /* tab_bg.png in Resources */,
 				5AA1EC151F46D0AF0032CBDD /* Mask.png in Resources */,
 				5A8E3E471F301CDD00B96D0F /* Assets.xcassets in Resources */,
@@ -237,10 +241,14 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Launch/Pods-Launch-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 				"${BUILT_PRODUCTS_DIR}/youtube-ios-player-helper/youtube_ios_player_helper.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/youtube_ios_player_helper.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
