@@ -10,7 +10,7 @@ import UIKit
 
 class QATableViewCell: UITableViewCell {
 
-    @IBOutlet weak var lblNo: UILabel!
+ 
     @IBOutlet weak var lblTitle: UILabel!
     @IBOutlet weak var lblDescription: UILabel!
  

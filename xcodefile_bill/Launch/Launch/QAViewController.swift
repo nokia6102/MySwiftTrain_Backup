@@ -4,10 +4,20 @@ import UIKit
 
 class QAViewController: UIViewController,UITableViewDelegate,UITableViewDataSource{
 
+    var aDic : [[String:Any]] = []
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        
+        for i in 1 ... 5
+        {
+          let d  = ["Title":"標題\(i)","Lecture":"講座 10\(i)", "Response":"回應\(i)"]
+          aDic.append(d)
+        }
+        
+        print(aDic)
+ 
+  
     }
 
     override func didReceiveMemoryWarning() {
@@ -16,11 +26,13 @@ class QAViewController: UIViewController,UITableViewDelegate,UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return aDic.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-      let cell = tableView.dequeueReusableCell(withIdentifier: "QACell", for: indexPath)
+      let cell = tableView.dequeueReusableCell(withIdentifier: "QACell", for: indexPath) as! QATableViewCell
+          cell.lblTitle.text = aDic[indexPath.row]["Title"] as? String  
+          cell.lblDescription.text = "\(aDic[indexPath.row]["Lecture"] ?? "0") / \(aDic[indexPath.row]["Response"] ?? "0")"
       return cell
     }
 
