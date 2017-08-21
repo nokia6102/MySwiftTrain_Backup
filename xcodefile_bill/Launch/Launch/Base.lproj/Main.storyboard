@@ -460,29 +460,20 @@
                                     <outlet property="delegate" destination="hi0-ah-sE1" id="Ap2-az-0eI"/>
                                 </connections>
                             </pickerView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="z4Z-VH-QjR">
-                                <rect key="frame" x="20" y="330" width="140" height="32"/>
-                                <state key="normal">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="請在此處輸入問題描述">
-                                            <attributes>
-                                                <color key="NSColor" red="0.60789000000000004" green="0.60780000000000001" blue="0.60792000000000002" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                                <font key="NSFont" size="14" name="PingFangTC-Regular"/>
-                                                <real key="NSKern" value="0.0"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                </state>
-                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="請在此處輸入問題描述" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="pVP-7Y-aqx">
+                                <rect key="frame" x="20" y="337" width="374" height="303"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="7XD-Ze-xs9" firstAttribute="top" secondItem="qc7-Jr-hlx" secondAttribute="bottom" id="AGG-hM-2Fg"/>
                             <constraint firstItem="9hO-dx-zB5" firstAttribute="leading" secondItem="ElP-nN-K73" secondAttribute="leading" id="J97-EL-uUO"/>
                             <constraint firstItem="qc7-Jr-hlx" firstAttribute="top" secondItem="XwO-9u-Im4" secondAttribute="bottom" constant="17" id="Llv-Ed-rNC"/>
-                            <constraint firstItem="qc7-Jr-hlx" firstAttribute="leading" secondItem="z4Z-VH-QjR" secondAttribute="leading" id="P3Y-2z-XPn"/>
-                            <constraint firstItem="z4Z-VH-QjR" firstAttribute="top" secondItem="7XD-Ze-xs9" secondAttribute="bottom" constant="1" id="WoS-p1-zO6"/>
                             <constraint firstItem="9hO-dx-zB5" firstAttribute="top" secondItem="ElP-nN-K73" secondAttribute="top" id="gGL-i8-3Q6"/>
                             <constraint firstItem="7XD-Ze-xs9" firstAttribute="leading" secondItem="ElP-nN-K73" secondAttribute="leading" id="hEF-PG-jtp"/>
                             <constraint firstAttribute="trailing" secondItem="9hO-dx-zB5" secondAttribute="trailing" id="ilr-Q9-hrq"/>
@@ -504,7 +495,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4I9-7h-Lcz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3951" y="123"/>
+            <point key="canvasLocation" x="3950.7246376811599" y="122.28260869565219"/>
         </scene>
         <!--問題-->
         <scene sceneID="Hs2-Ot-t1S">

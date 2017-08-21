@@ -8,10 +8,10 @@ class TQViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSo
 
         // Do any additional setup after loading the view.
         //準備第一個陣列元素
-        list1.append("1")
-        list1.append("2")
-        list1.append("3")
-        list1.append("4")
+        list1.append("程式問題")
+        list1.append("觀念問題")
+        list1.append("課程釋疑")
+        list1.append("其他")
         
     }
 
