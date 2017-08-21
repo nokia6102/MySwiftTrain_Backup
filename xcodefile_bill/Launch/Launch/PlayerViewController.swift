@@ -1,6 +1,7 @@
-
 import UIKit
 import youtube_ios_player_helper
+import Firebase
+
 class PlayerController: UIViewController,UITableViewDelegate,UITableViewDataSource,YTPlayerViewDelegate{
     
  
