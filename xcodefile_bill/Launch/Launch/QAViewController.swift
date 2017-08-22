@@ -5,21 +5,30 @@ import UIKit
 class QAViewController: UIViewController,UITableViewDelegate,UITableViewDataSource{
 
     var aDic : [[String:Any]] = []
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
+
         for i in 1 ... 5
         {
           let d  = ["Title":"標題\(i)","Lecture":"講座 10\(i)", "Response":"回應\(i)"]
           aDic.append(d)
         }
-        
         print(aDic)
  
-  
+        //透明NavigationBar背景
+        UINavigationBar.appearance().shadowImage = UIImage()
+        UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
     }
-
+    
+ 
+    @IBAction func tagRightButton(_ sender: Any)
+    {
+        print("按了")
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

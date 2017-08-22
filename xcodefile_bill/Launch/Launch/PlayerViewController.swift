@@ -20,8 +20,11 @@ class PlayerController: UIViewController,UITableViewDelegate,UITableViewDataSour
      
         self.playerView.load(withVideoId: "3AaTfGSfBmw", playerVars: playerVars)
         self.playerView.delegate = self
+       
+
     }
     
+        
     @IBAction func tapPlay(_ sender: UIButton)
     {
         playerView.playVideo()
@@ -83,5 +86,6 @@ class PlayerController: UIViewController,UITableViewDelegate,UITableViewDataSour
      // Pass the selected object to the new view controller.
      }
      */
+    
     
 }
