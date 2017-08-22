@@ -7,7 +7,8 @@ class PlayerController: UIViewController,UITableViewDelegate,UITableViewDataSour
     
     @IBOutlet weak var playerView: YTPlayerView!
     @IBOutlet weak var btnPlay: UIButton!
-    
+    @IBOutlet weak var tableView: UITableView!
+    var tableOk = false
     var ref : DatabaseReference!
     var arrTable = [[String:Any]]()
                                         //   加uiview中文放                     字幕                  放完不放連結
@@ -24,8 +25,10 @@ class PlayerController: UIViewController,UITableViewDelegate,UITableViewDataSour
         self.playerView.delegate = self
         
         readDic()
-
+       
     }
+    
+    
     func readDic()
     {
         
@@ -50,14 +53,21 @@ class PlayerController: UIViewController,UITableViewDelegate,UITableViewDataSour
 //                    print("p:\(partsTime)")
                     let totalTime = Int(partsTime[0])! * 3600 + Int(partsTime[1])! * 60 + Int(partsTime[2])!
                     print ("t:\(totalTime)")
-                    dictionary["totalStartTime"] = totalTime
+                    dictionary["totalStartTime"] = Float(totalTime)
                     self.arrTable.append(dictionary)
                 }
             }
             
             print("all:\(self.arrTable)")
             print("count:\(self.arrTable.count)")
-//            self.tableView.reloadData()
+            self.tableView.reloadData()
+            self.tableOk = true
+            let numberOfSections = self.tableView.numberOfSections
+//            let numberOfRows = self.tableView.numberOfRows(inSection: numberOfSections-1)
+            
+            let indexPath = IndexPath(row: 1 , section: numberOfSections-1)
+            self.tableView.scrollToRow(at: indexPath, at: UITableViewScrollPosition.middle, animated: true)
+
         })
      
     }
@@ -85,15 +95,34 @@ class PlayerController: UIViewController,UITableViewDelegate,UITableViewDataSour
         self.playerView.nextVideo()
     }
     
-    //YTPLayerViewDelegate
+    //Mark:- YTPLayerViewDelegate
     func playerView(_ playerView: YTPlayerView, didPlayTime playTime: Float) {
         print ("playTime :\(playTime)")
-      
-               
-//        if Int(playTime) >= Int (playerView.duration())
-//        {
-//              btnPlay.isHidden = false
-//        }
+        if (tableOk)
+        {
+            print ("Table已準備好")
+            
+     
+            let lastNumberOfSections = self.tableView.numberOfRows(inSection: 0)
+            print ("lst:\(lastNumberOfSections)")
+            let selectedIndexPath = tableView.indexPathForSelectedRow!.row
+            print ("sel:\(selectedIndexPath)")
+            if selectedIndexPath < lastNumberOfSections
+            {
+                print ("自動slip:\(selectedIndexPath)")
+                let nextTime = arrTable[selectedIndexPath+1]["totalStartTime"] as! Float
+                print ("nextTime:\(nextTime)")
+             
+                if playTime >= nextTime
+                {
+                    let indexPath = IndexPath(row: selectedIndexPath+1 , section: 0)
+                    self.tableView.selectRow(at: indexPath, animated: true, scrollPosition: .middle)
+                    self.tableView.scrollToRow(at: indexPath, at: UITableViewScrollPosition.middle, animated: true)
+  
+                }
+            }
+        }
+     
     }
     
     func playerView(_ playerView: YTPlayerView, didChangeTo state: YTPlayerState) {
@@ -105,13 +134,23 @@ class PlayerController: UIViewController,UITableViewDelegate,UITableViewDataSour
         }
     }
     
+    //Mark:- tableView Delegate
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return arrTable.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "PlayerCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "PlayerCell", for: indexPath) as! PlayerTableViewCell
+        cell.lblSubtitle.text = arrTable[indexPath.row]["text"] as? String
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
+    {
+        let toTime : Float = arrTable[indexPath.row]["totalStartTime"] as! Float
+        playerView.seek(toSeconds: toTime, allowSeekAhead: true)
+        let indexPath = IndexPath(row: indexPath.row , section: 0)
+        self.tableView.scrollToRow(at: indexPath, at: UITableViewScrollPosition.middle, animated: true)
     }
     
     
