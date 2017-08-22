@@ -14,6 +14,11 @@ class MainViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         // Dispose of any resources that can be recreated.
     }
     
+//    override func unwind(for unwindSegue: UIStoryboardSegue, towardsViewController subsequentVC: UIViewController) {
+//        print ("回來")
+//    }
+    @IBAction func unwindToVC1(segue:UIStoryboardSegue) { print ("回來") }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }

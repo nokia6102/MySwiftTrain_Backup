@@ -22,6 +22,7 @@ class QAViewController: UIViewController,UITableViewDelegate,UITableViewDataSour
         UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
     }
     
+
  
     @IBAction func tagRightButton(_ sender: Any)
     {

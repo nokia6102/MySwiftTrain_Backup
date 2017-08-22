@@ -1,14 +1,15 @@
 import UIKit
 import youtube_ios_player_helper
 import Firebase
+import FirebaseDatabase
 
 class PlayerController: UIViewController,UITableViewDelegate,UITableViewDataSource,YTPlayerViewDelegate{
     
- 
     @IBOutlet weak var playerView: YTPlayerView!
-    
     @IBOutlet weak var btnPlay: UIButton!
-//    let playerVars = ["playsinline": 1]
+    
+    var ref : DatabaseReference!
+    var arrTable = [[String:Any]]()
                                         //   加uiview中文放                     字幕                  放完不放連結
       let playerVars: [AnyHashable: Any]  = [ "playsinline": 1 ,"cc_load_policy":1 ,"rel":0,
 //                                            一用就會出現youtube水印
@@ -17,13 +18,50 @@ class PlayerController: UIViewController,UITableViewDelegate,UITableViewDataSour
     override func viewDidLoad()
     {
         super.viewDidLoad()
-     
+        
+        ref = Database.database().reference(fromURL: "https://trainforswift-f4067.firebaseio.com/SubTitle").child("101")
         self.playerView.load(withVideoId: "3AaTfGSfBmw", playerVars: playerVars)
         self.playerView.delegate = self
-       
+        
+        readDic()
 
     }
-    
+    func readDic()
+    {
+        
+        ref.observe(.value, with: { (snapshot) in
+            
+            
+            for child in snapshot.children
+            {
+                let Value:DataSnapshot = child as! DataSnapshot
+                
+                let  myValue = Value.value!
+                
+                if var dictionary  = myValue as? [String : Any]
+                {
+                    print(dictionary["number"] ?? "x")
+                    let sourceTime = dictionary["startTime"] as! String
+//                    print("s:\(sourceTime)")
+                    let index = sourceTime.index(sourceTime.startIndex, offsetBy: 8)
+                    let time  =  sourceTime.substring(to: index)
+//                    print ("t:\(time)")
+                    let partsTime = time.components(separatedBy: ":")
+//                    print("p:\(partsTime)")
+                    let totalTime = Int(partsTime[0])! * 3600 + Int(partsTime[1])! * 60 + Int(partsTime[2])!
+                    print ("t:\(totalTime)")
+                    dictionary["totalStartTime"] = totalTime
+                    self.arrTable.append(dictionary)
+                }
+            }
+            
+            print("all:\(self.arrTable)")
+            print("count:\(self.arrTable.count)")
+//            self.tableView.reloadData()
+        })
+     
+    }
+
         
     @IBAction func tapPlay(_ sender: UIButton)
     {
