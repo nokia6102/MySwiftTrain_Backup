@@ -154,16 +154,28 @@ SWIFT_CLASS("_TtC6Launch11AppDelegate")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class UIStoryboardSegue;
+@class NSBundle;
+@class NSCoder;
+
+SWIFT_CLASS("_TtC6Launch19ApplyViewController")
+@interface ApplyViewController : UIViewController
+- (IBAction)unwindApplyViewControllerFor:(UIStoryboardSegue * _Nonnull)unwindSegue;
+- (void)viewDidLoad;
+- (void)didReceiveMemoryWarning;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
 @class UIWebView;
 @class UITableView;
 @class UITableViewCell;
 @class UIButton;
-@class NSBundle;
-@class NSCoder;
 
 SWIFT_CLASS("_TtC6Launch23ClassListViewController")
 @interface ClassListViewController : UIViewController <UIScrollViewDelegate, UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, weak) IBOutlet UIWebView * _Null_unspecified videoView;
+- (IBAction)unwindFor:(UIStoryboardSegue * _Nonnull)unwindSegue;
 @property (nonatomic, readonly, copy) NSArray<NSString *> * _Nonnull noArray;
 @property (nonatomic, readonly, copy) NSArray<NSString *> * _Nonnull titleArray;
 @property (nonatomic, readonly, copy) NSArray<NSString *> * _Nonnull timeArray;
@@ -173,6 +185,15 @@ SWIFT_CLASS("_TtC6Launch23ClassListViewController")
 - (void)viewDidLoad;
 - (void)didReceiveMemoryWarning;
 - (IBAction)btnMovie:(UIButton * _Nonnull)sender;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC6Launch21ContentViewController")
+@interface ContentViewController : UIViewController
+- (void)viewDidLoad;
+- (void)didReceiveMemoryWarning;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -193,6 +214,15 @@ SWIFT_CLASS("_TtC6Launch16QAViewController")
 - (void)viewDidLoad;
 - (void)didReceiveMemoryWarning;
 - (IBAction)btnCancel:(UIBarButtonItem * _Nonnull)sender;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC6Launch21ReApplyViewController")
+@interface ReApplyViewController : UIViewController
+- (void)viewDidLoad;
+- (void)didReceiveMemoryWarning;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
