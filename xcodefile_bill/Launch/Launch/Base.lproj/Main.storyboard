@@ -223,7 +223,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <action selector="tapPlay:" destination="hNW-Ez-vkm" eventType="touchUpInside" id="6Le-vQ-exx"/>
-                                    <segue destination="tHB-gq-yvQ" kind="unwind" unwindAction="unwindToVC1WithSegue:" id="oEI-FT-PHF"/>
+                                    <segue destination="tHB-gq-yvQ" kind="unwind" unwindAction="unwindToMainVCWithSegue:" id="p6W-kv-Koe"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="視頻- 00:30 分鐘" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VPd-Zq-idb">
@@ -376,7 +376,7 @@
                         <barButtonItem key="leftBarButtonItem" systemItem="stop" id="veR-Ig-JkN">
                             <connections>
                                 <action selector="tagRightButton:" destination="hNX-7F-F9f" id="16t-CO-5mp"/>
-                                <segue destination="S7o-K3-msc" kind="unwind" unwindAction="unwindToPlayerVCWithSegue:" id="Sqy-rw-x3X"/>
+                                <segue destination="S7o-K3-msc" kind="unwind" unwindAction="unwindToPlayerVCWithSegue:" id="2tI-D2-a9h"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="提出問題" id="kbc-ca-FZH">
@@ -699,7 +699,7 @@
         <segue reference="noe-aW-nSI"/>
         <segue reference="QFP-0z-1zi"/>
         <segue reference="zoN-1s-9I7"/>
-        <segue reference="ToU-cU-LMP"/>
         <segue reference="AL2-fr-7dD"/>
+        <segue reference="9b8-L6-Hwa"/>
     </inferredMetricsTieBreakers>
 </document>

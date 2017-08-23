@@ -95,40 +95,14 @@ class PlayerController: UIViewController,UITableViewDelegate,UITableViewDataSour
     {
         self.playerView.nextVideo()
     }
-    
-    
+  
     @IBAction func unwindToPlayerVC(segue:UIStoryboardSegue) { print ("回來") }
     
     //Mark:- YTPLayerViewDelegate
-    
     func playerView(_ playerView: YTPlayerView, didPlayTime playTime: Float) {
         print ("playTime :\(playTime)")
         if (tableOk)
         {
-            
-            
-//            print ("serach qu")
-//         
-//                let currentTime =  playerView.currentTime()
-//                var cline = 0
-//                for index in 0 ..< arrTable.count
-//                {
-//                    let lTime = arrTable[index]["totalStartTime"] as! Float
-//                    let rTime = arrTable[index + 1]["totalStartTime"] as! Float
-//                    if  currentTime >= lTime && currentTime < rTime
-//                    {
-//                        cline = index
-//                    }
-//                }
-//                let toTime : Float = arrTable[cline]["totalStartTime"] as! Float
-//                playerView.seek(toSeconds: toTime, allowSeekAhead: true)
-//                
-//                let indexPath = IndexPath(row: cline , section: 0)
-//                self.tableView.scrollToRow(at: indexPath, at: UITableViewScrollPosition.middle, animated: true)
-         
-            
-      
-     
             let lastNumberOfSections = self.tableView.numberOfRows(inSection: 0)
             print ("lst:\(lastNumberOfSections)")
             let selectedIndexPath = tableView.indexPathForSelectedRow!.row
@@ -151,8 +125,6 @@ class PlayerController: UIViewController,UITableViewDelegate,UITableViewDataSour
     }
     
     func playerView(_ playerView: YTPlayerView, didChangeTo state: YTPlayerState) {
-
-        
         switch state {
         case .ended:
             self.playerView.stopVideo()
