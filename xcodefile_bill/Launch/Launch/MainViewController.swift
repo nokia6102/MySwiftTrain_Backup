@@ -17,7 +17,7 @@ class MainViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
 //    override func unwind(for unwindSegue: UIStoryboardSegue, towardsViewController subsequentVC: UIViewController) {
 //        print ("回來")
 //    }
-    @IBAction func unwindToVC1(segue:UIStoryboardSegue) { print ("回來") }
+    @IBAction func unwindToMainVC(segue:UIStoryboardSegue) { print ("回來") }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1

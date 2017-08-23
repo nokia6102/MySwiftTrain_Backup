@@ -243,7 +243,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RKh-ib-qEX">
                                 <rect key="frame" x="108" y="350" width="96" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="問答（12）">
+                                <state key="normal" title="問答（99）">
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -351,7 +351,7 @@
                                         <connections>
                                             <outlet property="lblDescription" destination="1vi-Sz-rMo" id="lRX-91-2eU"/>
                                             <outlet property="lblTitle" destination="Pba-v5-MCe" id="fbw-1f-Olo"/>
-                                            <segue destination="hi0-ah-sE1" kind="show" id="QJs-nB-sZZ"/>
+                                            <segue destination="iia-F7-Qim" kind="show" id="QFP-0z-1zi"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -373,14 +373,21 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="問答(99)" id="u6b-GF-zag">
-                        <barButtonItem key="rightBarButtonItem" systemItem="stop" id="veR-Ig-JkN">
+                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="veR-Ig-JkN">
                             <connections>
                                 <action selector="tagRightButton:" destination="hNX-7F-F9f" id="16t-CO-5mp"/>
+                                <segue destination="S7o-K3-msc" kind="unwind" unwindAction="unwindToPlayerVCWithSegue:" id="Sqy-rw-x3X"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="提出問題" id="kbc-ca-FZH">
+                            <connections>
+                                <segue destination="hi0-ah-sE1" kind="show" id="rjG-sW-G7G"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fah-hg-k14" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="S7o-K3-msc" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3150.7246376811595" y="121.46739130434784"/>
         </scene>
@@ -543,7 +550,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
-                                        <fragment content="回應  2">
+                                        <fragment content="回應  0">
                                             <attributes>
                                                 <color key="NSColor" red="0.60789000000000004" green="0.60780000000000001" blue="0.60792000000000002" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                 <font key="NSFont" size="14" name="PingFangTC-Regular"/>
@@ -564,6 +571,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="問答列表" id="usW-JM-KnU">
+                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="2FJ-nv-7zw">
+                            <connections>
+                                <action selector="tagRightButton:" destination="hNX-7F-F9f" id="pKf-dZ-BgC"/>
+                                <segue destination="hNX-7F-F9f" kind="show" id="noe-aW-nSI"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="回應問題" id="i6Q-oa-Vck">
                             <connections>
                                 <segue destination="WAS-WB-XQ4" kind="show" id="gZt-hZ-imF"/>
@@ -621,7 +634,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Viola Houston" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="phx-fP-uEc">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Viola Houston" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="phx-fP-uEc">
                                 <rect key="frame" x="78" y="75" width="121" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -638,12 +651,22 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="回應問題" id="XUd-44-BiL">
-                        <barButtonItem key="rightBarButtonItem" title="儲存" id="1FF-Od-ycR"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="4U1-yW-7b2">
+                            <connections>
+                                <action selector="tagRightButton:" destination="hNX-7F-F9f" id="lFj-r5-eSZ"/>
+                                <segue destination="iia-F7-Qim" kind="show" id="txm-Go-8uJ"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="儲存" id="1FF-Od-ycR">
+                            <connections>
+                                <segue destination="iia-F7-Qim" kind="show" id="kzR-N6-V1j"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sMV-fi-E0Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5442.0289855072469" y="116.57608695652175"/>
+            <point key="canvasLocation" x="5500" y="117"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="CL3-kU-Lpd">
@@ -661,7 +684,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="exL-Fo-1uq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2357.971014492754" y="121.46739130434784"/>
+            <point key="canvasLocation" x="2361" y="122"/>
         </scene>
     </scenes>
     <resources>
@@ -673,9 +696,10 @@
         <image name="video.png" width="375" height="238"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="AL2-fr-7dD"/>
-        <segue reference="9b8-L6-Hwa"/>
-        <segue reference="yHs-UG-Eyf"/>
+        <segue reference="noe-aW-nSI"/>
+        <segue reference="QFP-0z-1zi"/>
         <segue reference="zoN-1s-9I7"/>
+        <segue reference="ToU-cU-LMP"/>
+        <segue reference="AL2-fr-7dD"/>
     </inferredMetricsTieBreakers>
 </document>

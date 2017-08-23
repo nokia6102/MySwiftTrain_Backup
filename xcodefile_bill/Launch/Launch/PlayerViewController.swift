@@ -23,11 +23,11 @@ class PlayerController: UIViewController,UITableViewDelegate,UITableViewDataSour
         ref = Database.database().reference(fromURL: "https://trainforswift-f4067.firebaseio.com/SubTitle").child("101")
         self.playerView.load(withVideoId: "3AaTfGSfBmw", playerVars: playerVars)
         self.playerView.delegate = self
-        
+
         readDic()
-       
     }
     
+ 
     
     func readDic()
     {
@@ -57,17 +57,19 @@ class PlayerController: UIViewController,UITableViewDelegate,UITableViewDataSour
                     self.arrTable.append(dictionary)
                 }
             }
+            let endDic : Dictionary = ["totalStartTime": self.playerView.duration(), "number": 1, "startTime": "00:00:03,670", "stopTime": "00:00:11,929", "text": "THE END"
+            ] as [String : Any]
+            
+            self.arrTable.append(endDic)
             
             print("all:\(self.arrTable)")
             print("count:\(self.arrTable.count)")
             self.tableView.reloadData()
             self.tableOk = true
-            let numberOfSections = self.tableView.numberOfSections
-//            let numberOfRows = self.tableView.numberOfRows(inSection: numberOfSections-1)
             
-            let indexPath = IndexPath(row: 1 , section: numberOfSections-1)
-            self.tableView.scrollToRow(at: indexPath, at: UITableViewScrollPosition.middle, animated: true)
-
+            //選擇在第一行
+            let selIndexPath = IndexPath(row: 0 , section: 0)
+            self.tableView.selectRow(at: selIndexPath, animated: true, scrollPosition: .middle)
         })
      
     }
@@ -76,7 +78,6 @@ class PlayerController: UIViewController,UITableViewDelegate,UITableViewDataSour
     @IBAction func tapPlay(_ sender: UIButton)
     {
         playerView.playVideo()
-      
     }
     
     @IBAction func btnLoadList(_ sender: UIButton)
@@ -95,13 +96,38 @@ class PlayerController: UIViewController,UITableViewDelegate,UITableViewDataSour
         self.playerView.nextVideo()
     }
     
+    
+    @IBAction func unwindToPlayerVC(segue:UIStoryboardSegue) { print ("回來") }
+    
     //Mark:- YTPLayerViewDelegate
+    
     func playerView(_ playerView: YTPlayerView, didPlayTime playTime: Float) {
         print ("playTime :\(playTime)")
         if (tableOk)
         {
-            print ("Table已準備好")
             
+            
+//            print ("serach qu")
+//         
+//                let currentTime =  playerView.currentTime()
+//                var cline = 0
+//                for index in 0 ..< arrTable.count
+//                {
+//                    let lTime = arrTable[index]["totalStartTime"] as! Float
+//                    let rTime = arrTable[index + 1]["totalStartTime"] as! Float
+//                    if  currentTime >= lTime && currentTime < rTime
+//                    {
+//                        cline = index
+//                    }
+//                }
+//                let toTime : Float = arrTable[cline]["totalStartTime"] as! Float
+//                playerView.seek(toSeconds: toTime, allowSeekAhead: true)
+//                
+//                let indexPath = IndexPath(row: cline , section: 0)
+//                self.tableView.scrollToRow(at: indexPath, at: UITableViewScrollPosition.middle, animated: true)
+         
+            
+      
      
             let lastNumberOfSections = self.tableView.numberOfRows(inSection: 0)
             print ("lst:\(lastNumberOfSections)")
@@ -118,7 +144,6 @@ class PlayerController: UIViewController,UITableViewDelegate,UITableViewDataSour
                     let indexPath = IndexPath(row: selectedIndexPath+1 , section: 0)
                     self.tableView.selectRow(at: indexPath, animated: true, scrollPosition: .middle)
                     self.tableView.scrollToRow(at: indexPath, at: UITableViewScrollPosition.middle, animated: true)
-  
                 }
             }
         }
@@ -126,12 +151,16 @@ class PlayerController: UIViewController,UITableViewDelegate,UITableViewDataSour
     }
     
     func playerView(_ playerView: YTPlayerView, didChangeTo state: YTPlayerState) {
+
+        
         switch state {
         case .ended:
-             btnPlay.isHidden = false
+            self.playerView.stopVideo()
+            break
         default:
              break
         }
+        
     }
     
     //Mark:- tableView Delegate

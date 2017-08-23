@@ -11,6 +11,8 @@
 		5A167C4B1F42C132002FE929 /* QAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A167C4A1F42C132002FE929 /* QAViewController.swift */; };
 		5A167C4D1F42C229002FE929 /* QATableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A167C4C1F42C229002FE929 /* QATableViewCell.swift */; };
 		5A1C9A4F1F43DFCB00F57252 /* TQViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1C9A4E1F43DFCB00F57252 /* TQViewController.swift */; };
+		5A5F6DE71F4D51C9004D6AF6 /* QListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5F6DE61F4D51C9004D6AF6 /* QListViewController.swift */; };
+		5A5F6DE91F4D525E004D6AF6 /* QListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5F6DE81F4D525E004D6AF6 /* QListTableViewCell.swift */; };
 		5A8E3E401F301CDD00B96D0F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8E3E3F1F301CDD00B96D0F /* AppDelegate.swift */; };
 		5A8E3E421F301CDD00B96D0F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8E3E411F301CDD00B96D0F /* ViewController.swift */; };
 		5A8E3E451F301CDD00B96D0F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A8E3E431F301CDD00B96D0F /* Main.storyboard */; };
@@ -37,6 +39,8 @@
 		5A167C4A1F42C132002FE929 /* QAViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QAViewController.swift; sourceTree = "<group>"; };
 		5A167C4C1F42C229002FE929 /* QATableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QATableViewCell.swift; sourceTree = "<group>"; };
 		5A1C9A4E1F43DFCB00F57252 /* TQViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TQViewController.swift; sourceTree = "<group>"; };
+		5A5F6DE61F4D51C9004D6AF6 /* QListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QListViewController.swift; sourceTree = "<group>"; };
+		5A5F6DE81F4D525E004D6AF6 /* QListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QListTableViewCell.swift; sourceTree = "<group>"; };
 		5A8E3E3C1F301CDD00B96D0F /* Launch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Launch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A8E3E3F1F301CDD00B96D0F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5A8E3E411F301CDD00B96D0F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -123,6 +127,8 @@
 				5A167C4C1F42C229002FE929 /* QATableViewCell.swift */,
 				5AA1EB151F4521C70032CBDD /* PlayerViewController.swift */,
 				5AA1EB171F4522140032CBDD /* PlayerTableViewCell.swift */,
+				5A5F6DE61F4D51C9004D6AF6 /* QListViewController.swift */,
+				5A5F6DE81F4D525E004D6AF6 /* QListTableViewCell.swift */,
 			);
 			path = Launch;
 			sourceTree = "<group>";
@@ -281,6 +287,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A1C9A4F1F43DFCB00F57252 /* TQViewController.swift in Sources */,
+				5A5F6DE91F4D525E004D6AF6 /* QListTableViewCell.swift in Sources */,
+				5A5F6DE71F4D51C9004D6AF6 /* QListViewController.swift in Sources */,
 				5AA1EB161F4521C70032CBDD /* PlayerViewController.swift in Sources */,
 				5AC7CBCD1F3C9ACD00946E9B /* MainViewController.swift in Sources */,
 				5A167C4D1F42C229002FE929 /* QATableViewCell.swift in Sources */,
