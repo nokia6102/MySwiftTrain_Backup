@@ -61,7 +61,7 @@ class PlayerController: UIViewController,UITableViewDelegate,UITableViewDataSour
         
         ref.observe(.value, with: { (snapshot) in
             
-            
+            self.arrTable.removeAll()
             for child in snapshot.children
             {
                 let Value:DataSnapshot = child as! DataSnapshot
@@ -121,7 +121,9 @@ class PlayerController: UIViewController,UITableViewDelegate,UITableViewDataSour
         {
             let lastNumberOfSections = self.tableView.numberOfRows(inSection: 0)
             print ("lst:\(lastNumberOfSections)")
+        
             let selectedIndexPath = tableView.indexPathForSelectedRow!.row
+    
             print ("sel:\(selectedIndexPath)")
             if selectedIndexPath < lastNumberOfSections
             {
