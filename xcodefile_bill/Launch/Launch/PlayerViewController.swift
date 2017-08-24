@@ -11,15 +11,17 @@ class PlayerController: UIViewController,UITableViewDelegate,UITableViewDataSour
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var durntionTime: UILabel!
    
-    weak var firstVC:UIViewController!
+    @IBOutlet weak var playerTitle: UILabel!
     
+//    weak var firstVC:UIViewController!
+    weak var firstVC:MainViewController?
     var tableOk = false
     var ref : DatabaseReference!
     private var arrTable = [[String:Any]]()
     var playvideCode = "3AaTfGSfBmw"
     var selectVideo = 0
 //    var cc = "0"
-//    var ccFlag = false
+    var ccFlag = false
                                         //   加uiview中文放                     字幕                  放完不放連結 //                                            一用就會出現youtube水印
     
     override func viewDidLoad()
@@ -31,12 +33,25 @@ class PlayerController: UIViewController,UITableViewDelegate,UITableViewDataSour
 //        self.playerView.load(withVideoId: "3AaTfGSfBmw", playerVars: ["playsinline": 1])
        
         print ("trustfer selectVide : \(self.selectVideo)")
-        self.playerView.load(withVideoId: "3AaTfGSfBmw",playerVars: ["playsinline": 1])
+        let playCode = self.firstVC?.arrTable[selectVideo]["videocode"] as! String
+        ccFlag = (self.firstVC?.arrTable[selectVideo]["cc"] as! String ) == "1"
+        playerTitle.text = self.firstVC?.arrTable[selectVideo]["title"] as? String
+        
+        self.playerView.load(withVideoId: playCode,playerVars: ["playsinline": 1])
         self.playerView.delegate = self
-        
+       
    
-        
-        readDic()
+        if ccFlag
+        {
+            readDic()
+        }
+        else
+        {
+            let endDic : Dictionary = ["totalStartTime": Float(self.playerView.duration()), "number": 1, "startTime": "00:00:03,670", "stopTime": "00:00:11,929", "text": "* 無字幕 *"
+                ] as [String : Any]
+            
+            self.arrTable.append(endDic)
+        }
     }
     
  
@@ -69,7 +84,7 @@ class PlayerController: UIViewController,UITableViewDelegate,UITableViewDataSour
                     self.arrTable.append(dictionary)
                 }
             }
-            let endDic : Dictionary = ["totalStartTime": Float(self.playerView.duration()), "number": 1, "startTime": "00:00:03,670", "stopTime": "00:00:11,929", "text": "THE END"
+            let endDic : Dictionary = ["totalStartTime": Float(self.playerView.duration()), "number": 1, "startTime": "00:00:03,670", "stopTime": "00:00:11,929", "text": "* 本片結束 *"
             ] as [String : Any]
             
             self.arrTable.append(endDic)
@@ -95,28 +110,14 @@ class PlayerController: UIViewController,UITableViewDelegate,UITableViewDataSour
         playerView.playVideo()
     }
     
-    @IBAction func btnLoadList(_ sender: UIButton)
-    {
-//        self.playerView.load(withPlaylistId: "PLNimSq2k6r46NtbwbHLjl9pjVidMPiTQ7", playerVars: playerVars)
-        self.playerView.playVideo()
-    }
-    
-    @IBAction func btnPrev(_ sender: Any)
-    {
-        self.playerView.previousVideo()
-    }
-    
-    @IBAction func btnNext(_ sender: UIButton)
-    {
-        self.playerView.nextVideo()
-    }
-  
+
     @IBAction func unwindToPlayerVC(segue:UIStoryboardSegue) { print ("回來") }
     
     //Mark:- YTPLayerViewDelegate
     func playerView(_ playerView: YTPlayerView, didPlayTime playTime: Float) {
         print ("playTime :\(playTime)")
-        if (tableOk)
+        
+        if (tableOk && ccFlag)
         {
             let lastNumberOfSections = self.tableView.numberOfRows(inSection: 0)
             print ("lst:\(lastNumberOfSections)")
@@ -141,9 +142,6 @@ class PlayerController: UIViewController,UITableViewDelegate,UITableViewDataSour
     
     func playerViewDidBecomeReady(_ playerView: YTPlayerView) {
          self.playerView.playVideo()
-//        durntionTime.text = String( self.playerView.duration() / 3600 )
-//        durntionTime.text = durntionTime.text! + ":"
-//        durntionTime.text = durntionTime.text! + String(self.playerView.duration()/60)
     }
     
     func playerView(_ playerView: YTPlayerView, didChangeTo state: YTPlayerState) {
@@ -171,14 +169,13 @@ class PlayerController: UIViewController,UITableViewDelegate,UITableViewDataSour
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
-        if tableOk
+        if tableOk && ccFlag
         {
             if indexPath.row == arrTable.count - 1
             {
              self.playerView.stopVideo()
                 let indexPath = IndexPath(row: 0 , section: 0)
                 self.tableView.selectRow(at: indexPath, animated: true, scrollPosition: .middle)
-//                self.tableView.scrollToRow(at: indexPath, at: UITableViewScrollPosition.middle, animated: true)
             }
         }
         let toTime : Float = arrTable[indexPath.row]["totalStartTime"] as! Float

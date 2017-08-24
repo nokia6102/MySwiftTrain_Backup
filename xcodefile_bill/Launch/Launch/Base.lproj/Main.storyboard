@@ -135,8 +135,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="62"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xm3-Zv-gij">
-                                                    <rect key="frame" x="21" y="20" width="8" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xm3-Zv-gij">
+                                                    <rect key="frame" x="13" y="20" width="29" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -188,7 +188,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zHs-tU-5RQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="870" y="-6"/>
+            <point key="canvasLocation" x="869.56521739130437" y="-6.5217391304347831"/>
         </scene>
         <!--Player Controller-->
         <scene sceneID="LLh-PL-7Qn">
@@ -296,6 +296,7 @@
                     <connections>
                         <outlet property="btnPlay" destination="1RR-PH-IXv" id="97j-SP-cJf"/>
                         <outlet property="durtionTime" destination="VPd-Zq-idb" id="kQt-pi-x7J"/>
+                        <outlet property="playerTitle" destination="4oh-xB-4Av" id="XVf-Ue-ncA"/>
                         <outlet property="playerView" destination="ehv-3H-6Ns" id="riN-AD-ETR"/>
                         <outlet property="tableView" destination="BBp-ka-7qA" id="kSc-Z7-BCP"/>
                     </connections>

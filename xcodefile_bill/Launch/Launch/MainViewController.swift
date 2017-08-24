@@ -35,7 +35,7 @@ class MainViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
                 
                 let  myValue = Value.value!
                 
-                if var dictionary  = myValue as? [String : Any]
+                if let dictionary  = myValue as? [String : Any]
                 {
                     self.arrTable.append(dictionary)
                 }
@@ -63,13 +63,14 @@ class MainViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
       let cell = tableView.dequeueReusableCell(withIdentifier: "MainCell", for: indexPath) as! MainTableViewCell
-            cell.lblTitle.text = arrTable[indexPath.row]["title"] as? String
+        cell.lblNo.text = arrTable[indexPath.row]["lid"] as? String
+        cell.lblTitle.text = arrTable[indexPath.row]["title"] as? String
+        
       return cell
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        selectLession = indexPath.row + 1
-        
+        selectLession = indexPath.row
          print ("s0:\(selectLession)")
         
         performSegue(withIdentifier: "sgPlay", sender: self)
@@ -100,6 +101,15 @@ class MainViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
              print ("s1:\(selectLession)")
              secondVC.selectVideo = selectLession
         }
+        else if segue.identifier == "sgPlayFrist1"
+        {
+            print ("發動sgPlay")
+            let secondVC = segue.destination as! PlayerController
+            secondVC.firstVC = self
+            print ("s1:\(selectLession)")
+            secondVC.selectVideo = 0
+        }
+        
 //
 //            selectLession = (tableView.indexPathForSelectedRow?.row)!
 //            print ("select Lession:\(selectLession)")
