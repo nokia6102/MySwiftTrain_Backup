@@ -67,7 +67,15 @@ class MainViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
       return cell
     }
 
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectLession = indexPath.row + 1
+        
+         print ("s0:\(selectLession)")
+        
+        performSegue(withIdentifier: "sgPlay", sender: self)
+       //  prepare(for: <#T##UIStoryboardSegue#>, sender: <#T##Any?#>)
+ 
+    }
     
 //     // MARK: - Navigation
 //     
@@ -83,14 +91,24 @@ class MainViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
         print("轉換到其他頁")
-//        if segue.identifier == "sgPlayFrist1"
-//        {
-            //從轉換線取得下一頁的執行實體（此時是UIViewController的視角），並進行SecondViewController的型別轉換
-            let secondVC = segue.destination as! PlayerController
-            //進行傳遞資訊到下一頁（填入下一頁的屬性值）<值型別傳遞>
-//            secondVC.str = "hello"
-            //把自己這一頁的引用傳給下一頁<引用型別傳遞>
-            secondVC.firstVC = self
+        
+        if segue.identifier == "sgPlay"
+        {
+             print ("發動sgPlay")
+             let secondVC = segue.destination as! PlayerController
+             secondVC.firstVC = self
+             print ("s1:\(selectLession)")
+             secondVC.selectVideo = selectLession
+        }
+//
+//            selectLession = (tableView.indexPathForSelectedRow?.row)!
+//            print ("select Lession:\(selectLession)")
+//            //從轉換線取得下一頁的執行實體（此時是UIViewController的視角），並進行SecondViewController的型別轉換
+//            let secondVC = segue.destination as! PlayerController
+//            //進行傳遞資訊到下一頁（填入下一頁的屬性值）<值型別傳遞>
+////            secondVC.str = "hello"
+//            //把自己這一頁的引用傳給下一頁<引用型別傳遞>
+//            secondVC.firstVC = self
 //        }
     }
     

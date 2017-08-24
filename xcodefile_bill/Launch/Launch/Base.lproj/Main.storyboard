@@ -72,10 +72,10 @@
             </objects>
             <point key="canvasLocation" x="152" y="-7"/>
         </scene>
-        <!--Main View Controller-->
+        <!--sgPlay-->
         <scene sceneID="nKD-1m-bIw">
             <objects>
-                <viewController modalTransitionStyle="flipHorizontal" id="QfB-fg-TpE" customClass="MainViewController" customModule="Launch" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="sgPlay" modalTransitionStyle="flipHorizontal" id="QfB-fg-TpE" customClass="MainViewController" customModule="Launch" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ZaG-qj-JVE"/>
                         <viewControllerLayoutGuide type="bottom" id="Iah-Ta-iL9"/>
@@ -163,7 +163,6 @@
                                             <outlet property="lblDescription" destination="l7u-hj-TFI" id="mdz-hb-pgc"/>
                                             <outlet property="lblNo" destination="Xm3-Zv-gij" id="ynH-Po-rge"/>
                                             <outlet property="lblTitle" destination="IAa-Kw-6L2" id="D6A-da-jkd"/>
-                                            <segue destination="hNW-Ez-vkm" kind="show" identifier="sgSelectPlay" id="1GM-Of-3Hu"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -184,6 +183,7 @@
                     </view>
                     <connections>
                         <outlet property="tableView" destination="Qz3-ls-pAh" id="rgM-Ya-9LH"/>
+                        <segue destination="hNW-Ez-vkm" kind="show" identifier="sgPlay" id="SaY-uL-UnD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zHs-tU-5RQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -303,7 +303,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y9D-er-aif" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="tHB-gq-yvQ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1627.536231884058" y="-7.3369565217391308"/>
+            <point key="canvasLocation" x="1719" y="-6"/>
         </scene>
         <!--問答(99)-->
         <scene sceneID="UeM-JK-SFP">
@@ -725,6 +725,6 @@
         <segue reference="zoN-1s-9I7"/>
         <segue reference="txm-Go-8uJ"/>
         <segue reference="6Um-Ve-G8F"/>
-        <segue reference="1GM-Of-3Hu"/>
+        <segue reference="AL2-fr-7dD"/>
     </inferredMetricsTieBreakers>
 </document>

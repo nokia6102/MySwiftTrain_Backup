@@ -11,24 +11,27 @@ class PlayerController: UIViewController,UITableViewDelegate,UITableViewDataSour
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var durntionTime: UILabel!
    
-    weak var firstVC:MainViewController!
+    weak var firstVC:UIViewController!
     
     var tableOk = false
     var ref : DatabaseReference!
-    var arrTable = [[String:Any]]()
+    private var arrTable = [[String:Any]]()
     var playvideCode = "3AaTfGSfBmw"
-    var cc = "0"
-    var ccFlag = false
-                                        //   加uiview中文放                     字幕                  放完不放連結
-      let playerVars: [AnyHashable: Any]  = [ "playsinline": 1 ,"cc_load_policy":1 ,"rel":0,
-//                                            一用就會出現youtube水印
-                                                 "showinfo":1,"modestbranding":1 , "autoplay":1 ]
+    var selectVideo = 0
+//    var cc = "0"
+//    var ccFlag = false
+                                        //   加uiview中文放                     字幕                  放完不放連結 //                                            一用就會出現youtube水印
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        ccFlag = cc == "1"
+//        ccFlag = cc == "1"
         ref = Database.database().reference(fromURL: "https://trainforswift-f4067.firebaseio.com/SubTitle").child("101")
-        self.playerView.load(withVideoId: playvideCode, playerVars: playerVars)
+//        let playerVars: [AnyHashable: Any]  = [ "playsinline": 1 ,"cc_load_policy":1 ,"rel":0,"showinfo":1,"modestbranding":1 , "autoplay":1 ]
+//        self.playerView.load(withVideoId: "3AaTfGSfBmw", playerVars: ["playsinline": 1])
+       
+        print ("trustfer selectVide : \(self.selectVideo)")
+        self.playerView.load(withVideoId: "3AaTfGSfBmw",playerVars: ["playsinline": 1])
         self.playerView.delegate = self
         
    
@@ -94,7 +97,7 @@ class PlayerController: UIViewController,UITableViewDelegate,UITableViewDataSour
     
     @IBAction func btnLoadList(_ sender: UIButton)
     {
-        self.playerView.load(withPlaylistId: "PLNimSq2k6r46NtbwbHLjl9pjVidMPiTQ7", playerVars: playerVars)
+//        self.playerView.load(withPlaylistId: "PLNimSq2k6r46NtbwbHLjl9pjVidMPiTQ7", playerVars: playerVars)
         self.playerView.playVideo()
     }
     
