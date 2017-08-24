@@ -27,6 +27,24 @@ class PlayerController: UIViewController,UITableViewDelegate,UITableViewDataSour
     var ccFlag = false
                                         //   加uiview中文放                     字幕                  放完不放連結 //                                            一用就會出現youtube水印
     
+    override func viewWillAppear(_ animated: Bool) {
+        print ("in:")
+        if UIDeviceOrientationIsLandscape(UIDevice.current.orientation){
+            print("橫")
+            let playerVars: [AnyHashable: Any]  = [ "playsinline": 0 ,"cc_load_policy":1 ,"rel":0,"showinfo":1,"modestbranding":1 , "autoplay":1 ]
+        
+            
+            print ("trustfer selectVide : \(self.selectVideo)")
+            let playCode = self.firstVC?.arrTable[selectVideo]["videocode"] as! String
+            ccFlag = (self.firstVC?.arrTable[selectVideo]["cc"] as! String ) == "1"
+            playerTitle.text = self.firstVC?.arrTable[selectVideo]["title"] as? String
+            let lid = self.firstVC?.arrTable[selectVideo]["lid"] as! String
+            self.playerView.load(withVideoId: playCode,playerVars: playerVars)
+
+        }else{
+            print("直")
+        }
+    }
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -106,6 +124,7 @@ class PlayerController: UIViewController,UITableViewDelegate,UITableViewDataSour
             //選擇在第一行
             let selIndexPath = IndexPath(row: 0 , section: 0)
             self.tableView.selectRow(at: selIndexPath, animated: true, scrollPosition: .middle)
+//             self.playerView.load(withVideoId: self.playvideCode,playerVars:  ["playsinline": 0])
          
         })
      
