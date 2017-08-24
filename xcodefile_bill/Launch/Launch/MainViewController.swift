@@ -14,19 +14,6 @@ class MainViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         // Dispose of any resources that can be recreated.
     }
     
-//    override func unwind(for unwindSegue: UIStoryboardSegue, towardsViewController subsequentVC: UIViewController) {
-//        print ("回來")
-//    }
- 
-    @IBAction func jumpToQA(_ sender: Any)
-    {
-        //強跳
-        if let vc = storyboard?.instantiateViewController(withIdentifier: "QAnav1")
-        {
-            show(vc, sender: self)
-        }
-    }
-    
     @IBAction func unwindToMainVC(segue:UIStoryboardSegue) { print ("回來") }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

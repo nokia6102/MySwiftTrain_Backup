@@ -22,8 +22,8 @@ class PlayerController: UIViewController,UITableViewDelegate,UITableViewDataSour
         ref = Database.database().reference(fromURL: "https://trainforswift-f4067.firebaseio.com/SubTitle").child("101")
         self.playerView.load(withVideoId: "3AaTfGSfBmw", playerVars: playerVars)
         self.playerView.delegate = self
-    
         
+
         readDic()
     }
     
@@ -57,7 +57,7 @@ class PlayerController: UIViewController,UITableViewDelegate,UITableViewDataSour
                     self.arrTable.append(dictionary)
                 }
             }
-            let endDic : Dictionary = ["totalStartTime": self.playerView.duration(), "number": 1, "startTime": "00:00:03,670", "stopTime": "00:00:11,929", "text": "THE END"
+            let endDic : Dictionary = ["totalStartTime": Float(self.playerView.duration()), "number": 1, "startTime": "00:00:03,670", "stopTime": "00:00:11,929", "text": "THE END"
             ] as [String : Any]
             
             self.arrTable.append(endDic)
@@ -130,8 +130,10 @@ class PlayerController: UIViewController,UITableViewDelegate,UITableViewDataSour
     func playerViewDidBecomeReady(_ playerView: YTPlayerView) {
          self.playerView.playVideo()
     }
+    
     func playerView(_ playerView: YTPlayerView, didChangeTo state: YTPlayerState) {
         switch state {
+
         case .ended:
             self.playerView.stopVideo()
             break
@@ -154,6 +156,16 @@ class PlayerController: UIViewController,UITableViewDelegate,UITableViewDataSour
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
+        if tableOk
+        {
+            if indexPath.row == arrTable.count - 1
+            {
+             self.playerView.stopVideo()
+                let indexPath = IndexPath(row: 0 , section: 0)
+                self.tableView.selectRow(at: indexPath, animated: true, scrollPosition: .middle)
+//                self.tableView.scrollToRow(at: indexPath, at: UITableViewScrollPosition.middle, animated: true)
+            }
+        }
         let toTime : Float = arrTable[indexPath.row]["totalStartTime"] as! Float
         playerView.seek(toSeconds: toTime, allowSeekAhead: true)
         let indexPath = IndexPath(row: indexPath.row , section: 0)

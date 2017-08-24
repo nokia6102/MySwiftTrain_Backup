@@ -26,6 +26,16 @@ class QAViewController: UIViewController,UITableViewDelegate,UITableViewDataSour
     }
     
 
+    @IBAction func jumpToQA(_ sender: Any)
+    {
+        //強跳
+        if let vc = storyboard?.instantiateViewController(withIdentifier: "sbPlayer")
+        {
+            present(vc, animated: true, completion: nil)
+//            show(vc, sender: self)
+        }
+    }
+
  
     @IBAction func tagRightButton(_ sender: Any)
     {
