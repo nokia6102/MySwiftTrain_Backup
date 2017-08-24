@@ -163,7 +163,7 @@
                                             <outlet property="lblDescription" destination="l7u-hj-TFI" id="mdz-hb-pgc"/>
                                             <outlet property="lblNo" destination="Xm3-Zv-gij" id="ynH-Po-rge"/>
                                             <outlet property="lblTitle" destination="IAa-Kw-6L2" id="D6A-da-jkd"/>
-                                            <segue destination="hNW-Ez-vkm" kind="show" id="1GM-Of-3Hu"/>
+                                            <segue destination="hNW-Ez-vkm" kind="show" identifier="sgSelectPlay" id="1GM-Of-3Hu"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -176,12 +176,15 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="266"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <segue destination="hNW-Ez-vkm" kind="show" id="AL2-fr-7dD"/>
+                                    <segue destination="hNW-Ez-vkm" kind="show" identifier="sgPlayFrist1" id="AL2-fr-7dD"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="Qz3-ls-pAh" id="rgM-Ya-9LH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zHs-tU-5RQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -722,6 +725,6 @@
         <segue reference="zoN-1s-9I7"/>
         <segue reference="txm-Go-8uJ"/>
         <segue reference="6Um-Ve-G8F"/>
-        <segue reference="AL2-fr-7dD"/>
+        <segue reference="1GM-Of-3Hu"/>
     </inferredMetricsTieBreakers>
 </document>

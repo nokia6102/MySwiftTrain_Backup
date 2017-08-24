@@ -10,11 +10,15 @@ class PlayerController: UIViewController,UITableViewDelegate,UITableViewDataSour
     @IBOutlet weak var durtionTime: UILabel!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var durntionTime: UILabel!
+   
+    weak var firstVC:MainViewController!
     
     var tableOk = false
     var ref : DatabaseReference!
     var arrTable = [[String:Any]]()
-
+    var playvideCode = "3AaTfGSfBmw"
+    var cc = "0"
+    var ccFlag = false
                                         //   加uiview中文放                     字幕                  放完不放連結
       let playerVars: [AnyHashable: Any]  = [ "playsinline": 1 ,"cc_load_policy":1 ,"rel":0,
 //                                            一用就會出現youtube水印
@@ -22,9 +26,9 @@ class PlayerController: UIViewController,UITableViewDelegate,UITableViewDataSour
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        
+        ccFlag = cc == "1"
         ref = Database.database().reference(fromURL: "https://trainforswift-f4067.firebaseio.com/SubTitle").child("101")
-        self.playerView.load(withVideoId: "3AaTfGSfBmw", playerVars: playerVars)
+        self.playerView.load(withVideoId: playvideCode, playerVars: playerVars)
         self.playerView.delegate = self
         
    
