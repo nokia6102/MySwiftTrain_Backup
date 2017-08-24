@@ -13,6 +13,9 @@
 		5A8E3E451F301CDD00B96D0F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A8E3E431F301CDD00B96D0F /* Main.storyboard */; };
 		5A8E3E471F301CDD00B96D0F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A8E3E461F301CDD00B96D0F /* Assets.xcassets */; };
 		5A8E3E4A1F301CDD00B96D0F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A8E3E481F301CDD00B96D0F /* LaunchScreen.storyboard */; };
+		B33426C91F4D6EF3009066CD /* ApplyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33426C81F4D6EF3009066CD /* ApplyViewController.swift */; };
+		B33426CB1F4D6F5B009066CD /* ReApplyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33426CA1F4D6F5B009066CD /* ReApplyViewController.swift */; };
+		B33426CD1F4D6FB8009066CD /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33426CC1F4D6FB8009066CD /* ContentViewController.swift */; };
 		B39A3F291F3023E90065BF28 /* Swift_logo.svg.png in Resources */ = {isa = PBXBuildFile; fileRef = B39A3F281F3023E90065BF28 /* Swift_logo.svg.png */; };
 		B39A3F2B1F30268F0065BF28 /* btn_開始閱讀.png in Resources */ = {isa = PBXBuildFile; fileRef = B39A3F2A1F30268F0065BF28 /* btn_開始閱讀.png */; };
 		B39A3F2D1F302AEF0065BF28 /* 36MBC5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B39A3F2C1F302AEF0065BF28 /* 36MBC5.jpg */; };
@@ -35,6 +38,9 @@
 		5A8E3E461F301CDD00B96D0F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5A8E3E491F301CDD00B96D0F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5A8E3E4B1F301CDD00B96D0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B33426C81F4D6EF3009066CD /* ApplyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplyViewController.swift; sourceTree = "<group>"; };
+		B33426CA1F4D6F5B009066CD /* ReApplyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReApplyViewController.swift; sourceTree = "<group>"; };
+		B33426CC1F4D6FB8009066CD /* ContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
 		B39A3F281F3023E90065BF28 /* Swift_logo.svg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Swift_logo.svg.png; sourceTree = "<group>"; };
 		B39A3F2A1F30268F0065BF28 /* btn_開始閱讀.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_開始閱讀.png"; sourceTree = "<group>"; };
 		B39A3F2C1F302AEF0065BF28 /* 36MBC5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 36MBC5.jpg; sourceTree = "<group>"; };
@@ -88,9 +94,12 @@
 				B39A3F281F3023E90065BF28 /* Swift_logo.svg.png */,
 				5A8E3E3F1F301CDD00B96D0F /* AppDelegate.swift */,
 				5A8E3E411F301CDD00B96D0F /* ViewController.swift */,
+				B33426CC1F4D6FB8009066CD /* ContentViewController.swift */,
 				B3BE12F01F4149D800B097FF /* ClassListViewController.swift */,
 				B3C945DA1F4431D6005994A5 /* QAListViewController.swift */,
 				B3C945DC1F443838005994A5 /* QAViewController.swift */,
+				B33426C81F4D6EF3009066CD /* ApplyViewController.swift */,
+				B33426CA1F4D6F5B009066CD /* ReApplyViewController.swift */,
 				5A8E3E431F301CDD00B96D0F /* Main.storyboard */,
 				5A8E3E461F301CDD00B96D0F /* Assets.xcassets */,
 				5A8E3E481F301CDD00B96D0F /* LaunchScreen.storyboard */,
@@ -182,8 +191,11 @@
 			files = (
 				B3BE12F51F41820E00B097FF /* VideoUIView.swift in Sources */,
 				B3BE12F11F4149D800B097FF /* ClassListViewController.swift in Sources */,
+				B33426CB1F4D6F5B009066CD /* ReApplyViewController.swift in Sources */,
 				B3C945DB1F4431D6005994A5 /* QAListViewController.swift in Sources */,
+				B33426CD1F4D6FB8009066CD /* ContentViewController.swift in Sources */,
 				5A8E3E421F301CDD00B96D0F /* ViewController.swift in Sources */,
+				B33426C91F4D6EF3009066CD /* ApplyViewController.swift in Sources */,
 				B3C945DD1F443838005994A5 /* QAViewController.swift in Sources */,
 				5A8E3E401F301CDD00B96D0F /* AppDelegate.swift in Sources */,
 			);

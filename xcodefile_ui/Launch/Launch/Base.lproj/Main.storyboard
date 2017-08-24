@@ -197,10 +197,10 @@
             </objects>
             <point key="canvasLocation" x="850.72463768115949" y="116.57608695652175"/>
         </scene>
-        <!--View Controller-->
+        <!--Content View Controller-->
         <scene sceneID="LLh-PL-7Qn">
             <objects>
-                <viewController id="hNW-Ez-vkm" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ContentViewController" id="hNW-Ez-vkm" customClass="ContentViewController" customModule="Launch" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Jgy-Ls-YMz"/>
                         <viewControllerLayoutGuide type="bottom" id="Ktt-hp-bJq"/>
@@ -243,6 +243,9 @@
                                 <state key="normal" title="問答（12）">
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="wEn-Uo-leF" kind="show" id="EA0-mn-KH2"/>
+                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="65" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BBp-ka-7qA">
                                 <rect key="frame" x="0.0" y="400" width="414" height="336"/>
@@ -253,7 +256,7 @@
                                         <rect key="frame" x="0.0" y="28" width="414" height="62"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="p6G-mp-tkR" id="9fZ-FO-26M">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="61.666666666666664"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="62"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="書必員會的人熱領間對那研世清，的化候量風你看變近希" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FkA-vY-QdU">
@@ -268,6 +271,14 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rfg-zl-kIB">
+                                <rect key="frame" x="348" y="360" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="回列表"/>
+                                <connections>
+                                    <segue destination="I3t-Mk-qgr" kind="unwind" unwindAction="unwindFor:" id="eXU-jb-UhV"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -279,8 +290,25 @@
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y9D-er-aif" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="I3t-Mk-qgr" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1587" y="514"/>
+            <point key="canvasLocation" x="851" y="847"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="S2i-bR-JjX">
+            <objects>
+                <navigationController id="wEn-Uo-leF" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="q7Q-Fa-xKY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="hNX-7F-F9f" kind="relationship" relationship="rootViewController" id="rPK-pa-ckL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZAh-de-pnB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1599" y="845"/>
         </scene>
         <!--問答-->
         <scene sceneID="UeM-JK-SFP">
@@ -340,7 +368,7 @@
                     <navigationItem key="navigationItem" title="問答" id="1KM-8a-7ic">
                         <barButtonItem key="leftBarButtonItem" title="關閉" id="LaM-3Y-LVi">
                             <connections>
-                                <segue destination="QfB-fg-TpE" kind="show" action="showDetailViewController:sender:" id="M3H-bg-1Xa"/>
+                                <segue destination="uYH-47-1g8" kind="unwind" unwindAction="unwindFor:" id="iMZ-J4-dPH"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="提出問題" id="GpV-qg-JU3">
@@ -351,6 +379,7 @@
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fah-hg-k14" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="uYH-47-1g8" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2374" y="117"/>
         </scene>
@@ -406,12 +435,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4I9-7h-Lcz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3145" y="117"/>
+            <point key="canvasLocation" x="3164" y="117"/>
         </scene>
         <!--問題-->
         <scene sceneID="Hs2-Ot-t1S">
             <objects>
-                <viewController id="iia-F7-Qim" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ApplyViewController" id="iia-F7-Qim" customClass="ApplyViewController" customModule="Launch" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="XWM-da-KL9"/>
                         <viewControllerLayoutGuide type="bottom" id="Vn0-sO-7fx"/>
@@ -523,12 +552,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aww-Z4-jiD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3928" y="117"/>
+            <point key="canvasLocation" x="3939" y="117"/>
         </scene>
-        <!--View Controller-->
+        <!--回應問題-->
         <scene sceneID="zNw-Jx-2ya">
             <objects>
-                <viewController id="WAS-WB-XQ4" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ReApplyViewController" id="WAS-WB-XQ4" customClass="ReApplyViewController" customModule="Launch" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8Qt-j2-Wju"/>
                         <viewControllerLayoutGuide type="bottom" id="j41-sX-boU"/>
@@ -540,46 +569,6 @@
                             <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="36MBC5.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="oQL-18-7QY">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
-                            <navigationBar alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="82v-ZE-9K7">
-                                <rect key="frame" x="0.0" y="20" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="回應問題" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bd7-xL-0A1">
-                                <rect key="frame" x="144" y="32" width="126" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="18"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4MT-FZ-fCv">
-                                <rect key="frame" x="20" y="28" width="66" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="取消">
-                                            <attributes>
-                                                <color key="NSColor" red="0.59209048748016357" green="0.59219515323638916" blue="0.59208387136459351" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <font key="NSFont" size="16" name=".PingFangTC-Regular"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kck-UR-K3D">
-                                <rect key="frame" x="319" y="27" width="75" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="儲存">
-                                            <attributes>
-                                                <color key="NSColor" red="0.94956177470000003" green="0.5067394972" blue="0.15876328949999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <font key="NSFont" size="16" name=".PingFangTC-Regular"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                </state>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="avator_female01.png" translatesAutoresizingMaskIntoConstraints="NO" id="Zsx-xM-xvd">
                                 <rect key="frame" x="20" y="75" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -635,8 +624,16 @@
                             <constraint firstItem="oQL-18-7QY" firstAttribute="top" secondItem="VTZ-uu-pah" secondAttribute="top" id="vgw-bz-T9C"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="回應問題" id="IW1-7b-DK3">
+                        <barButtonItem key="rightBarButtonItem" title="儲存" id="Wss-yp-Lh4">
+                            <connections>
+                                <segue destination="vfD-u2-tWv" kind="unwind" unwindAction="unwindApplyViewControllerFor:" id="brh-wD-qVd"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sMV-fi-E0Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="vfD-u2-tWv" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="4714" y="117"/>
         </scene>
@@ -656,7 +653,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Tj-AZ-xql" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1587" y="-229"/>
+            <point key="canvasLocation" x="1599" y="117"/>
         </scene>
     </scenes>
     <resources>
@@ -668,6 +665,6 @@
         <image name="video.png" width="375" height="238"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="M3H-bg-1Xa"/>
+        <segue reference="rPK-pa-ckL"/>
     </inferredMetricsTieBreakers>
 </document>

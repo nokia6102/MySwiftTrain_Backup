@@ -16,7 +16,12 @@ class ClassListViewController: UIViewController, UITableViewDelegate, UITableVie
 
     @IBOutlet weak var videoView: UIWebView!
     
+    //設定一個讓下一個頁面可以返回到此的Seque（當點選關閉時）
+    @IBAction func unwind(for unwindSegue: UIStoryboardSegue) {
     
+    }
+    
+
     //建立要顯示的資料，存在陣列裡面
     let noArray = ["1", "2", "3", "4", "5", "6"]
     let titleArray = ["cat", "dog", "elephant", "rabbit", "lion", "tiger"]

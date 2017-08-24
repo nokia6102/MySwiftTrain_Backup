@@ -13,6 +13,7 @@ provides-dynamic-lookup:
 - "tableView"
 - "timeArray"
 - "titleArray"
+- "unwind"
 - "videoView"
 - "viewDidLoad"
 depends-top-level:
@@ -27,6 +28,7 @@ depends-top-level:
 - "StringLiteralType"
 - "UIButton"
 - !private "UILabel"
+- "UIStoryboardSegue"
 - "UITableView"
 - "UITableViewCell"
 - "UITableViewDataSource"
@@ -143,6 +145,7 @@ depends-member:
 - ["C6Launch23ClassListViewController", "Int"]
 - ["C6Launch23ClassListViewController", "UIButton"]
 - !private ["C6Launch23ClassListViewController", "UILabel"]
+- ["C6Launch23ClassListViewController", "UIStoryboardSegue"]
 - ["C6Launch23ClassListViewController", "UITableView"]
 - ["C6Launch23ClassListViewController", "UITableViewCell"]
 - ["C6Launch23ClassListViewController", "UIWebView"]
@@ -175,6 +178,7 @@ depends-member:
 - ["C6Launch23ClassListViewController", "tableView"]
 - ["C6Launch23ClassListViewController", "timeArray"]
 - ["C6Launch23ClassListViewController", "titleArray"]
+- ["C6Launch23ClassListViewController", "unwind"]
 - ["C6Launch23ClassListViewController", "videoView"]
 - !private ["C6Launch23ClassListViewController", "view"]
 - ["C6Launch23ClassListViewController", "viewDidLoad"]
@@ -461,6 +465,7 @@ depends-member:
 - ["CSo8NSObject", "Int"]
 - ["CSo8NSObject", "UIButton"]
 - !private ["CSo8NSObject", "UILabel"]
+- ["CSo8NSObject", "UIStoryboardSegue"]
 - ["CSo8NSObject", "UITableView"]
 - ["CSo8NSObject", "UITableViewCell"]
 - ["CSo8NSObject", "UIWebView"]
@@ -500,6 +505,7 @@ depends-member:
 - !private ["CSo8NSObject", "text"]
 - ["CSo8NSObject", "timeArray"]
 - ["CSo8NSObject", "titleArray"]
+- ["CSo8NSObject", "unwind"]
 - ["CSo8NSObject", "videoView"]
 - !private ["CSo8NSObject", "view"]
 - ["CSo8NSObject", "viewDidLoad"]
@@ -731,6 +737,7 @@ depends-member:
 - ["CSo11UIResponder", "Int"]
 - ["CSo11UIResponder", "UIButton"]
 - !private ["CSo11UIResponder", "UILabel"]
+- ["CSo11UIResponder", "UIStoryboardSegue"]
 - ["CSo11UIResponder", "UITableView"]
 - ["CSo11UIResponder", "UITableViewCell"]
 - ["CSo11UIResponder", "UIWebView"]
@@ -770,6 +777,7 @@ depends-member:
 - !private ["CSo11UIResponder", "text"]
 - ["CSo11UIResponder", "timeArray"]
 - ["CSo11UIResponder", "titleArray"]
+- ["CSo11UIResponder", "unwind"]
 - ["CSo11UIResponder", "videoView"]
 - !private ["CSo11UIResponder", "view"]
 - ["CSo11UIResponder", "viewDidLoad"]
@@ -999,6 +1007,7 @@ depends-member:
 - ["CSo16UIViewController", "Int"]
 - ["CSo16UIViewController", "UIButton"]
 - !private ["CSo16UIViewController", "UILabel"]
+- ["CSo16UIViewController", "UIStoryboardSegue"]
 - ["CSo16UIViewController", "UITableView"]
 - ["CSo16UIViewController", "UITableViewCell"]
 - ["CSo16UIViewController", "UIWebView"]
@@ -1030,6 +1039,7 @@ depends-member:
 - ["CSo16UIViewController", "tableView"]
 - ["CSo16UIViewController", "timeArray"]
 - ["CSo16UIViewController", "titleArray"]
+- ["CSo16UIViewController", "unwind"]
 - ["CSo16UIViewController", "videoView"]
 - !private ["CSo16UIViewController", "view"]
 - ["CSo16UIViewController", "viewDidLoad"]
@@ -1235,4 +1245,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
-interface-hash: "b0ab036680e21461b8010d285eb35583"
+interface-hash: "28c46383ebd398d3871080f46419abe6"
