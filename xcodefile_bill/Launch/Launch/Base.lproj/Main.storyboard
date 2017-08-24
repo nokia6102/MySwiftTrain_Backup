@@ -259,7 +259,7 @@
                                         <rect key="frame" x="0.0" y="28" width="414" height="87"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="p6G-mp-tkR" id="9fZ-FO-26M">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="86.666666666666671"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="87"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="字幕" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="none" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FkA-vY-QdU">
@@ -292,6 +292,7 @@
                     </view>
                     <connections>
                         <outlet property="btnPlay" destination="1RR-PH-IXv" id="97j-SP-cJf"/>
+                        <outlet property="durtionTime" destination="VPd-Zq-idb" id="kQt-pi-x7J"/>
                         <outlet property="playerView" destination="ehv-3H-6Ns" id="riN-AD-ETR"/>
                         <outlet property="tableView" destination="BBp-ka-7qA" id="kSc-Z7-BCP"/>
                     </connections>
@@ -719,7 +720,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="zoN-1s-9I7"/>
-        <segue reference="QFP-0z-1zi"/>
+        <segue reference="txm-Go-8uJ"/>
         <segue reference="6Um-Ve-G8F"/>
         <segue reference="AL2-fr-7dD"/>
     </inferredMetricsTieBreakers>

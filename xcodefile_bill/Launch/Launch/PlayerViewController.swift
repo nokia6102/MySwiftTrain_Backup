@@ -7,10 +7,14 @@ class PlayerController: UIViewController,UITableViewDelegate,UITableViewDataSour
     
     @IBOutlet weak var playerView: YTPlayerView!
     @IBOutlet weak var btnPlay: UIButton!
+    @IBOutlet weak var durtionTime: UILabel!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var durntionTime: UILabel!
+    
     var tableOk = false
     var ref : DatabaseReference!
     var arrTable = [[String:Any]]()
+
                                         //   加uiview中文放                     字幕                  放完不放連結
       let playerVars: [AnyHashable: Any]  = [ "playsinline": 1 ,"cc_load_policy":1 ,"rel":0,
 //                                            一用就會出現youtube水印
@@ -23,7 +27,8 @@ class PlayerController: UIViewController,UITableViewDelegate,UITableViewDataSour
         self.playerView.load(withVideoId: "3AaTfGSfBmw", playerVars: playerVars)
         self.playerView.delegate = self
         
-
+   
+        
         readDic()
     }
     
@@ -129,6 +134,9 @@ class PlayerController: UIViewController,UITableViewDelegate,UITableViewDataSour
     
     func playerViewDidBecomeReady(_ playerView: YTPlayerView) {
          self.playerView.playVideo()
+//        durntionTime.text = String( self.playerView.duration() / 3600 )
+//        durntionTime.text = durntionTime.text! + ":"
+//        durntionTime.text = durntionTime.text! + String(self.playerView.duration()/60)
     }
     
     func playerView(_ playerView: YTPlayerView, didChangeTo state: YTPlayerState) {
