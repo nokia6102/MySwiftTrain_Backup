@@ -13,9 +13,12 @@ class PlayerController: UIViewController,UITableViewDelegate,UITableViewDataSour
    
     @IBOutlet weak var playerTitle: UILabel!
     
+  @IBOutlet weak var subTimeMark: UILabel!
+  
 //    weak var firstVC:UIViewController!
     weak var firstVC:MainViewController?
     var tableOk = false
+    var bufferOk = true
     var ref : DatabaseReference!
     private var arrTable = [[String:Any]]()
     var playvideCode = "3AaTfGSfBmw"
@@ -28,16 +31,20 @@ class PlayerController: UIViewController,UITableViewDelegate,UITableViewDataSour
     {
         super.viewDidLoad()
 //        ccFlag = cc == "1"
-        ref = Database.database().reference(fromURL: "https://trainforswift-f4067.firebaseio.com/SubTitle").child("101")
-//        let playerVars: [AnyHashable: Any]  = [ "playsinline": 1 ,"cc_load_policy":1 ,"rel":0,"showinfo":1,"modestbranding":1 , "autoplay":1 ]
+      
+        let playerVars: [AnyHashable: Any]  = [ "playsinline": 1 ,"cc_load_policy":1 ,"rel":0,"showinfo":1,"modestbranding":1 , "autoplay":1 ]
 //        self.playerView.load(withVideoId: "3AaTfGSfBmw", playerVars: ["playsinline": 1])
        
         print ("trustfer selectVide : \(self.selectVideo)")
         let playCode = self.firstVC?.arrTable[selectVideo]["videocode"] as! String
         ccFlag = (self.firstVC?.arrTable[selectVideo]["cc"] as! String ) == "1"
         playerTitle.text = self.firstVC?.arrTable[selectVideo]["title"] as? String
-        
-        self.playerView.load(withVideoId: playCode,playerVars: ["playsinline": 1])
+        let lid = self.firstVC?.arrTable[selectVideo]["lid"] as! String
+      
+      
+        self.playerView.load(withVideoId: playCode,playerVars: playerVars)
+        ref = Database.database().reference(fromURL: "https://trainforswift-f4067.firebaseio.com/SubTitle").child(lid)
+      
         self.playerView.delegate = self
        
    
@@ -47,7 +54,7 @@ class PlayerController: UIViewController,UITableViewDelegate,UITableViewDataSour
         }
         else
         {
-            let endDic : Dictionary = ["totalStartTime": Float(self.playerView.duration()), "number": 1, "startTime": "00:00:03,670", "stopTime": "00:00:11,929", "text": "* 無字幕 *"
+            let endDic : Dictionary = ["totalStartTime": Float(self.playerView.duration()+1), "number": 1, "startTime": "00:00:03,670", "stopTime": "00:00:11,929", "text": "* 無字幕 *"
                 ] as [String : Any]
             
             self.arrTable.append(endDic)
@@ -125,7 +132,8 @@ class PlayerController: UIViewController,UITableViewDelegate,UITableViewDataSour
             let selectedIndexPath = tableView.indexPathForSelectedRow!.row
     
             print ("sel:\(selectedIndexPath)")
-            if selectedIndexPath < lastNumberOfSections
+          
+            if selectedIndexPath < lastNumberOfSections - 1
             {
                 print ("自動slip:\(selectedIndexPath)")
                 let nextTime = arrTable[selectedIndexPath+1]["totalStartTime"] as! Float
@@ -144,20 +152,25 @@ class PlayerController: UIViewController,UITableViewDelegate,UITableViewDataSour
     
     func playerViewDidBecomeReady(_ playerView: YTPlayerView) {
          self.playerView.playVideo()
+         let Mintues = Int(self.playerView.duration() / 60)
+         let Hours = Int(Mintues / 60)
+         let elepaseTime = String(format: "視頻: %02d:%02d 分鐘", Hours, Mintues)
+         print ("tt:\(elepaseTime)")
+        subTimeMark.text = elepaseTime
     }
     
     func playerView(_ playerView: YTPlayerView, didChangeTo state: YTPlayerState) {
         switch state {
-
-        case .ended:
-            self.playerView.stopVideo()
-            break
+        case .buffering:
+            bufferOk = false
+        case .playing:
+            bufferOk = true
         default:
              break
         }
         
     }
-    
+  
     //Mark:- tableView Delegate
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return arrTable.count
@@ -171,20 +184,26 @@ class PlayerController: UIViewController,UITableViewDelegate,UITableViewDataSour
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
-        if tableOk && ccFlag
+      print ("buffer OK:\(bufferOk)")
+        if tableOk && ccFlag && bufferOk
         {
-            if indexPath.row == arrTable.count - 1
+          let lastNumberOfSections = self.tableView.numberOfRows(inSection: 0)
+
+          print ("i:\(indexPath.row) ,lstN:\(lastNumberOfSections)")
+            if indexPath.row >= lastNumberOfSections - 2
             {
-             self.playerView.stopVideo()
-                let indexPath = IndexPath(row: 0 , section: 0)
-                self.tableView.selectRow(at: indexPath, animated: true, scrollPosition: .middle)
+                self.playerView.pauseVideo()
+//                let indexPath = IndexPath(row: 0 , section: 0)
+//                self.tableView.selectRow(at: indexPath, animated: true, scrollPosition: .middle)
+              return
             }
+          
+          let toTime : Float = arrTable[indexPath.row]["totalStartTime"] as! Float
+          playerView.seek(toSeconds: toTime, allowSeekAhead: true)
+          let indexPath = IndexPath(row: indexPath.row , section: 0)
+          self.tableView.scrollToRow(at: indexPath, at: UITableViewScrollPosition.middle, animated: true)
         }
-        let toTime : Float = arrTable[indexPath.row]["totalStartTime"] as! Float
-        playerView.seek(toSeconds: toTime, allowSeekAhead: true)
-        let indexPath = IndexPath(row: indexPath.row , section: 0)
-        self.tableView.scrollToRow(at: indexPath, at: UITableViewScrollPosition.middle, animated: true)
-    }
+     }
     
     
     /*

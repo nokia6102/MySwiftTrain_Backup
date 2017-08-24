@@ -17,7 +17,7 @@ class MainViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         super.viewDidLoad()
         ref = Database.database().reference(fromURL: "https://trainforswift-f4067.firebaseio.com/Lesson")
 
-     
+  
         readLessionList()
     }
 
@@ -28,7 +28,7 @@ class MainViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         
         ref.observe(.value, with: { (snapshot) in
             
-            
+           self.arrTable.removeAll()
             for child in snapshot.children
             {
                 let Value:DataSnapshot = child as! DataSnapshot
@@ -42,6 +42,9 @@ class MainViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
             }
             self.tableOk = true
             self.tableView.reloadData()
+          //選擇在第一行
+          let selIndexPath = IndexPath(row: 0 , section: 0)
+          self.tableView.selectRow(at: selIndexPath, animated: true, scrollPosition: .middle)
             print("all:\(self.arrTable)")
             print("count:\(self.arrTable.count)")
         
@@ -65,16 +68,21 @@ class MainViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
       let cell = tableView.dequeueReusableCell(withIdentifier: "MainCell", for: indexPath) as! MainTableViewCell
         cell.lblNo.text = arrTable[indexPath.row]["lid"] as? String
         cell.lblTitle.text = arrTable[indexPath.row]["title"] as? String
-        
+        cell.lblDescription.text = arrTable[indexPath.row]["desc"] as? String
       return cell
     }
 
+  @IBAction func tapPlay(_ sender: UIButton)
+  {
+    selectLession = tableView.indexPathForSelectedRow!.row
+    performSegue(withIdentifier: "sgPlay", sender: self)
+  }
+  
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         selectLession = indexPath.row
          print ("s0:\(selectLession)")
-        
         performSegue(withIdentifier: "sgPlay", sender: self)
-       //  prepare(for: <#T##UIStoryboardSegue#>, sender: <#T##Any?#>)
+  
  
     }
     

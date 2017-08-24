@@ -11,11 +11,11 @@ class QAViewController: UIViewController,UITableViewDelegate,UITableViewDataSour
         super.viewDidLoad()
 
         
-        let d1  = ["Title":"101課程:Swift&Objective-C混用","Lecture":"講座 101", "Response":"回應0"]
+        let d1  = ["Title":"SWift直通車:Swift&Objective-C混用","Lecture":"講座 1", "Response":"回應0"]
         aDic.append(d1)
-        for i in 2 ... 5
+        for i in 2 ... 99
         {
-          let d  = ["Title":"標題\(i)","Lecture":"講座 10\(i)", "Response":"回應\(i)"]
+          let d  = ["Title":"SWift直通車:第\(i)天","Lecture":"講座 10\(i)", "Response":"回應0"]
           aDic.append(d)
         }
         print(aDic)

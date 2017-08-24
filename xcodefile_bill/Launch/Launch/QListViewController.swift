@@ -10,9 +10,9 @@ class QListViewController: UIViewController,UITableViewDelegate,UITableViewDataS
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        for i in 1 ... 5
+        for i in 1 ... 50
         {
-            let d  = ["Title":"標題\(i)","Lecture":"講座 10\(i)", "Response":"回應\(i)"]
+            let d  = ["Title":"標題\(i)","Lecture":"講座 \(i)", "Response":"回應\(i)"]
             aDic.append(d)
         }
         print(aDic)
