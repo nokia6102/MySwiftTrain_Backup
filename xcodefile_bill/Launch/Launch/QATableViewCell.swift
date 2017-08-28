@@ -13,6 +13,7 @@ class QATableViewCell: UITableViewCell {
  
     @IBOutlet weak var lblTitle: UILabel!
     @IBOutlet weak var lblDescription: UILabel!
+    @IBOutlet weak var lblTimeStamp: UILabel!
  
     
     override func awakeFromNib() {

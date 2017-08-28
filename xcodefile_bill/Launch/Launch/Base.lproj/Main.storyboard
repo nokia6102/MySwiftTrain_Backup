@@ -432,13 +432,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bE3-yS-kqp">
-                                <rect key="frame" x="0.0" y="-24" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                                 <items>
                                     <navigationItem title="問答(99)" id="RJz-Vq-ttJ"/>
                                 </items>
                             </navigationBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yIX-ho-kOo">
-                                <rect key="frame" x="0.0" y="20" width="414" height="716"/>
+                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="QACell" rowHeight="80" id="g7h-bC-dEE" customClass="QATableViewCell" customModule="Launch" customModuleProvider="target">
@@ -477,7 +477,6 @@
                                         <connections>
                                             <outlet property="lblDescription" destination="1vi-Sz-rMo" id="lRX-91-2eU"/>
                                             <outlet property="lblTitle" destination="Pba-v5-MCe" id="fbw-1f-Olo"/>
-                                            <segue destination="iia-F7-Qim" kind="show" id="QFP-0z-1zi"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -519,12 +518,13 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="yIX-ho-kOo" id="P99-Yp-Rxs"/>
+                        <segue destination="iia-F7-Qim" kind="show" identifier="sgQlist" id="3b0-wA-tRF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fah-hg-k14" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="S7o-K3-msc" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3150.7246376811595" y="121.46739130434784"/>
+            <point key="canvasLocation" x="3283" y="-7"/>
         </scene>
         <!--提出問題-->
         <scene sceneID="VnN-be-QFc">
@@ -595,12 +595,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4I9-7h-Lcz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3950.7246376811599" y="122.28260869565219"/>
+            <point key="canvasLocation" x="3858" y="1054"/>
         </scene>
         <!--問答列表-->
         <scene sceneID="Hs2-Ot-t1S">
             <objects>
-                <viewController id="iia-F7-Qim" sceneMemberID="viewController">
+                <viewController id="iia-F7-Qim" customClass="QListViewController" customModule="Launch" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="XWM-da-KL9"/>
                         <viewControllerLayoutGuide type="bottom" id="Vn0-sO-7fx"/>
@@ -613,25 +613,25 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avator_female01.png" translatesAutoresizingMaskIntoConstraints="NO" id="9qL-ze-ebD">
-                                <rect key="frame" x="20" y="31" width="50" height="50"/>
+                                <rect key="frame" x="20" y="75" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="84L-MC-aAz"/>
                                     <constraint firstAttribute="width" constant="50" id="NDZ-ui-ZIf"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Viola Houston" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BFL-mA-1Dq">
-                                <rect key="frame" x="80" y="31" width="126" height="24"/>
+                                <rect key="frame" x="80" y="75" width="126" height="24"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2017/07/20" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sPC-9Q-l49">
-                                <rect key="frame" x="80" y="61" width="126" height="17"/>
+                                <rect key="frame" x="80" y="105" width="126" height="17"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="14"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="101課程:Swift&amp;Objective-C混用" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iw1-Kk-Bs7">
-                                <rect key="frame" x="20" y="98" width="227" height="24"/>
+                                <rect key="frame" x="20" y="142" width="227" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="24" id="y09-Pp-1DQ"/>
                                 </constraints>
@@ -639,16 +639,16 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="btM-aM-Y0X">
-                                <rect key="frame" x="20" y="128" width="374" height="214"/>
+                                <rect key="frame" x="20" y="172" width="374" height="215"/>
                                 <string key="text">開發 iPhone 程式的大家，您是用舊的Objective-C語言或是用新的Swift語言開發應用程式呢？您知道Swift跟Objective-C的檔案可以混用嗎？這種混用方法叫做Mix and Match。使用此方法，可以讓您在舊有的Objective-C專案中，加入以Swift程式碼撰寫的新功能；或是相反、讓您能夠在新的Swift專案中使用舊的Objective-C類別。本篇文章就要帶大家實際帶著大家做一遍，有興趣的朋友可以參考一下：</string>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="179" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Cq7-Y1-ypY">
-                                <rect key="frame" x="0.0" y="385" width="414" height="351"/>
+                                <rect key="frame" x="0.0" y="430" width="414" height="306"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="179" id="a2S-vN-X6f">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="QACell" rowHeight="179" id="a2S-vN-X6f" customClass="QATableViewCell" customModule="Launch" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="179"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="a2S-vN-X6f" id="i3d-vX-O1g">
@@ -701,55 +701,51 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="lblDescription" destination="k3U-rC-aNp" id="2sz-K3-o7x"/>
+                                            <outlet property="lblTimeStamp" destination="81v-h5-d8f" id="mD7-nB-2bN"/>
                                             <segue destination="WAS-WB-XQ4" kind="show" id="zoN-1s-9I7"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="iia-F7-Qim" id="0xV-FZ-BOl"/>
+                                    <outlet property="delegate" destination="iia-F7-Qim" id="bnI-uP-NjC"/>
+                                </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pPs-29-dV5">
-                                <rect key="frame" x="20" y="350" width="46" height="32"/>
-                                <state key="normal">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="回應  0">
-                                            <attributes>
-                                                <color key="NSColor" red="0.60789000000000004" green="0.60780000000000001" blue="0.60792000000000002" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                                <font key="NSFont" size="14" name="PingFangTC-Regular"/>
-                                                <real key="NSKern" value="0.0"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                </state>
-                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="回應" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AgA-gh-8zF">
+                                <rect key="frame" x="20" y="399" width="88" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Iw1-Kk-Bs7" firstAttribute="leading" secondItem="9qL-ze-ebD" secondAttribute="leading" id="0MT-za-4Jq"/>
                             <constraint firstItem="btM-aM-Y0X" firstAttribute="leading" secondItem="Iw1-Kk-Bs7" secondAttribute="leading" id="2GM-1V-xpk"/>
                             <constraint firstItem="9qL-ze-ebD" firstAttribute="top" secondItem="XWM-da-KL9" secondAttribute="bottom" constant="11" id="31R-Fs-ecR"/>
-                            <constraint firstItem="Iw1-Kk-Bs7" firstAttribute="leading" secondItem="pPs-29-dV5" secondAttribute="leading" id="4FU-BZ-2Zn"/>
                             <constraint firstAttribute="trailing" secondItem="Cq7-Y1-ypY" secondAttribute="trailing" id="4fE-d6-y3l"/>
-                            <constraint firstItem="pPs-29-dV5" firstAttribute="top" secondItem="btM-aM-Y0X" secondAttribute="bottom" constant="8" symbolic="YES" id="67Y-k5-EaW"/>
                             <constraint firstItem="BFL-mA-1Dq" firstAttribute="top" secondItem="XWM-da-KL9" secondAttribute="bottom" constant="11" id="6gW-IR-1GF"/>
                             <constraint firstItem="Cq7-Y1-ypY" firstAttribute="trailing" secondItem="ajh-7D-FmH" secondAttribute="trailing" id="7sC-2k-GbT"/>
                             <constraint firstItem="Vn0-sO-7fx" firstAttribute="top" secondItem="Cq7-Y1-ypY" secondAttribute="bottom" id="C4g-wU-EvR"/>
                             <constraint firstItem="btM-aM-Y0X" firstAttribute="top" secondItem="Iw1-Kk-Bs7" secondAttribute="bottom" constant="6" id="E3S-AE-6Qi"/>
-                            <constraint firstItem="Cq7-Y1-ypY" firstAttribute="top" secondItem="pPs-29-dV5" secondAttribute="bottom" constant="3" id="Fz7-fH-B9r"/>
                             <constraint firstItem="ajh-7D-FmH" firstAttribute="top" secondItem="tXl-wK-CN1" secondAttribute="top" id="HJ1-7h-pf6"/>
                             <constraint firstAttribute="trailingMargin" secondItem="sPC-9Q-l49" secondAttribute="trailing" constant="188" id="IC9-Sd-nnz"/>
+                            <constraint firstItem="AgA-gh-8zF" firstAttribute="leading" secondItem="tXl-wK-CN1" secondAttribute="leading" constant="20" id="JJy-5J-qri"/>
                             <constraint firstItem="sPC-9Q-l49" firstAttribute="top" secondItem="BFL-mA-1Dq" secondAttribute="bottom" constant="6" id="OFY-zw-WoX"/>
                             <constraint firstItem="btM-aM-Y0X" firstAttribute="centerX" secondItem="Cq7-Y1-ypY" secondAttribute="centerX" id="TWg-WI-2Zp"/>
                             <constraint firstAttribute="trailing" secondItem="ajh-7D-FmH" secondAttribute="trailing" id="Ur5-Nn-8Il"/>
                             <constraint firstItem="Cq7-Y1-ypY" firstAttribute="leading" secondItem="tXl-wK-CN1" secondAttribute="leading" id="YBH-Y5-WCT"/>
-                            <constraint firstItem="Cq7-Y1-ypY" firstAttribute="top" secondItem="pPs-29-dV5" secondAttribute="bottom" constant="3" id="b1b-VA-czX"/>
                             <constraint firstItem="ajh-7D-FmH" firstAttribute="leading" secondItem="tXl-wK-CN1" secondAttribute="leading" id="cwF-df-LTd"/>
-                            <constraint firstItem="pPs-29-dV5" firstAttribute="top" secondItem="tXl-wK-CN1" secondAttribute="top" constant="350" id="d9F-hG-oU2"/>
                             <constraint firstAttribute="trailingMargin" secondItem="BFL-mA-1Dq" secondAttribute="trailing" constant="188" id="f76-Ot-4xh"/>
                             <constraint firstItem="sPC-9Q-l49" firstAttribute="leading" secondItem="9qL-ze-ebD" secondAttribute="trailing" constant="10" id="h5w-sj-Syj"/>
                             <constraint firstItem="Vn0-sO-7fx" firstAttribute="top" secondItem="ajh-7D-FmH" secondAttribute="bottom" id="iOH-A5-KKQ"/>
                             <constraint firstItem="BFL-mA-1Dq" firstAttribute="leading" secondItem="9qL-ze-ebD" secondAttribute="trailing" constant="10" id="kwF-l7-6qv"/>
                             <constraint firstItem="9qL-ze-ebD" firstAttribute="leading" secondItem="tXl-wK-CN1" secondAttribute="leadingMargin" id="m2y-xy-sK0"/>
+                            <constraint firstItem="AgA-gh-8zF" firstAttribute="top" secondItem="btM-aM-Y0X" secondAttribute="bottom" constant="12" id="p7s-jo-9mU"/>
+                            <constraint firstAttribute="trailing" secondItem="AgA-gh-8zF" secondAttribute="trailing" constant="306" id="p8K-br-YsX"/>
                             <constraint firstItem="Iw1-Kk-Bs7" firstAttribute="top" secondItem="9qL-ze-ebD" secondAttribute="bottom" constant="17" id="pta-bj-5NJ"/>
+                            <constraint firstItem="Cq7-Y1-ypY" firstAttribute="top" secondItem="AgA-gh-8zF" secondAttribute="bottom" constant="10" id="pvL-Xm-41R"/>
                             <constraint firstItem="Cq7-Y1-ypY" firstAttribute="bottom" secondItem="Vn0-sO-7fx" secondAttribute="top" id="sQI-DW-4zR"/>
                             <constraint firstItem="Cq7-Y1-ypY" firstAttribute="leading" secondItem="ajh-7D-FmH" secondAttribute="leading" id="xpl-Sn-C1z"/>
                         </constraints>
@@ -767,10 +763,14 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="Cq7-Y1-ypY" id="bMk-64-GK9"/>
+                        <outlet property="totalReponse" destination="AgA-gh-8zF" id="O5t-yc-yPO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aww-Z4-jiD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4689.8550724637689" y="116.57608695652175"/>
+            <point key="canvasLocation" x="4467" y="95"/>
         </scene>
         <!--回應問題-->
         <scene sceneID="zNw-Jx-2ya">
@@ -923,8 +923,8 @@
         <image name="video.png" width="375" height="238"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Vu9-Gd-cgT"/>
-        <segue reference="QFP-0z-1zi"/>
+        <segue reference="noe-aW-nSI"/>
+        <segue reference="3b0-wA-tRF"/>
         <segue reference="zoN-1s-9I7"/>
     </inferredMetricsTieBreakers>
 </document>

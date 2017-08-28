@@ -4,25 +4,23 @@ import FirebaseDatabase
 
 class QListViewController: UIViewController,UITableViewDelegate,UITableViewDataSource{
     
-    var aDic : [[String:Any]] = []
     var ref : DatabaseReference!
     var arrTable = [[String:Any]]()
     var tableOk = false
+    var selectQ = 2
+    
+    @IBOutlet weak var totalReponse: UILabel!
+    
+    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-            ref = Database.database().reference(fromURL: "https://trainforswift-f4067.firebaseio.com/Q")
+            ref = Database.database().reference(fromURL: "https://trainforswift-f4067.firebaseio.com/A")
         
         readQList()
         
         
-//        for i in 1 ... 50
-//        {
-//            let d  = ["Title":"標題\(i)","Lecture":"講座 \(i)", "Response":"回應\(i)"]
-//            aDic.append(d)
-//        }
-//        print(aDic)
-        
+      
         //透明NavigationBar背景
         UINavigationBar.appearance().shadowImage = UIImage()
         UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
@@ -42,17 +40,20 @@ class QListViewController: UIViewController,UITableViewDelegate,UITableViewDataS
                 
                 if let dictionary  = myValue as? [String : Any]
                 {
-                    self.arrTable.append(dictionary)
+                    if dictionary["QNoId"] as! Int == self.selectQ
+                    {
+                        self.arrTable.append(dictionary)
+                    }
                 }
             }
             self.tableOk = true
-//            self.tableView.reloadData()
+            self.tableView.reloadData()
             //選擇在第一行
-            let selIndexPath = IndexPath(row: 0 , section: 0)
+ 
 //            self.tableView.selectRow(at: selIndexPath, animated: true, scrollPosition: .middle)
             print("all:\(self.arrTable)")
             print("count:\(self.arrTable.count)")
-            
+            self.totalReponse.text = "回應 \(self.arrTable.count)"
             
         })
         
@@ -66,19 +67,22 @@ class QListViewController: UIViewController,UITableViewDelegate,UITableViewDataS
         self.dismiss(animated: true, completion: nil)
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+ 
     
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return aDic.count
+        return arrTable.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+       
         let cell = tableView.dequeueReusableCell(withIdentifier: "QACell", for: indexPath) as! QATableViewCell
-        cell.lblTitle.text = aDic[indexPath.row]["Title"] as? String
-        cell.lblDescription.text = "\(aDic[indexPath.row]["Lecture"] ?? "0") / \(aDic[indexPath.row]["Response"] ?? "0")"
+        if (tableOk)
+        {
+//        cell.lblTitle.text = arrTable[indexPath.row]["Category"] as? String
+            cell.lblDescription.text = arrTable[indexPath.row]["ResponseText"] as? String
+        }
         return cell
     }
     

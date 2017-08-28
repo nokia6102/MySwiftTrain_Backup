@@ -86,6 +86,14 @@ class QAViewController: UIViewController,UITableViewDelegate,UITableViewDataSour
         // Dispose of any resources that can be recreated.
     }
     
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let selectQ = (aDic[indexPath.row]["QNoId"] as? Int)!
+        print ("sQ:\(selectQ)")
+        //        performSegue(withIdentifier: "sgQlist", sender: self)
+        
+    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return aDic.count
     }

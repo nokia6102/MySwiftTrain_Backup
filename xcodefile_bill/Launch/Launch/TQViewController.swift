@@ -30,6 +30,8 @@ class TQViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSo
         // Dispose of any resources that can be recreated.
     }
     
+    
+    
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return  list1.count
     }
