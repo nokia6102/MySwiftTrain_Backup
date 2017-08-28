@@ -1,25 +1,61 @@
-
 import UIKit
-
+import Firebase
+import FirebaseDatabase
 
 class QListViewController: UIViewController,UITableViewDelegate,UITableViewDataSource{
     
     var aDic : [[String:Any]] = []
-    
+    var ref : DatabaseReference!
+    var arrTable = [[String:Any]]()
+    var tableOk = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
+            ref = Database.database().reference(fromURL: "https://trainforswift-f4067.firebaseio.com/Q")
         
-        for i in 1 ... 50
-        {
-            let d  = ["Title":"標題\(i)","Lecture":"講座 \(i)", "Response":"回應\(i)"]
-            aDic.append(d)
-        }
-        print(aDic)
+        readQList()
+        
+        
+//        for i in 1 ... 50
+//        {
+//            let d  = ["Title":"標題\(i)","Lecture":"講座 \(i)", "Response":"回應\(i)"]
+//            aDic.append(d)
+//        }
+//        print(aDic)
         
         //透明NavigationBar背景
         UINavigationBar.appearance().shadowImage = UIImage()
         UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
+    }
+    
+    func readQList()
+    {
+        
+        ref.observe(.value, with: { (snapshot) in
+            
+            self.arrTable.removeAll()
+            for child in snapshot.children
+            {
+                let Value:DataSnapshot = child as! DataSnapshot
+                
+                let  myValue = Value.value!
+                
+                if let dictionary  = myValue as? [String : Any]
+                {
+                    self.arrTable.append(dictionary)
+                }
+            }
+            self.tableOk = true
+//            self.tableView.reloadData()
+            //選擇在第一行
+            let selIndexPath = IndexPath(row: 0 , section: 0)
+//            self.tableView.selectRow(at: selIndexPath, animated: true, scrollPosition: .middle)
+            print("all:\(self.arrTable)")
+            print("count:\(self.arrTable.count)")
+            
+            
+        })
+        
     }
     
     

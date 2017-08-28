@@ -1,8 +1,15 @@
-
 import UIKit
+import Firebase
+import FirebaseDatabase
 
 class TQViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource {
     var list1 = [String]()      //此處書上原為let，必須改為var，否則無法加入陣列元素
+    
+    var ref : DatabaseReference!
+    var arrTable = [[String:Any]]()
+    var tableOk = false
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

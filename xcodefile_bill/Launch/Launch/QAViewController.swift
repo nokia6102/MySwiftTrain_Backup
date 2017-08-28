@@ -1,23 +1,33 @@
-
 import UIKit
+import Firebase
+import FirebaseDatabase
 
 
 class QAViewController: UIViewController,UITableViewDelegate,UITableViewDataSource{
 
     var aDic : [[String:Any]] = []
+    var ref : DatabaseReference!
+//    var arrTable = [[String:Any]]()
+    var tableOk = false
     
+    
+    @IBOutlet weak var tableView: UITableView!
+ 
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        ref = Database.database().reference(fromURL: "https://trainforswift-f4067.firebaseio.com/QA")
         
-        let d1  = ["Title":"SWift直通車:Swift&Objective-C混用","Lecture":"講座 1", "Response":"回應0"]
-        aDic.append(d1)
-        for i in 2 ... 99
-        {
-          let d  = ["Title":"SWift直通車:第\(i)天","Lecture":"講座 10\(i)", "Response":"回應0"]
-          aDic.append(d)
-        }
+        readQAList()
+//
+//        let d1  = ["Title":"SWift直通車:Swift&Objective-C混用","Lecture":"講座 1", "Response":"回應0"]
+//        aDic.append(d1)
+//        for i in 2 ... 99
+//        {
+//          let d  = ["Title":"SWift直通車:第\(i)天","Lecture":"講座 10\(i)", "Response":"回應0"]
+//          aDic.append(d)
+//        }
         print(aDic)
  
         //透明NavigationBar背景
@@ -26,6 +36,34 @@ class QAViewController: UIViewController,UITableViewDelegate,UITableViewDataSour
     }
     
 
+    func readQAList()
+    {
+        
+        ref.observe(.value, with: { (snapshot) in
+            
+            self.aDic.removeAll()
+            print ("=====")
+            for child in snapshot.children
+            {
+                let Value:DataSnapshot = child as! DataSnapshot
+                
+                let  myValue = Value.value!
+                
+                if let dictionary  = myValue as? [String : Any]
+                {
+                    self.aDic.append(dictionary)
+                }
+            }
+            self.tableOk = true
+            self.tableView.reloadData()
+ 
+            
+            
+        })
+        
+    }
+    
+    
     @IBAction func jumpToQA(_ sender: Any)
     {
         //強跳
