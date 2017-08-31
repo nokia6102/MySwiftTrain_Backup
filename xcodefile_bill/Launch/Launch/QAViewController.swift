@@ -9,7 +9,7 @@ class QAViewController: UIViewController,UITableViewDelegate,UITableViewDataSour
     var ref : DatabaseReference!
 //    var arrTable = [[String:Any]]()
     var tableOk = false
-    
+    var selectQ = 0
     
     @IBOutlet weak var tableView: UITableView!
  
@@ -90,9 +90,9 @@ class QAViewController: UIViewController,UITableViewDelegate,UITableViewDataSour
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
       
         print ("aDic:\(aDic)")
-        let selectQ = (aDic[indexPath.row]["QAid"] as? Int)!
+        selectQ = (aDic[indexPath.row]["QAid"] as? Int)!
         print ("sQ:\(selectQ)")
-        //        performSegue(withIdentifier: "sgQlist", sender: self)
+         performSegue(withIdentifier: "sgQlist", sender: self)
         
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -107,14 +107,24 @@ class QAViewController: UIViewController,UITableViewDelegate,UITableViewDataSour
     }
 
     
-    /*
+  
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+      print("轉換到其他頁")
+      
+      if segue.identifier == "sgQlist"
+      {
+        print ("發動sgQlist")
+        let nextVC = segue.destination as! QListViewController
+        nextVC.firstVC = self
+        print ("s1:\(self.selectQ)")
+        nextVC.selectQ = self.selectQ
+      }
+      
     }
-    */
+  
 
 }

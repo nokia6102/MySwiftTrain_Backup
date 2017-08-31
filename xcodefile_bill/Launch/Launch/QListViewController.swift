@@ -4,20 +4,29 @@ import FirebaseDatabase
 
 class QListViewController: UIViewController,UITableViewDelegate,UITableViewDataSource{
     
-    var ref : DatabaseReference!
+    var ref ,refQ ,refA: DatabaseReference!
     var arrTable = [[String:Any]]()
+    var arrQTable = [[String:Any]]()
     var tableOk = false
     var selectQ = 2
-    
+    var firstVC : QAViewController?
+  
+  @IBOutlet weak var lblTimestamp: UILabel!
+  @IBOutlet weak var lblTitle: UILabel!
+  @IBOutlet weak var lblDesc: UILabel!
     @IBOutlet weak var totalReponse: UILabel!
     
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-            ref = Database.database().reference(fromURL: "https://trainforswift-f4067.firebaseio.com/A")
-        
+      ref = Database.database().reference(fromURL: "https://trainforswift-f4067.firebaseio.com")
+      refQ = ref.child("Q")
+      refA = ref.child("A")
+      
+      
         readQList()
+        readAList()
         
         
       
@@ -25,12 +34,43 @@ class QListViewController: UIViewController,UITableViewDelegate,UITableViewDataS
         UINavigationBar.appearance().shadowImage = UIImage()
         UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
     }
+  
+  func readQList()
+  {
     
-    func readQList()
-    {
+    refQ.observe(.value, with: { (snapshot) in
+      
+//      self.arrTable.removeAll()
+      for child in snapshot.children
+      {
+        let Value:DataSnapshot = child as! DataSnapshot
         
-        ref.observe(.value, with: { (snapshot) in
-            
+        let  myValue = Value.value!
+        
+        if let dictionary  = myValue as? [String : Any]
+        {
+          if dictionary["Id"] as! Int == self.selectQ
+          {
+            self.arrQTable.append(dictionary)
+          }
+        }
+      }
+  
+      print("Qall:\(self.arrQTable)")
+      print("Qcount:\(self.arrQTable.count)")
+      self.lblTitle.text = self.arrQTable.first?["Title"] as? String
+      self.lblDesc.text = self.arrQTable.first?["Descrition"] as? String
+      self.lblTimestamp.text = self.arrQTable.first?["TimeStamp"] as? String
+      
+    })
+    
+  }
+  
+    func readAList()
+    {
+      
+        refA.observe(.value, with: { (snapshot) in
+          
             self.arrTable.removeAll()
             for child in snapshot.children
             {
