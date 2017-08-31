@@ -88,8 +88,9 @@ class QAViewController: UIViewController,UITableViewDelegate,UITableViewDataSour
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        let selectQ = (aDic[indexPath.row]["QNoId"] as? Int)!
+      
+        print ("aDic:\(aDic)")
+        let selectQ = (aDic[indexPath.row]["QAid"] as? Int)!
         print ("sQ:\(selectQ)")
         //        performSegue(withIdentifier: "sgQlist", sender: self)
         
