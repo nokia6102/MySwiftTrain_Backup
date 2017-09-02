@@ -62,8 +62,9 @@ class QAViewController: UIViewController,UITableViewDelegate,UITableViewDataSour
         })
         
     }
-    
-    
+       @IBAction func unwindToPlayerQAVC(segue:UIStoryboardSegue) { print ("回來QAVC") }
+   
+  
     @IBAction func jumpToQA(_ sender: Any)
     {
         //強跳

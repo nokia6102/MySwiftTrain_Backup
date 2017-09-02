@@ -58,7 +58,7 @@ class MainViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func unwindToMainVC(segue:UIStoryboardSegue) { print ("回來") }
+    @IBAction func unwindToMainVC(segue:UIStoryboardSegue) { print ("回來MainView") }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return arrTable.count

@@ -40,7 +40,7 @@ class QListViewController: UIViewController,UITableViewDelegate,UITableViewDataS
     
     refQ.observe(.value, with: { (snapshot) in
       
-//      self.arrTable.removeAll()
+      self.arrQTable.removeAll()
       for child in snapshot.children
       {
         let Value:DataSnapshot = child as! DataSnapshot
@@ -100,7 +100,9 @@ class QListViewController: UIViewController,UITableViewDelegate,UITableViewDataS
     }
     
     
-    
+    @IBAction func unwindToQlistVC(segue:UIStoryboardSegue) { print ("回來Qlist VC") }
+  
+  
     @IBAction func tagRightButton(_ sender: Any)
     {
         print("按了")

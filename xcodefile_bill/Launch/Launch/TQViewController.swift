@@ -3,55 +3,121 @@ import Firebase
 import FirebaseDatabase
 
 class TQViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource {
+  
+  
+  @IBOutlet weak var txtInputQ:UITextView!
+  @IBOutlet weak var pickView: UIPickerView!
     var list1 = [String]()      //此處書上原為let，必須改為var，否則無法加入陣列元素
-    
+  
     var ref : DatabaseReference!
     var arrTable = [[String:Any]]()
-    var tableOk = false
+ 
+    var pickerOK = false
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
+     
+               ref = Database.database().reference(fromURL: "https://trainforswift-f4067.firebaseio.com/Lesson")
+      
+      
+//        //準備第一個陣列元素
+//        list1.append("課程:Swift&Objective-C混用")
+//        list1.append("除錯問題")
+//        list1.append("一般式問題")
+//        list1.append("程式問題")
+//        list1.append("觀念問題")
+//        list1.append("課程釋疑")
+//        list1.append("其他")
+      
+        readLessionList()
+      setDoneOnKeyboard()
+    }
 
-        // Do any additional setup after loading the view.
-        //準備第一個陣列元素
-        list1.append("課程:Swift&Objective-C混用")
-        list1.append("除錯問題")
-        list1.append("一般式問題")
-        list1.append("程式問題")
-        list1.append("觀念問題")
-        list1.append("課程釋疑")
-        list1.append("其他")
+  @IBAction func unwindToTQVC(segue:UIStoryboardSegue) { print ("回來QTVC") }
+  
+  
+  func readLessionList()
+  {
+    
+    ref.observe(.value, with: { (snapshot) in
+      
+      self.arrTable.removeAll()
+      for child in snapshot.children
+      {
+        let Value:DataSnapshot = child as! DataSnapshot
         
-    }
+        let  myValue = Value.value!
+        
+        if let dictionary  = myValue as? [String : Any]
+        {
+          self.arrTable.append(dictionary)
+        }
+      }
+      self.pickerOK = true
+      self.pickView.reloadAllComponents()
+//      self.pick.reloadData()
+      //選擇在第一行
+//      let selIndexPath = IndexPath(row: 0 , section: 0)
+//      self.tableView.selectRow(at: selIndexPath, animated: true, scrollPosition: .middle)
+      print("all:\(self.arrTable)")
+      print("count:\(self.arrTable.count)")
+      
+      
+    })
+    
+  }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    
-    
+  
+  
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return  list1.count
+        return  arrTable.count
     }
-    
+  
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return list1[row]
+        return arrTable[row]["title"] as? String
     }
-    
-    /*
+  
+  func setDoneOnKeyboard() {
+    let keyboardToolbar = UIToolbar()
+    keyboardToolbar.sizeToFit()
+    let flexBarButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+    let doneBarButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(self.dismissKeyboard))
+    keyboardToolbar.items = [flexBarButton, doneBarButton]
+    self.txtInputQ.inputAccessoryView = keyboardToolbar
+  }
+  
+@IBAction  func dismissKeyboard() {
+  print ("縮了鍵盤")
+//    ref = Database.database().reference(fromURL: "https://myfirebase-c064c.firebaseio.com/").child("test").childByAutoId()
+//    let postInfo = [ "uid": "輸入者", "Description": uitextEvaluationMessage.text!, "stars": floatStars
+//      , "timestamp": ServerValue.timestamp() ]
+//      as [String : Any]
+//    ref.setValue(postInfo)
+//    
+//    
+//    let childautoID = ref.key
+//    print("childautoID:\(childautoID)資料已建立" )
+    view.endEditing(true)
+//    //do-to: 程式轉場
+//    self.performSegue(withIdentifier: "content", sender: nil)
+  
+//  dismiss(animated: true, completion: nil)
+  }
+
+  
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-    }
-    */
+       dismissKeyboard()
+      }
+  
 
 }
