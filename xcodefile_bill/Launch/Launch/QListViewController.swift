@@ -3,7 +3,7 @@ import Firebase
 import FirebaseDatabase
 
 class QListViewController: UIViewController,UITableViewDelegate,UITableViewDataSource{
-    
+  
     var ref ,refQ ,refA: DatabaseReference!
     var arrTable = [[String:Any]]()
     var arrQTable = [[String:Any]]()
@@ -50,18 +50,18 @@ class QListViewController: UIViewController,UITableViewDelegate,UITableViewDataS
         if let dictionary  = myValue as? [String : Any]
         {
 //          if (dictionary["lid"] as! NSString).integerValue == self.selectQ
-            if (dictionary["lid"] as? Int)! == self.selectQ
-          {
+//            if (dictionary["lid"] as? Int)! == self.selectQ
+//          {
             self.arrQTable.append(dictionary)
-          }
+//          }
         }
       }
   
       print("Qall:\(self.arrQTable)")
       print("Qcount:\(self.arrQTable.count)")
-      self.lblTitle.text = self.arrQTable.first?["Title"] as? String
-      self.lblDesc.text = self.arrQTable.first?["Descrition"] as? String
-      self.lblTimestamp.text = self.arrQTable.first?["TimeStamp"] as? String
+      self.lblTitle.text = self.arrQTable[self.selectQ]["Title"] as? String
+      self.lblDesc.text = self.arrQTable[self.selectQ]["Description"] as? String
+      self.lblTimestamp.text = self.arrQTable[self.selectQ]["TimeStamp"] as? String
       
     })
     

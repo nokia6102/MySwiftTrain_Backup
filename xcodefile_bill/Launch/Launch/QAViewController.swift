@@ -84,7 +84,8 @@ class QAViewController: UIViewController,UITableViewDelegate,UITableViewDataSour
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
       
         print ("aDic:\(aDic)")
-    selectQ = (aDic[indexPath.row]["lid"] as? Int)!
+//    selectQ = (aDic[indexPath.row]["lid"] as? Int)!
+    selectQ = indexPath.row
       //http://www.developerq.com/article/1491434364
 //       selectQ = Int((aDic[indexPath.row]["lid"] as! NSString).intValue)
         print ("sQ:\(selectQ)")
