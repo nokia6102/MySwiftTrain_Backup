@@ -9,7 +9,7 @@ class QAViewController: UIViewController,UITableViewDelegate,UITableViewDataSour
     var ref : DatabaseReference!
 //    var arrTable = [[String:Any]]()
     var tableOk = false
-    var selectQ = 0
+  var selectQ : Int = 0
     
     @IBOutlet weak var tableView: UITableView!
  
@@ -17,7 +17,7 @@ class QAViewController: UIViewController,UITableViewDelegate,UITableViewDataSour
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        ref = Database.database().reference(fromURL: "https://trainforswift-f4067.firebaseio.com/QA")
+        ref = Database.database().reference(fromURL: "https://trainforswift-f4067.firebaseio.com/Q")
         
         readQAList()
 //
@@ -91,10 +91,12 @@ class QAViewController: UIViewController,UITableViewDelegate,UITableViewDataSour
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
       
         print ("aDic:\(aDic)")
-        selectQ = (aDic[indexPath.row]["QAid"] as? Int)!
+  //  selectQ = (aDic[indexPath.row]["lid"] as? Int)!
+      //http://www.developerq.com/article/1491434364
+       selectQ = Int((aDic[indexPath.row]["lid"] as! NSString).intValue)
         print ("sQ:\(selectQ)")
          performSegue(withIdentifier: "sgQlist", sender: self)
-        
+      
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return aDic.count
