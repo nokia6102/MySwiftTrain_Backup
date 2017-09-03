@@ -9,7 +9,7 @@ class TQViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSo
   @IBOutlet weak var pickView: UIPickerView!
     var list1 = [String]()      //此處書上原為let，必須改為var，否則無法加入陣列元素
   
-    var ref : DatabaseReference!
+    var ref ,refQ,refLesson : DatabaseReference!
     var arrTable = [[String:Any]]()
  
     var pickerOK = false
@@ -18,18 +18,12 @@ class TQViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSo
     override func viewDidLoad() {
         super.viewDidLoad()
      
-               ref = Database.database().reference(fromURL: "https://trainforswift-f4067.firebaseio.com/Lesson")
+      ref = Database.database().reference(fromURL: "https://trainforswift-f4067.firebaseio.com")
+      refQ = ref.child("Q")
+      refLesson = ref.child("Lesson")
       
       
-//        //準備第一個陣列元素
-//        list1.append("課程:Swift&Objective-C混用")
-//        list1.append("除錯問題")
-//        list1.append("一般式問題")
-//        list1.append("程式問題")
-//        list1.append("觀念問題")
-//        list1.append("課程釋疑")
-//        list1.append("其他")
-      
+
         readLessionList()
       setDoneOnKeyboard()
     }
@@ -40,7 +34,7 @@ class TQViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSo
   func readLessionList()
   {
     
-    ref.observe(.value, with: { (snapshot) in
+    refLesson.observe(.value, with: { (snapshot) in
       
       self.arrTable.removeAll()
       for child in snapshot.children
@@ -93,12 +87,7 @@ class TQViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSo
   
 @IBAction  func dismissKeyboard() {
   print ("縮了鍵盤")
-//    ref = Database.database().reference(fromURL: "https://myfirebase-c064c.firebaseio.com/").child("test").childByAutoId()
-//    let postInfo = [ "uid": "輸入者", "Description": uitextEvaluationMessage.text!, "stars": floatStars
-//      , "timestamp": ServerValue.timestamp() ]
-//      as [String : Any]
-//    ref.setValue(postInfo)
-//    
+ //
 //    
 //    let childautoID = ref.key
 //    print("childautoID:\(childautoID)資料已建立" )
@@ -107,6 +96,7 @@ class TQViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSo
 //    self.performSegue(withIdentifier: "content", sender: nil)
   
 //  dismiss(animated: true, completion: nil)
+ // self.performSegue(withIdentifier: "retQ", sender: self)
   }
 
   
@@ -116,7 +106,19 @@ class TQViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSo
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-       dismissKeyboard()
+      let refQlist = refQ.childByAutoId()
+      let postInfo = ["Category" : "D1",
+                      
+                      "uid": "輸入者",
+                      "Description": txtInputQ.text!,
+                      "lid": "1",
+                      "Id" : 5,
+                      "Title": txtInputQ.text!,
+                      "TimeStamp": ServerValue.timestamp() ] as [String : Any]
+      
+      refQlist.setValue(postInfo)
+
+      dismissKeyboard()
       }
   
 
