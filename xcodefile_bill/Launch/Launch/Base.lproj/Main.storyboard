@@ -437,15 +437,18 @@
                                     <navigationItem title="問答(99)" id="RJz-Vq-ttJ"/>
                                 </items>
                             </navigationBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yIX-ho-kOo">
+                            <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="36MBC5.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="ns5-1O-901">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="148" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yIX-ho-kOo">
                                 <rect key="frame" x="0.0" y="20" width="414" height="716"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="QACell" rowHeight="80" id="g7h-bC-dEE" customClass="QATableViewCell" customModule="Launch" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="80"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="QACell" rowHeight="148" id="g7h-bC-dEE" customClass="QATableViewCell" customModule="Launch" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="148"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="g7h-bC-dEE" id="3BS-an-elR">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="148"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="也多想想怎樣做才是比較適當的吧！" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pba-v5-MCe">
@@ -453,29 +456,43 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="22" id="fiX-3a-uGW"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="講座 1  /  2個回應" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1vi-Sz-rMo">
-                                                    <rect key="frame" x="19" y="31" width="377" height="22"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1vi-Sz-rMo">
+                                                    <rect key="frame" x="19" y="36" width="377" height="74"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="74" id="j9p-7u-guT"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="講座 1  /  2個回應" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eZ0-O9-lHX">
+                                                    <rect key="frame" x="248" y="118" width="158" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="Pba-v5-MCe" firstAttribute="trailing" secondItem="1vi-Sz-rMo" secondAttribute="trailing" id="4E7-k0-WJA"/>
                                                 <constraint firstItem="Pba-v5-MCe" firstAttribute="leading" secondItem="3BS-an-elR" secondAttribute="leadingMargin" constant="11" id="4Wf-Aq-whl"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="1vi-Sz-rMo" secondAttribute="trailing" constant="10" id="5Qs-tz-I3k"/>
+                                                <constraint firstItem="1vi-Sz-rMo" firstAttribute="top" secondItem="Pba-v5-MCe" secondAttribute="bottom" constant="8" symbolic="YES" id="5T4-if-Eh4"/>
                                                 <constraint firstItem="Pba-v5-MCe" firstAttribute="top" secondItem="3BS-an-elR" secondAttribute="topMargin" constant="-2" id="9Ac-n7-QtZ"/>
+                                                <constraint firstItem="eZ0-O9-lHX" firstAttribute="leading" secondItem="3BS-an-elR" secondAttribute="leading" constant="248" id="En2-BV-zJ3"/>
+                                                <constraint firstItem="eZ0-O9-lHX" firstAttribute="top" secondItem="1vi-Sz-rMo" secondAttribute="bottom" constant="8" symbolic="YES" id="IyU-6x-WbS"/>
+                                                <constraint firstAttribute="trailing" secondItem="eZ0-O9-lHX" secondAttribute="trailing" constant="8" id="KHN-pa-2BL"/>
                                                 <constraint firstItem="Pba-v5-MCe" firstAttribute="centerX" secondItem="3BS-an-elR" secondAttribute="centerX" id="Ll5-Lr-fRy"/>
-                                                <constraint firstItem="1vi-Sz-rMo" firstAttribute="top" secondItem="Pba-v5-MCe" secondAttribute="bottom" constant="3" id="OyS-Qd-PO9"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="1vi-Sz-rMo" secondAttribute="bottom" constant="18.666666666666671" id="Z9D-13-sll"/>
-                                                <constraint firstItem="Pba-v5-MCe" firstAttribute="leading" secondItem="1vi-Sz-rMo" secondAttribute="leading" id="tbl-IC-rMj"/>
+                                                <constraint firstItem="1vi-Sz-rMo" firstAttribute="centerX" secondItem="3BS-an-elR" secondAttribute="centerX" id="QgH-cw-B2l"/>
+                                                <constraint firstAttribute="bottom" secondItem="eZ0-O9-lHX" secondAttribute="bottom" constant="9" id="czx-Ou-ozv"/>
+                                                <constraint firstItem="1vi-Sz-rMo" firstAttribute="leading" secondItem="3BS-an-elR" secondAttribute="leadingMargin" constant="11" id="ux5-Pk-aac"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="lblDescription" destination="1vi-Sz-rMo" id="lRX-91-2eU"/>
+                                            <outlet property="lblResponse" destination="eZ0-O9-lHX" id="8CX-si-7c3"/>
                                             <outlet property="lblTitle" destination="Pba-v5-MCe" id="fbw-1f-Olo"/>
                                         </connections>
                                     </tableViewCell>
@@ -485,9 +502,6 @@
                                     <outlet property="delegate" destination="hNX-7F-F9f" id="DsT-9j-Ipg"/>
                                 </connections>
                             </tableView>
-                            <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="36MBC5.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="ns5-1O-901">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -524,7 +538,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fah-hg-k14" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="S7o-K3-msc" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3283" y="-7"/>
+            <point key="canvasLocation" x="3282.608695652174" y="-7.3369565217391308"/>
         </scene>
         <!--提出問題-->
         <scene sceneID="VnN-be-QFc">
@@ -928,8 +942,8 @@
         <image name="video.png" width="375" height="238"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="6Um-Ve-G8F"/>
+        <segue reference="Vu9-Gd-cgT"/>
+        <segue reference="3b0-wA-tRF"/>
         <segue reference="gZt-hZ-imF"/>
-        <segue reference="kzR-N6-V1j"/>
     </inferredMetricsTieBreakers>
 </document>

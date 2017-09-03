@@ -13,7 +13,7 @@ class TQViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSo
     var arrTable = [[String:Any]]()
  
     var pickerOK = false
-
+    var selectedValue:String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,7 +62,9 @@ class TQViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSo
     
   }
 
-  
+  func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+       selectedValue = arrTable[pickerView.selectedRow(inComponent: 0)]["title"] as! String
+  }
   
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return  arrTable.count
@@ -107,13 +109,14 @@ class TQViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSo
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
       let refQlist = refQ.childByAutoId()
+      
       let postInfo = ["Category" : "D1",
                       
                       "uid": "輸入者",
-                      "Description": txtInputQ.text!,
-                      "lid": "1",
+                      "Description":txtInputQ.text!,
+                      "lid": 1,
                       "Id" : 5,
-                      "Title": txtInputQ.text!,
+                      "Title": selectedValue,
                       "TimeStamp": ServerValue.timestamp() ] as [String : Any]
       
       refQlist.setValue(postInfo)

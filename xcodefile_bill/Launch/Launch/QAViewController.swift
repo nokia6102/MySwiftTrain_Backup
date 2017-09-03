@@ -20,14 +20,7 @@ class QAViewController: UIViewController,UITableViewDelegate,UITableViewDataSour
         ref = Database.database().reference(fromURL: "https://trainforswift-f4067.firebaseio.com/Q")
         
         readQAList()
-//
-//        let d1  = ["Title":"SWift直通車:Swift&Objective-C混用","Lecture":"講座 1", "Response":"回應0"]
-//        aDic.append(d1)
-//        for i in 2 ... 99
-//        {
-//          let d  = ["Title":"SWift直通車:第\(i)天","Lecture":"講座 10\(i)", "Response":"回應0"]
-//          aDic.append(d)
-//        }
+
         print(aDic)
  
         //透明NavigationBar背景
@@ -91,9 +84,9 @@ class QAViewController: UIViewController,UITableViewDelegate,UITableViewDataSour
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
       
         print ("aDic:\(aDic)")
-  //  selectQ = (aDic[indexPath.row]["lid"] as? Int)!
+    selectQ = (aDic[indexPath.row]["lid"] as? Int)!
       //http://www.developerq.com/article/1491434364
-       selectQ = Int((aDic[indexPath.row]["lid"] as! NSString).intValue)
+//       selectQ = Int((aDic[indexPath.row]["lid"] as! NSString).intValue)
         print ("sQ:\(selectQ)")
          performSegue(withIdentifier: "sgQlist", sender: self)
       
@@ -104,8 +97,9 @@ class QAViewController: UIViewController,UITableViewDelegate,UITableViewDataSour
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
       let cell = tableView.dequeueReusableCell(withIdentifier: "QACell", for: indexPath) as! QATableViewCell
-          cell.lblTitle.text = aDic[indexPath.row]["Title"] as? String  
-          cell.lblDescription.text = "\(aDic[indexPath.row]["Lecture"] ?? "0") / \(aDic[indexPath.row]["Response"] ?? "0")"
+          cell.lblTitle.text = aDic[indexPath.row]["Title"] as? String
+       cell.lblDescription.text = aDic[indexPath.row]["Description"] as? String
+          cell.lblResponse.text = "\(aDic[indexPath.row]["Lecture"] ?? "0") / \(aDic[indexPath.row]["Response"] ?? "0")"
       return cell
     }
 

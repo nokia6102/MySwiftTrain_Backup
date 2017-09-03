@@ -49,7 +49,8 @@ class QListViewController: UIViewController,UITableViewDelegate,UITableViewDataS
         
         if let dictionary  = myValue as? [String : Any]
         {
-          if (dictionary["lid"] as! NSString).integerValue == self.selectQ
+//          if (dictionary["lid"] as! NSString).integerValue == self.selectQ
+            if (dictionary["lid"] as? Int)! == self.selectQ
           {
             self.arrQTable.append(dictionary)
           }
