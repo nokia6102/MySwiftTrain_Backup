@@ -431,7 +431,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bE3-yS-kqp">
-                                <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="-24" width="414" height="44"/>
                                 <items>
                                     <navigationItem title="問答(99)" id="RJz-Vq-ttJ"/>
                                 </items>
@@ -440,7 +440,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="148" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yIX-ho-kOo">
-                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                                <rect key="frame" x="0.0" y="20" width="414" height="716"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="QACell" rowHeight="148" id="g7h-bC-dEE" customClass="QATableViewCell" customModule="Launch" customModuleProvider="target">
@@ -474,6 +474,13 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="lid" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QRq-7R-9XX">
+                                                    <rect key="frame" x="329" y="8" width="67" height="19"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="Pba-v5-MCe" firstAttribute="leading" secondItem="3BS-an-elR" secondAttribute="leadingMargin" constant="11" id="4Wf-Aq-whl"/>
@@ -491,6 +498,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="lblDescription" destination="1vi-Sz-rMo" id="lRX-91-2eU"/>
+                                            <outlet property="lblLid" destination="QRq-7R-9XX" id="xc1-lY-h1g"/>
                                             <outlet property="lblResponse" destination="eZ0-O9-lHX" id="8CX-si-7c3"/>
                                             <outlet property="lblTitle" destination="Pba-v5-MCe" id="fbw-1f-Olo"/>
                                         </connections>
@@ -555,7 +563,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7XD-Ze-xs9">
-                                <rect key="frame" x="0.0" y="76" width="414" height="216"/>
+                                <rect key="frame" x="0.0" y="32" width="414" height="216"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="216" id="cjc-nA-DZ8"/>
                                     <constraint firstAttribute="width" constant="414" id="zfX-pv-L8H"/>
@@ -566,7 +574,7 @@
                                 </connections>
                             </pickerView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="請在此處輸入問題描述" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="pVP-7Y-aqx">
-                                <rect key="frame" x="20" y="300" width="374" height="340"/>
+                                <rect key="frame" x="20" y="256" width="374" height="384"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -901,6 +909,7 @@
                         <outlet property="lblTimeStamp" destination="dsQ-il-IXd" id="yjF-jj-tay"/>
                         <outlet property="lblTitle" destination="b5Z-6c-4Fu" id="h2z-Op-kfv"/>
                         <outlet property="txtName" destination="phx-fP-uEc" id="Vsh-rl-7wd"/>
+                        <outlet property="txtResponse" destination="tvJ-kC-HjJ" id="VFo-yZ-VzK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sMV-fi-E0Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -951,7 +960,7 @@
         <image name="video.png" width="375" height="238"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="kzR-N6-V1j"/>
         <segue reference="noe-aW-nSI"/>
+        <segue reference="3b0-wA-tRF"/>
     </inferredMetricsTieBreakers>
 </document>

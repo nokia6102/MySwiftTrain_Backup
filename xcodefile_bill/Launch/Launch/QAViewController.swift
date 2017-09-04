@@ -7,10 +7,10 @@ class QAViewController: UIViewController,UITableViewDelegate,UITableViewDataSour
 
     var aDic : [[String:Any]] = []
     var ref : DatabaseReference!
-//    var arrTable = [[String:Any]]()
+
     var tableOk = false
   var selectQ : Int = 0
-    
+  var seleL : Int = 0
     @IBOutlet weak var tableView: UITableView!
  
     
@@ -56,17 +56,7 @@ class QAViewController: UIViewController,UITableViewDelegate,UITableViewDataSour
         
     }
        @IBAction func unwindToPlayerQAVC(segue:UIStoryboardSegue) { print ("回來QAVC") }
-   
   
-    @IBAction func jumpToQA(_ sender: Any)
-    {
-        //強跳
-        if let vc = storyboard?.instantiateViewController(withIdentifier: "sbPlayer")
-        {
-            present(vc, animated: true, completion: nil)
-//            show(vc, sender: self)
-        }
-    }
 
  
     @IBAction func tagRightButton(_ sender: Any)
@@ -75,19 +65,15 @@ class QAViewController: UIViewController,UITableViewDelegate,UITableViewDataSour
         self.dismiss(animated: true, completion: nil)
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
+
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
       
         print ("aDic:\(aDic)")
-//    selectQ = (aDic[indexPath.row]["lid"] as? Int)!
-    selectQ = indexPath.row
-      //http://www.developerq.com/article/1491434364
-//       selectQ = Int((aDic[indexPath.row]["lid"] as! NSString).intValue)
+ 
+      selectQ = indexPath.row
+ 
+//    selectQ = aDic[indexPath.row]["lid"] as! Int
         print ("sQ:\(selectQ)")
          performSegue(withIdentifier: "sgQlist", sender: self)
       

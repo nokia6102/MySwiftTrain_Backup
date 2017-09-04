@@ -7,14 +7,14 @@ class TQViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSo
   
   @IBOutlet weak var txtInputQ:UITextView!
   @IBOutlet weak var pickView: UIPickerView!
-    var list1 = [String]()      //此處書上原為let，必須改為var，否則無法加入陣列元素
+  
   
     var ref ,refQ,refLesson : DatabaseReference!
     var arrTable = [[String:Any]]()
  
     var pickerOK = false
     var selectedValue:String = ""
-    
+    var selectL = 0
     override func viewDidLoad() {
         super.viewDidLoad()
      
@@ -69,6 +69,7 @@ class TQViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSo
   
   func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
        selectedValue = arrTable[pickView.selectedRow(inComponent: 0)]["title"] as! String
+       selectL = row
   }
   
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
@@ -122,7 +123,7 @@ class TQViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSo
                       
                       "uid": "輸入者",
                       "Description":txtInputQ.text!,
-                      "lid": 1,
+                      "lid": selectL + 1,
                       "Id" : 5,
                       "Title": selectedValue,
                       "TimeStamp": ServerValue.timestamp() ] as [String : Any]

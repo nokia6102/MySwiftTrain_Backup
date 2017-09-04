@@ -11,6 +11,7 @@ import UIKit
 class QATableViewCell: UITableViewCell {
 
  
+  @IBOutlet weak var lblLid: UILabel!
     @IBOutlet weak var lblTitle: UILabel!
     @IBOutlet weak var lblDescription: UILabel!
     @IBOutlet weak var lblTimeStamp: UILabel!

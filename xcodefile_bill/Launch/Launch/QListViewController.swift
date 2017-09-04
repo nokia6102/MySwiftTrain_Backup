@@ -8,9 +8,9 @@ class QListViewController: UIViewController,UITableViewDelegate,UITableViewDataS
     var arrTable = [[String:Any]]()
     var arrQTable = [[String:Any]]()
     var tableOk = false
-    var selectQ = 2
+    var selectQ = 0
     var firstVC : QAViewController?
-  
+    var lid = 0
   @IBOutlet weak var lblTimestamp: UILabel!
   @IBOutlet weak var lblTitle: UILabel!
   @IBOutlet weak var lblDesc: UILabel!
@@ -62,7 +62,8 @@ class QListViewController: UIViewController,UITableViewDelegate,UITableViewDataS
       self.lblTitle.text = self.arrQTable[self.selectQ]["Title"] as? String
       self.lblDesc.text = self.arrQTable[self.selectQ]["Description"] as? String
       self.lblTimestamp.text = self.arrQTable[self.selectQ]["TimeStamp"] as? String
-      
+//      self.lid = selec
+      self.lid =  (self.arrQTable[self.selectQ]["lid"] as? Int)!
     })
     
   }
@@ -81,7 +82,7 @@ class QListViewController: UIViewController,UITableViewDelegate,UITableViewDataS
                 
                 if let dictionary  = myValue as? [String : Any]
                 {
-                    if dictionary["QNoId"] as! Int == self.selectQ
+                    if dictionary["QNoId"] as! Int == self.lid
                     {
                         self.arrTable.append(dictionary)
                     }
@@ -142,6 +143,7 @@ class QListViewController: UIViewController,UITableViewDelegate,UITableViewDataS
       {
         let secondVC = segue.destination as! AViewController
         secondVC.preVC = self
+        secondVC.lid = self.lid
       }
       else
       {
