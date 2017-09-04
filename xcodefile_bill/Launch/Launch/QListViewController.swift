@@ -11,6 +11,7 @@ class QListViewController: UIViewController,UITableViewDelegate,UITableViewDataS
     var selectQ = 0
     var firstVC : QAViewController?
     var lid = 0
+    var id = 0   //Question id
   @IBOutlet weak var lblTimestamp: UILabel!
   @IBOutlet weak var lblTitle: UILabel!
   @IBOutlet weak var lblDesc: UILabel!
@@ -59,7 +60,10 @@ class QListViewController: UIViewController,UITableViewDelegate,UITableViewDataS
       self.lblDesc.text = self.arrQTable[self.selectQ]["Description"] as? String
       self.lblTimestamp.text = self.arrQTable[self.selectQ]["TimeStamp"] as? String
 
-      self.lid =  (self.arrQTable[self.selectQ]["lid"] as? Int)!
+//      self.lid =  (self.arrQTable[self.selectQ]["lid"] as? Int)!
+      self.id =  (self.arrQTable[self.selectQ]["Id"] as? Int)!
+      
+      print ("sQid:\(self.id)")
     })
     
   }
@@ -78,7 +82,7 @@ class QListViewController: UIViewController,UITableViewDelegate,UITableViewDataS
                 
                 if let dictionary  = myValue as? [String : Any]
                 {
-                    if dictionary["QNoId"] as! Int == self.lid
+                    if dictionary["QNoId"] as! Int == self.id
                     {
                         self.arrTable.append(dictionary)
                     }
@@ -86,9 +90,8 @@ class QListViewController: UIViewController,UITableViewDelegate,UITableViewDataS
             }
             self.tableOk = true
             self.tableView.reloadData()
-            //選擇在第一行
- 
-//            self.tableView.selectRow(at: selIndexPath, animated: true, scrollPosition: .middle)
+
+          
             print("all:\(self.arrTable)")
             print("count:\(self.arrTable.count)")
             self.totalReponse.text = "回應 \(self.arrTable.count)"
@@ -120,7 +123,6 @@ class QListViewController: UIViewController,UITableViewDelegate,UITableViewDataS
         let cell = tableView.dequeueReusableCell(withIdentifier: "QACell", for: indexPath) as! QATableViewCell
         if (tableOk)
         {
-//        cell.lblTitle.text = arrTable[indexPath.row]["Category"] as? String
             cell.lblDescription.text = arrTable[indexPath.row]["ResponseText"] as? String
         }
         return cell
@@ -139,7 +141,9 @@ class QListViewController: UIViewController,UITableViewDelegate,UITableViewDataS
       {
         let secondVC = segue.destination as! AViewController
         secondVC.preVC = self
-        secondVC.lid = self.lid
+//        secondVC.lid = self.lid
+        secondVC.id = self.id
+      
       }
       else
       {

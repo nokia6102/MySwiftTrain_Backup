@@ -13,6 +13,7 @@ class AViewController: UIViewController {
   @IBOutlet weak var lblDesc: UILabel!
   @IBOutlet weak var txtResponse: UITextView!
   var lid:Int?
+  var id:Int?
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -20,8 +21,8 @@ class AViewController: UIViewController {
       lblTimeStamp.text = preVC?.lblTimestamp.text
       lblTitle.text = preVC?.lblTitle.text
       lblDesc.text = preVC?.lblDesc.text
-      lid = preVC?.lid
-      print ("*lid :\(lid)")
+      self.id = preVC?.id
+      print ("*Qid :\(String(describing: self.id))")
       ref = Database.database().reference(fromURL: "https://trainforswift-f4067.firebaseio.com")
       refA = ref.child("A")
        
@@ -44,7 +45,7 @@ class AViewController: UIViewController {
       let postInfo = [
                       "ResponseUserName": txtName.text!,
                       "ResponseText":txtResponse.text!,
-                      "QNoId" : self.lid,
+                      "QNoId" : self.id,
                       "Id" : self.lid ,
                       "Title": lblTitle.text!,
                       "TimeStamp": ServerValue.timestamp() ] as [String : Any]
