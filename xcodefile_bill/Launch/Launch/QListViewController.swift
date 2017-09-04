@@ -50,7 +50,7 @@ class QListViewController: UIViewController,UITableViewDelegate,UITableViewDataS
         if let dictionary  = myValue as? [String : Any]
         {
 //          if (dictionary["lid"] as! NSString).integerValue == self.selectQ
-//            if (dictionary["lid"] as? Int)! == self.selectQ
+//           if (dictionary["lid"] as? Int)! == self.selectQ
 //          {
             self.arrQTable.append(dictionary)
 //          }
@@ -129,15 +129,25 @@ class QListViewController: UIViewController,UITableViewDelegate,UITableViewDataS
         return cell
     }
     
-    
-    /*
+ 
      // MARK: - Navigation
      
      // In a storyboard-based application, you will often want to do a little preparation before navigation
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
      // Get the new view controller using segue.destinationViewController.
      // Pass the selected object to the new view controller.
+      
+      
+      if segue.identifier == "sgAVC"
+      {
+        let secondVC = segue.destination as! AViewController
+        secondVC.preVC = self
+      }
+      else
+      {
+        print ("other")
+      }
      }
-     */
-    
+  
+  
 }

@@ -31,6 +31,7 @@
 		B39AF8B41F31578800D04B63 /* video.png in Resources */ = {isa = PBXBuildFile; fileRef = B39AF8B31F31578800D04B63 /* video.png */; };
 		B39AF8B61F3158B900D04B63 /* tab_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = B39AF8B51F3158B900D04B63 /* tab_bg.png */; };
 		B39AF8B81F315C2F00D04B63 /* checkmark.png in Resources */ = {isa = PBXBuildFile; fileRef = B39AF8B71F315C2F00D04B63 /* checkmark.png */; };
+		DB2B9F6F1F5CEE9500721AC4 /* AViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2B9F6E1F5CEE9500721AC4 /* AViewController.swift */; };
 		DB577DC81F480B630054452E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DB577DC71F480B630054452E /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +63,7 @@
 		B39AF8B31F31578800D04B63 /* video.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = video.png; sourceTree = "<group>"; };
 		B39AF8B51F3158B900D04B63 /* tab_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tab_bg.png; sourceTree = "<group>"; };
 		B39AF8B71F315C2F00D04B63 /* checkmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checkmark.png; sourceTree = "<group>"; };
+		DB2B9F6E1F5CEE9500721AC4 /* AViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AViewController.swift; sourceTree = "<group>"; };
 		DB577DC71F480B630054452E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F1C6D5695E88FA1FC6E18FA4 /* Pods-Launch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Launch.release.xcconfig"; path = "Pods/Target Support Files/Pods-Launch/Pods-Launch.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -132,6 +134,7 @@
 				5A167C4C1F42C229002FE929 /* QATableViewCell.swift */,
 				5AA1EB171F4522140032CBDD /* PlayerTableViewCell.swift */,
 				5A5F6DE81F4D525E004D6AF6 /* QListTableViewCell.swift */,
+				DB2B9F6E1F5CEE9500721AC4 /* AViewController.swift */,
 			);
 			path = Launch;
 			sourceTree = "<group>";
@@ -302,6 +305,7 @@
 				5AA1EB181F4522140032CBDD /* PlayerTableViewCell.swift in Sources */,
 				5AC7CBCF1F3D2C7000946E9B /* MainTableViewCell.swift in Sources */,
 				5A8E3E401F301CDD00B96D0F /* AppDelegate.swift in Sources */,
+				DB2B9F6F1F5CEE9500721AC4 /* AViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

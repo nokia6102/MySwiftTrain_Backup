@@ -431,7 +431,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bE3-yS-kqp">
-                                <rect key="frame" x="0.0" y="-24" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                                 <items>
                                     <navigationItem title="問答(99)" id="RJz-Vq-ttJ"/>
                                 </items>
@@ -440,7 +440,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="148" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yIX-ho-kOo">
-                                <rect key="frame" x="0.0" y="20" width="414" height="716"/>
+                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="QACell" rowHeight="148" id="g7h-bC-dEE" customClass="QATableViewCell" customModule="Launch" customModuleProvider="target">
@@ -555,7 +555,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7XD-Ze-xs9">
-                                <rect key="frame" x="0.0" y="32" width="414" height="216"/>
+                                <rect key="frame" x="0.0" y="76" width="414" height="216"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="216" id="cjc-nA-DZ8"/>
                                     <constraint firstAttribute="width" constant="414" id="zfX-pv-L8H"/>
@@ -566,7 +566,7 @@
                                 </connections>
                             </pickerView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="請在此處輸入問題描述" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="pVP-7Y-aqx">
-                                <rect key="frame" x="20" y="256" width="374" height="384"/>
+                                <rect key="frame" x="20" y="300" width="374" height="340"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -671,7 +671,7 @@
                                         <rect key="frame" x="0.0" y="28" width="414" height="179"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="a2S-vN-X6f" id="i3d-vX-O1g">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="178.66666666666666"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="179"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avator_female01.png" translatesAutoresizingMaskIntoConstraints="NO" id="n2w-ZF-HIM">
@@ -722,7 +722,6 @@
                                         <connections>
                                             <outlet property="lblDescription" destination="k3U-rC-aNp" id="2sz-K3-o7x"/>
                                             <outlet property="lblTimeStamp" destination="81v-h5-d8f" id="mD7-nB-2bN"/>
-                                            <segue destination="WAS-WB-XQ4" kind="show" id="zoN-1s-9I7"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -780,7 +779,7 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="回應問題" id="i6Q-oa-Vck">
                             <connections>
-                                <segue destination="WAS-WB-XQ4" kind="show" id="gZt-hZ-imF"/>
+                                <segue destination="WAS-WB-XQ4" kind="show" identifier="sgAVC" id="gZt-hZ-imF"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -794,12 +793,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aww-Z4-jiD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4343.4782608695659" y="-6.5217391304347831"/>
+            <point key="canvasLocation" x="4141" y="-6"/>
         </scene>
         <!--回應問題-->
         <scene sceneID="zNw-Jx-2ya">
             <objects>
-                <viewController id="WAS-WB-XQ4" sceneMemberID="viewController">
+                <viewController id="WAS-WB-XQ4" customClass="AViewController" customModule="Launch" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8Qt-j2-Wju"/>
                         <viewControllerLayoutGuide type="bottom" id="j41-sX-boU"/>
@@ -888,7 +887,7 @@
                     <navigationItem key="navigationItem" title="回應問題" id="XUd-44-BiL">
                         <barButtonItem key="leftBarButtonItem" systemItem="stop" id="4U1-yW-7b2">
                             <connections>
-                                <action selector="tagRightButton:" destination="hNX-7F-F9f" id="lFj-r5-eSZ"/>
+                                <action selector="closeButton:" destination="WAS-WB-XQ4" id="1Zg-vr-d3a"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="儲存" id="1FF-Od-ycR">
@@ -897,10 +896,16 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="lblDesc" destination="niP-oh-mNs" id="Qic-ti-DsU"/>
+                        <outlet property="lblTimeStamp" destination="dsQ-il-IXd" id="yjF-jj-tay"/>
+                        <outlet property="lblTitle" destination="b5Z-6c-4Fu" id="h2z-Op-kfv"/>
+                        <outlet property="txtName" destination="phx-fP-uEc" id="Vsh-rl-7wd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sMV-fi-E0Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5622" y="-6"/>
+            <point key="canvasLocation" x="5694" y="-31"/>
         </scene>
         <!--Anav View Controller-->
         <scene sceneID="CL3-kU-Lpd">
@@ -946,8 +951,7 @@
         <image name="video.png" width="375" height="238"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="noe-aW-nSI"/>
         <segue reference="kzR-N6-V1j"/>
-        <segue reference="gZt-hZ-imF"/>
+        <segue reference="noe-aW-nSI"/>
     </inferredMetricsTieBreakers>
 </document>

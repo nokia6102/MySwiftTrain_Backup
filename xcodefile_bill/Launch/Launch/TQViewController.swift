@@ -62,8 +62,13 @@ class TQViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSo
     
   }
 
+//  @IBAction func ss(_ sender: Any?) {
+//    selectedValue = arrTable[pickView.selectedRow(inComponent: 0)]["title"] as! String
+//  }
+//  
+  
   func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-       selectedValue = arrTable[pickerView.selectedRow(inComponent: 0)]["title"] as! String
+       selectedValue = arrTable[pickView.selectedRow(inComponent: 0)]["title"] as! String
   }
   
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
@@ -75,6 +80,9 @@ class TQViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSo
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+      
+      selectedValue = arrTable[pickView.selectedRow(inComponent: 0)]["title"] as! String
+
         return arrTable[row]["title"] as? String
     }
   
