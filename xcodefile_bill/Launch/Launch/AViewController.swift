@@ -24,7 +24,7 @@ class AViewController: UIViewController {
       print ("*lid :\(lid)")
       ref = Database.database().reference(fromURL: "https://trainforswift-f4067.firebaseio.com")
       refA = ref.child("A")
-      
+       
   }
 
   @IBAction func closeButton(_ sender: Any)

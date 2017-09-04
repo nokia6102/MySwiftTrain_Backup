@@ -49,11 +49,7 @@ class QListViewController: UIViewController,UITableViewDelegate,UITableViewDataS
         
         if let dictionary  = myValue as? [String : Any]
         {
-//          if (dictionary["lid"] as! NSString).integerValue == self.selectQ
-//           if (dictionary["lid"] as? Int)! == self.selectQ
-//          {
-            self.arrQTable.append(dictionary)
-//          }
+          self.arrQTable.append(dictionary)
         }
       }
   
@@ -62,7 +58,7 @@ class QListViewController: UIViewController,UITableViewDelegate,UITableViewDataS
       self.lblTitle.text = self.arrQTable[self.selectQ]["Title"] as? String
       self.lblDesc.text = self.arrQTable[self.selectQ]["Description"] as? String
       self.lblTimestamp.text = self.arrQTable[self.selectQ]["TimeStamp"] as? String
-//      self.lid = selec
+
       self.lid =  (self.arrQTable[self.selectQ]["lid"] as? Int)!
     })
     

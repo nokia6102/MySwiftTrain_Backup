@@ -1,6 +1,5 @@
 import UIKit
 import Firebase
-import FirebaseDatabase
 
 class TQViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource {
   
@@ -9,9 +8,9 @@ class TQViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSo
   @IBOutlet weak var pickView: UIPickerView!
   
   
-    var ref ,refQ,refLesson : DatabaseReference!
+    var ref ,refQ, refLesson ,refCounter : DatabaseReference!
     var arrTable = [[String:Any]]()
- 
+  var nextQcount = 0
     var pickerOK = false
     var selectedValue:String = ""
     var selectL = 0
@@ -21,15 +20,28 @@ class TQViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSo
       ref = Database.database().reference(fromURL: "https://trainforswift-f4067.firebaseio.com")
       refQ = ref.child("Q")
       refLesson = ref.child("Lesson")
+      refCounter = ref.child("Counter")
+      
+      readCounter()
       
       
-
-        readLessionList()
+      readLessionList()
       setDoneOnKeyboard()
     }
 
   @IBAction func unwindToTQVC(segue:UIStoryboardSegue) { print ("回來QTVC") }
-  
+ 
+  func readCounter()
+  {
+    refCounter.observe(.value, with: { (snapshot) in
+      
+      let postDict = snapshot.value as? [String : AnyObject] ?? [:]
+
+      print ("postDict: \(postDict)")
+      self.nextQcount = postDict["Qcount"] as! Int + 1
+    })
+    
+  }
   
   func readLessionList()
   {
@@ -50,10 +62,7 @@ class TQViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSo
       }
       self.pickerOK = true
       self.pickView.reloadAllComponents()
-//      self.pick.reloadData()
-      //選擇在第一行
-//      let selIndexPath = IndexPath(row: 0 , section: 0)
-//      self.tableView.selectRow(at: selIndexPath, animated: true, scrollPosition: .middle)
+
       print("all:\(self.arrTable)")
       print("count:\(self.arrTable.count)")
       
@@ -61,11 +70,6 @@ class TQViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSo
     })
     
   }
-
-//  @IBAction func ss(_ sender: Any?) {
-//    selectedValue = arrTable[pickView.selectedRow(inComponent: 0)]["title"] as! String
-//  }
-//  
   
   func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
        selectedValue = arrTable[pickView.selectedRow(inComponent: 0)]["title"] as! String
@@ -98,16 +102,7 @@ class TQViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSo
   
 @IBAction  func dismissKeyboard() {
   print ("縮了鍵盤")
- //
-//    
-//    let childautoID = ref.key
-//    print("childautoID:\(childautoID)資料已建立" )
-    view.endEditing(true)
-//    //do-to: 程式轉場
-//    self.performSegue(withIdentifier: "content", sender: nil)
-  
-//  dismiss(animated: true, completion: nil)
- // self.performSegue(withIdentifier: "retQ", sender: self)
+  view.endEditing(true)
   }
 
   
@@ -119,17 +114,19 @@ class TQViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSo
         // Pass the selected object to the new view controller.
       let refQlist = refQ.childByAutoId()
       
+      print ("*nextQcount:\(nextQcount)")
       let postInfo = ["Category" : "D1",
-                      
                       "uid": "輸入者",
                       "Description":txtInputQ.text!,
                       "lid": selectL + 1,
-                      "Id" : 5,
+                      "Id" : nextQcount ,
                       "Title": selectedValue,
                       "TimeStamp": ServerValue.timestamp() ] as [String : Any]
       
       refQlist.setValue(postInfo)
 
+      let putInfo = [ "Qcount" : nextQcount ]
+      refCounter.setValue(putInfo)
       dismissKeyboard()
       }
   
