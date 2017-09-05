@@ -6,7 +6,8 @@ import FirebaseDatabase
 class QAViewController: UIViewController,UITableViewDelegate,UITableViewDataSource{
 
     var aDic : [[String:Any]] = []
-    var ref : DatabaseReference!
+  var responesDic : [String:Any] = [:]
+    var ref,refQ,refCounterResponse : DatabaseReference!
 
     var tableOk = false
   var selectQ : Int = 0
@@ -17,9 +18,12 @@ class QAViewController: UIViewController,UITableViewDelegate,UITableViewDataSour
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        ref = Database.database().reference(fromURL: "https://trainforswift-f4067.firebaseio.com/Q")
-        
+        ref = Database.database().reference(fromURL: "https://trainforswift-f4067.firebaseio.com/")
+        refQ = ref.child("Q")
+      refCounterResponse = ref.child("CounterResopne")
+      
         readQAList()
+        readResList()
 
         print(aDic)
  
@@ -32,7 +36,7 @@ class QAViewController: UIViewController,UITableViewDelegate,UITableViewDataSour
     func readQAList()
     {
         
-        ref.observe(.value, with: { (snapshot) in
+        refQ.observe(.value, with: { (snapshot) in
             
             self.aDic.removeAll()
             print ("=====")
@@ -47,14 +51,51 @@ class QAViewController: UIViewController,UITableViewDelegate,UITableViewDataSour
                     self.aDic.append(dictionary)
                 }
             }
-            self.tableOk = true
+//            self.tableOk = true
             self.tableView.reloadData()
  
-            
-            
         })
-        
+      
     }
+  
+  
+  func readResList()
+  {
+    
+    refCounterResponse.observe(.value, with: { (snapshot) in
+      
+
+         print ("child: \(snapshot.children)")
+      for child in snapshot.children
+      {
+        let Value:DataSnapshot = child as! DataSnapshot
+        
+        let  myValue = Value.value!
+        print ("myValue: \(myValue)")
+        if let dictionary  = myValue as? [String : Any]
+        {
+          // 上方三個分別列印：
+          // 未強轉之前的所有key:LazyMapCollection<Dictionary<String, Any>, String>(_base: ["name": "CoderSun", "age": 18, "height": 180, "gender": "男"], _transform: (Function))
+          // 強轉之後的所有key:["name", "age", "height", "gender"]
+          // ["CoderSun", 18, 180, "男"]
+         
+          //* Array 用意為 解出LazyMapCollection為Array才能用值，不然為還有一層Dictionary
+          print("強轉之後的所有key:\(Array(dictionary.keys)[0])")    //取第一個，注意不要用.first不然會有代Optional還要解包或做其他處理在此麻煩
+          print(Array(dictionary.values)[0])
+          
+          self.responesDic["\(Array(dictionary.keys)[0])"] = Array(dictionary.values)[0]
+          }
+      }
+
+    
+    print ("res dic: \(self.responesDic)")
+      self.tableOk = true
+      self.tableView.reloadData()
+      
+    })
+    
+  }
+  
        @IBAction func unwindToPlayerQAVC(segue:UIStoryboardSegue) { print ("回來QAVC") }
   
 
@@ -83,10 +124,17 @@ class QAViewController: UIViewController,UITableViewDelegate,UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+
       let cell = tableView.dequeueReusableCell(withIdentifier: "QACell", for: indexPath) as! QATableViewCell
           cell.lblTitle.text = aDic[indexPath.row]["Title"] as? String
        cell.lblDescription.text = aDic[indexPath.row]["Description"] as? String
-          cell.lblResponse.text = "\(aDic[indexPath.row]["Lecture"] ?? "0") / \(aDic[indexPath.row]["Response"] ?? "0")"
+      let sJdraw = "講座 \(aDic[indexPath.row]["lid"] ?? "0")"
+
+      let qNum = aDic[indexPath.row]["Id"] as! Int    //得到問題的id流水號
+      let key =  String(qNum)                         //把id轉成key(字串)
+      //查responseDic 字典，沒有(nil)則為0則回應
+      cell.lblResponse.text = sJdraw +  " ／ \(responesDic[key] ?? 0)" + " 回應"
+      
       return cell
     }
 

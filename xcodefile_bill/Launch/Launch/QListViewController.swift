@@ -4,7 +4,7 @@ import FirebaseDatabase
 
 class QListViewController: UIViewController,UITableViewDelegate,UITableViewDataSource{
   
-    var ref ,refQ ,refA: DatabaseReference!
+    var ref ,refQ ,refA,refCountResponse: DatabaseReference!
     var arrTable = [[String:Any]]()
     var arrQTable = [[String:Any]]()
     var tableOk = false
@@ -24,7 +24,7 @@ class QListViewController: UIViewController,UITableViewDelegate,UITableViewDataS
       ref = Database.database().reference(fromURL: "https://trainforswift-f4067.firebaseio.com")
       refQ = ref.child("Q")
       refA = ref.child("A")
-      
+      refCountResponse = ref.child("CounterResopne")
       
         readQList()
         readAList()
@@ -95,9 +95,10 @@ class QListViewController: UIViewController,UITableViewDelegate,UITableViewDataS
             print("all:\(self.arrTable)")
             print("count:\(self.arrTable.count)")
             self.totalReponse.text = "回應 \(self.arrTable.count)"
-            
+            self.refCountResponse.child("\(self.id)").setValue([
+              "\(self.id)":self.arrTable.count])
         })
-        
+      
     }
     
     
