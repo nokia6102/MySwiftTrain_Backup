@@ -14,9 +14,10 @@ class AViewController: UIViewController {
   @IBOutlet weak var txtResponse: UITextView!
   var lid:Int?
   var id:Int?
+  var pressSave = false
     override func viewDidLoad() {
         super.viewDidLoad()
-
+      pressSave = true
       txtName.text =  "some body"
       lblTimeStamp.text = preVC?.lblTimestamp.text
       lblTitle.text = preVC?.lblTitle.text
@@ -31,7 +32,10 @@ class AViewController: UIViewController {
   @IBAction func closeButton(_ sender: Any)
   {
     print("按了close")
-    self.dismiss(animated: true, completion: nil)
+    pressSave = false
+    //    self.dismiss(animated: true, completion: nil)         //退掉整個navgation Controller
+    _ = navigationController?.popViewController(animated: true)   //回上一層
+  
   }
 
   
@@ -41,17 +45,20 @@ class AViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-      let refADic = refA.childByAutoId()
-      let postInfo = [
-                      "ResponseUserName": txtName.text!,
-                      "ResponseText":txtResponse.text!,
-                      "QNoId" : self.id,
-                      "Id" : self.lid ,
-                      "Title": lblTitle.text!,
-                      "TimeStamp": ServerValue.timestamp() ] as [String : Any]
       
-      refADic.setValue(postInfo)
-  
+      if pressSave
+      {
+        let refADic = refA.childByAutoId()
+        let postInfo = [
+                        "ResponseUserName": txtName.text!,
+                        "ResponseText":txtResponse.text!,
+                        "QNoId" : self.id,
+                        "Id" : self.lid ,
+                        "Title": lblTitle.text!,
+                        "TimeStamp": ServerValue.timestamp() ] as [String : Any]
+        
+        refADic.setValue(postInfo)
+      }
   
   }
   

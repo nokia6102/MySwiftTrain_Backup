@@ -555,7 +555,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7XD-Ze-xs9">
-                                <rect key="frame" x="0.0" y="32" width="414" height="216"/>
+                                <rect key="frame" x="0.0" y="76" width="414" height="216"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="216" id="cjc-nA-DZ8"/>
                                     <constraint firstAttribute="width" constant="414" id="zfX-pv-L8H"/>
@@ -566,7 +566,7 @@
                                 </connections>
                             </pickerView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="請在此處輸入問題描述" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="pVP-7Y-aqx">
-                                <rect key="frame" x="20" y="256" width="374" height="384"/>
+                                <rect key="frame" x="20" y="300" width="374" height="340"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -590,10 +590,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="提出問題" id="kkC-L7-MKR">
-                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="hJq-cG-Uly">
+                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="h4P-zd-z1M">
                             <connections>
-                                <action selector="tagRightButton:" destination="hNX-7F-F9f" id="Wtd-Qg-FJx"/>
-                                <segue destination="hNX-7F-F9f" kind="show" id="Vu9-Gd-cgT"/>
+                                <action selector="closeButton:" destination="hi0-ah-sE1" id="hJP-7s-s8H"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="儲存" id="1qq-zC-hEC">
@@ -611,7 +610,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4I9-7h-Lcz" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="5WQ-2q-UVN" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3858" y="1054"/>
+            <point key="canvasLocation" x="3555" y="1020"/>
         </scene>
         <!--問答-->
         <scene sceneID="Hs2-Ot-t1S">
@@ -907,7 +906,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sMV-fi-E0Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="EiE-gh-WvS" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="5694" y="-31"/>
+            <point key="canvasLocation" x="5457" y="-33"/>
         </scene>
         <!--Anav View Controller-->
         <scene sceneID="CL3-kU-Lpd">
@@ -953,7 +952,7 @@
         <image name="video.png" width="375" height="238"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="3b0-wA-tRF"/>
+        <segue reference="yHs-UG-Eyf"/>
         <segue reference="noe-aW-nSI"/>
     </inferredMetricsTieBreakers>
 </document>

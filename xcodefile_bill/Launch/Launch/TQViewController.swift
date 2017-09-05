@@ -7,7 +7,7 @@ class TQViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSo
   @IBOutlet weak var txtInputQ:UITextView!
   @IBOutlet weak var pickView: UIPickerView!
   
-  
+    var pressSave = false
     var ref ,refQ, refLesson ,refCounter : DatabaseReference!
     var arrTable = [[String:Any]]()
   var nextQcount = 0
@@ -23,10 +23,9 @@ class TQViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSo
       refCounter = ref.child("Counter")
       
       readCounter()
-      
-      
       readLessionList()
       setDoneOnKeyboard()
+      pressSave = true
     }
 
   @IBAction func unwindToTQVC(segue:UIStoryboardSegue) { print ("回來QTVC") }
@@ -100,6 +99,16 @@ class TQViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSo
     self.txtInputQ.inputAccessoryView = keyboardToolbar
   }
   
+  @IBAction func closeButton(_ sender: Any)
+  {
+    print("按提出問題的close")
+      
+          pressSave = false
+          _ = navigationController?.popViewController(animated: true)   //回上一層
+    
+  }
+
+  
 @IBAction  func dismissKeyboard() {
   print ("縮了鍵盤")
   view.endEditing(true)
@@ -110,10 +119,10 @@ class TQViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSo
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-      let refQlist = refQ.childByAutoId()
-      
+    
+    if pressSave
+    {
+       let refQlist = refQ.childByAutoId()
       print ("*nextQcount:\(nextQcount)")
       let postInfo = ["Category" : "D1",
                       "uid": "輸入者",
@@ -124,11 +133,11 @@ class TQViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSo
                       "TimeStamp": ServerValue.timestamp() ] as [String : Any]
       
       refQlist.setValue(postInfo)
-
+    
       let putInfo = [ "Qcount" : nextQcount ]
       refCounter.setValue(putInfo)
-      dismissKeyboard()
       }
-  
+  dismissKeyboard()
+  }
 
 }
