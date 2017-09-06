@@ -14,12 +14,13 @@ class PlayerController: UIViewController,UITableViewDelegate,UITableViewDataSour
     @IBOutlet weak var playerTitle: UILabel!
     
   @IBOutlet weak var subTimeMark: UILabel!
+  @IBOutlet weak var btnAnswer: UIButton!
   
 //    weak var firstVC:UIViewController!
     weak var firstVC:MainViewController?
     var tableOk = false
     var bufferOk = true
-    var ref : DatabaseReference!
+    var ref,refQCount : DatabaseReference!
     private var arrTable = [[String:Any]]()
     var playvideCode = "3AaTfGSfBmw"
     var selectVideo = 0
@@ -44,6 +45,8 @@ class PlayerController: UIViewController,UITableViewDelegate,UITableViewDataSour
         }else{
             print("直")
         }
+      
+      readCounter()
     }
     override func viewDidLoad()
     {
@@ -63,6 +66,8 @@ class PlayerController: UIViewController,UITableViewDelegate,UITableViewDataSour
         self.playerView.load(withVideoId: playCode,playerVars: playerVars)
         ref = Database.database().reference(fromURL: "https://trainforswift-f4067.firebaseio.com/SubTitle").child(lid)
       
+        refQCount = Database.database().reference(fromURL: "https://trainforswift-f4067.firebaseio.com/Counter")
+      
         self.playerView.delegate = self
        
    
@@ -79,7 +84,24 @@ class PlayerController: UIViewController,UITableViewDelegate,UITableViewDataSour
         }
     }
     
- 
+  func readCounter()
+  {
+    refQCount.observe(.value, with: { (snapshot) in
+      
+      let postDict = snapshot.value as? [String : AnyObject] ?? [:]
+      
+      print ("postDict: \(postDict)")
+      let pNum = postDict["Qcount"] as! Int
+      
+      
+      print ("pNum \(pNum)")
+      
+      let p = "問答 (\(pNum))"
+      self.btnAnswer.setTitle( p, for: .normal)
+    })
+    
+  }
+  
     
     func readDic()
     {

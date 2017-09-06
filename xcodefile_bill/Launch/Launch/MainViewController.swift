@@ -6,19 +6,22 @@ import FirebaseDatabase
 
 class MainViewController: UIViewController,UITableViewDelegate,UITableViewDataSource{
 
-    var ref : DatabaseReference!
+    var ref,refQCount : DatabaseReference!
     var arrTable = [[String:Any]]()
     var tableOk = false
     var selectLession = 1
     
+  @IBOutlet weak var btnAnswer: UIButton!
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         ref = Database.database().reference(fromURL: "https://trainforswift-f4067.firebaseio.com/Lesson")
-
+           refQCount = Database.database().reference(fromURL: "https://trainforswift-f4067.firebaseio.com/Counter")
   
         readLessionList()
+        readCounter()
+     
     }
 
     
@@ -57,7 +60,25 @@ class MainViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+  
+  func readCounter()
+  {
+    refQCount.observe(.value, with: { (snapshot) in
+      
+      let postDict = snapshot.value as? [String : AnyObject] ?? [:]
+      
+      print ("postDict: \(postDict)")
+      let pNum = postDict["Qcount"] as! Int
+      
+      print ("pNum \(pNum)")
+      
+      let p = "問答 (\(pNum))"
+      self.btnAnswer.setTitle( p, for: .normal)
+    })
     
+  }
+
+  
     @IBAction func unwindToMainVC(segue:UIStoryboardSegue) { print ("回來MainView") }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

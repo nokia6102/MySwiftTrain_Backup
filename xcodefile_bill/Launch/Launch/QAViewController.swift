@@ -7,7 +7,7 @@ class QAViewController: UIViewController,UITableViewDelegate,UITableViewDataSour
 
     var aDic : [[String:Any]] = []
   var responesDic : [String:Any] = [:]
-    var ref,refQ,refCounterResponse : DatabaseReference!
+    var ref,refQ,refCounterResponse,refQcount : DatabaseReference!
 
     var tableOk = false
   var selectQ : Int = 0
@@ -20,8 +20,9 @@ class QAViewController: UIViewController,UITableViewDelegate,UITableViewDataSour
 
         ref = Database.database().reference(fromURL: "https://trainforswift-f4067.firebaseio.com/")
         refQ = ref.child("Q")
+      refQcount = ref.child("Counter")
       refCounterResponse = ref.child("CounterResopne")
-      
+        readCounter()
         readQAList()
         readResList()
 
@@ -30,8 +31,29 @@ class QAViewController: UIViewController,UITableViewDelegate,UITableViewDataSour
         //透明NavigationBar背景
         UINavigationBar.appearance().shadowImage = UIImage()
         UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
+      
+      
     }
     
+
+ func readCounter()
+  {
+    refQcount.observe(.value, with: { (snapshot) in
+      
+      let postDict = snapshot.value as? [String : AnyObject] ?? [:]
+      
+      print ("postDict: \(postDict)")
+      let pNum = postDict["Qcount"] as! Int
+      
+      
+      print ("pNum \(pNum)")
+      
+      let p = "問答列表(\(pNum))"
+      
+      self.navigationItem.title = p
+    })
+    
+  }
 
     func readQAList()
     {

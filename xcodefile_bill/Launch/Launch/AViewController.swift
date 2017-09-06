@@ -49,11 +49,13 @@ class AViewController: UIViewController {
       if pressSave
       {
         let refADic = refA.childByAutoId()
+        
+        //QNoId ,lid  to Any 不會報黃色
         let postInfo = [
                         "ResponseUserName": txtName.text!,
                         "ResponseText":txtResponse.text!,
-                        "QNoId" : self.id,
-                        "Id" : self.lid ,
+                        "QNoId" : self.id as Any,
+                        "Id" : self.lid as Any ,
                         "Title": lblTitle.text!,
                         "TimeStamp": ServerValue.timestamp() ] as [String : Any]
         
