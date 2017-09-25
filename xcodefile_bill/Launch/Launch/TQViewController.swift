@@ -95,7 +95,7 @@ class TQViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSo
     keyboardToolbar.sizeToFit()
     let flexBarButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
     let doneBarButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(self.dismissKeyboard))
-    keyboardToolbar.items = [flexBarButton, doneBarButton]
+    keyboardToolbar.items = [flexBarButton, doneBarButton,flexBarButton]
     self.txtInputQ.inputAccessoryView = keyboardToolbar
   }
   

@@ -36,6 +36,9 @@ class QAViewController: UIViewController,UITableViewDelegate,UITableViewDataSour
     }
     
 
+  
+  
+  
  func readCounter()
   {
     refQcount.observe(.value, with: { (snapshot) in
