@@ -1,7 +1,7 @@
 import UIKit
 import Firebase
 
-class TQViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource {
+class TQViewController: UIViewController,UITextViewDelegate,UIPickerViewDelegate,UIPickerViewDataSource {
   
   
   @IBOutlet weak var txtInputQ:UITextView!
@@ -26,7 +26,9 @@ class TQViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSo
       readLessionList()
       setDoneOnKeyboard()
       pressSave = true
-    }
+      txtInputQ.textColor = UIColor.lightGray
+      txtInputQ.delegate = self
+  }
 
   @IBAction func unwindToTQVC(segue:UIStoryboardSegue) { print ("回來QTVC") }
  
@@ -68,6 +70,18 @@ class TQViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSo
       
     })
     
+  }
+  
+  
+  
+  //MARK: UITextViewDelegate實作區
+  func textViewDidBeginEditing(_ textView: UITextView)
+  {
+    if textView.textColor == UIColor.lightGray {
+      textView.text = nil
+      textView.textColor = UIColor.black
+      textView.textAlignment = .left
+    }
   }
   
   func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {

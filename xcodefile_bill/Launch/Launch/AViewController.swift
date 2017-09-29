@@ -2,7 +2,7 @@ import UIKit
 import Firebase
 
 
-class AViewController: UIViewController {
+class AViewController: UIViewController,UITextViewDelegate {
 
   var preVC : QListViewController?
   
@@ -26,8 +26,11 @@ class AViewController: UIViewController {
       print ("*Qid :\(String(describing: self.id))")
       ref = Database.database().reference(fromURL: "https://trainforswift-f4067.firebaseio.com")
       refA = ref.child("A")
-       
-  }
+      txtResponse.text = "請輸入"
+      txtResponse.textColor = UIColor.lightGray
+      txtResponse.delegate = self
+      
+   }
 
   @IBAction func closeButton(_ sender: Any)
   {
@@ -38,6 +41,17 @@ class AViewController: UIViewController {
   
   }
 
+  
+  
+  //MARK: UITextViewDelegate實作區
+  func textViewDidBeginEditing(_ textView: UITextView)
+  {
+    if textView.textColor == UIColor.lightGray {
+      textView.text = nil
+      textView.textColor = UIColor.black
+      textView.textAlignment = .left
+    }
+  }
   
     // MARK: - Navigation
 
