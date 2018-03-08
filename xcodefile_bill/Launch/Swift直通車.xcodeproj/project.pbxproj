@@ -44,7 +44,7 @@
 		5A5F6DE61F4D51C9004D6AF6 /* QListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QListViewController.swift; sourceTree = "<group>"; };
 		5A5F6DE81F4D525E004D6AF6 /* QListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QListTableViewCell.swift; sourceTree = "<group>"; };
 		5A5F6DEA1F4D64E9004D6AF6 /* QAnavViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QAnavViewController.swift; sourceTree = "<group>"; };
-		5A8E3E3C1F301CDD00B96D0F /* Launch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Launch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A8E3E3C1F301CDD00B96D0F /* Swift直通車.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Swift直通車.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A8E3E3F1F301CDD00B96D0F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5A8E3E411F301CDD00B96D0F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5A8E3E441F301CDD00B96D0F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -101,7 +101,7 @@
 		5A8E3E3D1F301CDD00B96D0F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5A8E3E3C1F301CDD00B96D0F /* Launch.app */,
+				5A8E3E3C1F301CDD00B96D0F /* Swift直通車.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -151,9 +151,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5A8E3E3B1F301CDD00B96D0F /* Launch */ = {
+		5A8E3E3B1F301CDD00B96D0F /* Swift直通車 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5A8E3E4E1F301CDD00B96D0F /* Build configuration list for PBXNativeTarget "Launch" */;
+			buildConfigurationList = 5A8E3E4E1F301CDD00B96D0F /* Build configuration list for PBXNativeTarget "Swift直通車" */;
 			buildPhases = (
 				4835A45DC30771429F528EC1 /* [CP] Check Pods Manifest.lock */,
 				5A8E3E381F301CDD00B96D0F /* Sources */,
@@ -166,9 +166,9 @@
 			);
 			dependencies = (
 			);
-			name = Launch;
+			name = "Swift直通車";
 			productName = Launch;
-			productReference = 5A8E3E3C1F301CDD00B96D0F /* Launch.app */;
+			productReference = 5A8E3E3C1F301CDD00B96D0F /* Swift直通車.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -188,7 +188,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 5A8E3E371F301CDD00B96D0F /* Build configuration list for PBXProject "Launch" */;
+			buildConfigurationList = 5A8E3E371F301CDD00B96D0F /* Build configuration list for PBXProject "Swift直通車" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -201,7 +201,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5A8E3E3B1F301CDD00B96D0F /* Launch */,
+				5A8E3E3B1F301CDD00B96D0F /* Swift直通車 */,
 			);
 		};
 /* End PBXProject section */
@@ -459,7 +459,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5A8E3E371F301CDD00B96D0F /* Build configuration list for PBXProject "Launch" */ = {
+		5A8E3E371F301CDD00B96D0F /* Build configuration list for PBXProject "Swift直通車" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5A8E3E4C1F301CDD00B96D0F /* Debug */,
@@ -468,7 +468,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5A8E3E4E1F301CDD00B96D0F /* Build configuration list for PBXNativeTarget "Launch" */ = {
+		5A8E3E4E1F301CDD00B96D0F /* Build configuration list for PBXNativeTarget "Swift直通車" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5A8E3E4F1F301CDD00B96D0F /* Debug */,
