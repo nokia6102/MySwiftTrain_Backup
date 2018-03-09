@@ -1,0 +1,913 @@
+{
+  "A" : {
+    "-KtBo_xCaA7sUOGVgvF9" : {
+      "QNoId" : 2,
+      "ResponseText" : "請見官網",
+      "ResponseUserName" : "some body",
+      "TimeStamp" : 1504527409164,
+      "Title" : "FinalCase第二組 薪薪向榮找工作App"
+    },
+    "-KtHv4Rk93QI96DrwbmB" : {
+      "QNoId" : 2,
+      "ResponseText" : "http://mygoodjob.com.tw/exampes",
+      "ResponseUserName" : "some body",
+      "TimeStamp" : 1504629774348,
+      "Title" : "FinalCase第二組 薪薪向榮找工作App"
+    },
+    "-KtHvdWADZp4R01RvFD2" : {
+      "QNoId" : 4,
+      "ResponseText" : "💕yea ",
+      "ResponseUserName" : "some body",
+      "TimeStamp" : 1504629923145,
+      "Title" : "iOS面試題 MVC "
+    },
+    "-KtHx4ZrAWeLYDMMU_wR" : {
+      "QNoId" : 4,
+      "ResponseText" : "講解的不錯",
+      "ResponseUserName" : "some body",
+      "TimeStamp" : 1504630299219,
+      "Title" : "iOS面試題 MVC "
+    },
+    "-KtHyZGAJIJMXIvAdFqq" : {
+      "QNoId" : 4,
+      "ResponseText" : "3",
+      "ResponseUserName" : "some body",
+      "TimeStamp" : 1504630687033,
+      "Title" : "iOS面試題 MVC "
+    },
+    "-KtKEZH6Xg8mkKpyqqSu" : {
+      "QNoId" : 2,
+      "ResponseText" : "12345678",
+      "ResponseUserName" : "some body",
+      "TimeStamp" : 1504668697996,
+      "Title" : "FinalCase第二組 薪薪向榮找工作App"
+    },
+    "-KtLtF9pkkYTIqpgB-GG" : {
+      "QNoId" : 4,
+      "ResponseText" : "Jkdnjqnjxjjmdk ",
+      "ResponseUserName" : "some body",
+      "TimeStamp" : 1504696402805,
+      "Title" : "iOS面試題 MVC "
+    },
+    "-KumqgXSRF2k1-dcO1DY" : {
+      "QNoId" : 1,
+      "ResponseText" : "Test\n",
+      "ResponseUserName" : "some body",
+      "TimeStamp" : 1506239236472,
+      "Title" : "FinalCase第二組 薪薪向榮找工作App"
+    },
+    "-Kumqm6Y0KWqUQX4FFVk" : {
+      "QNoId" : 1,
+      "ResponseText" : "Test2\n",
+      "ResponseUserName" : "some body",
+      "TimeStamp" : 1506239259325,
+      "Title" : "FinalCase第二組 薪薪向榮找工作App"
+    },
+    "-KwJfecUgktozpdkoKa7" : {
+      "QNoId" : 1,
+      "ResponseText" : "Thuiiok",
+      "ResponseUserName" : "some body",
+      "TimeStamp" : 1507880512221,
+      "Title" : "FinalCase第二組 薪薪向榮找工作App"
+    },
+    "-KwJsPcR23CjlqGqSdoD" : {
+      "QNoId" : 4,
+      "ResponseText" : "Ggggjjifjhhyj",
+      "ResponseUserName" : "some body",
+      "TimeStamp" : 1507883854546,
+      "Title" : "iOS面試題 MVC "
+    },
+    "-L73XVLnaPYGtt9OfCmx" : {
+      "QNoId" : 7,
+      "ResponseText" : "Eerrr",
+      "ResponseUserName" : "some body",
+      "TimeStamp" : 1520494577248,
+      "Title" : "iOS面試題 MVC "
+    },
+    "-L73bDITzmabsChMVEjh" : {
+      "QNoId" : 1,
+      "ResponseText" : "A",
+      "ResponseUserName" : "some body",
+      "TimeStamp" : 1520495814018,
+      "Title" : "FinalCase第二組 薪薪向榮找工作App"
+    },
+    "-L73cuNjt9JdNXkso-V_" : {
+      "QNoId" : 1,
+      "ResponseText" : "B",
+      "ResponseUserName" : "some body",
+      "TimeStamp" : 1520496256727,
+      "Title" : "FinalCase第二組 薪薪向榮找工作App"
+    }
+  },
+  "Counter" : {
+    "Qcount" : 13
+  },
+  "CounterResopne" : [ null, [ null, 5 ], {
+    "2" : 3
+  }, {
+    "3" : 0
+  }, {
+    "4" : 5
+  }, {
+    "5" : 0
+  }, {
+    "6" : 0
+  }, {
+    "7" : 1
+  } ],
+  "Lecture" : [ {
+    "Desc" : "一次學好Swift",
+    "Id" : "10001",
+    "Title" : "Swift直通車"
+  }, {
+    "Desc" : "一次學好Swift",
+    "Id" : "10001",
+    "Title" : "Swift直通車"
+  } ],
+  "Lesson" : [ {
+    "cc" : "1",
+    "desc" : "短篇視頻,有字幕,#喂喂",
+    "lecture" : "10001",
+    "lid" : "1",
+    "title" : "Swift和Objtitve-C混用",
+    "videocode" : "3AaTfGSfBmw"
+  }, {
+    "cc" : "0",
+    "desc" : "短篇視頻,無字幕,#黑客松",
+    "lecture" : "10001",
+    "lid" : "2",
+    "title" : "FinalCase第二組 薪薪向榮找工作App",
+    "videocode" : "n6QC6sJqPxM"
+  }, {
+    "cc" : "0",
+    "desc" : "短篇視頻,無字幕,#教程App",
+    "lecture" : "10001",
+    "lid" : "3",
+    "title" : "FinalCase第三組 Swift直通車App",
+    "videocode" : "dcsjbU8yQ-8"
+  }, {
+    "cc" : "0",
+    "desc" : "011尚学堂,短篇視頻,無字幕,重要關念,#面試考題",
+    "lecture" : "10001",
+    "lid" : "4",
+    "title" : "iOS面試題 MVC ",
+    "videocode" : "4s4kdV8xNZY"
+  }, {
+    "cc" : "0",
+    "desc" : "008尚学堂,短篇視頻,無字幕,重要關念,#面試考題OC",
+    "lecture" : "10001",
+    "lid" : "5",
+    "title" : "iOS面試題 重要觀念-1",
+    "videocode" : "JfgjvAr2ozI"
+  }, {
+    "cc" : "0",
+    "desc" : "009尚学堂,短篇視頻,無字幕,重要關念,#面試考題",
+    "lecture" : "10001",
+    "lid" : "6",
+    "title" : "iOS面試題 重要觀念-2",
+    "videocode" : "u1IAlLeVLPs"
+  }, {
+    "cc" : "0",
+    "desc" : "010尚学堂,短篇視頻,無字幕,重要關念,#面試考題",
+    "lecture" : "10001",
+    "lid" : "7",
+    "title" : "iOS面試題 重要觀念-3",
+    "videocode" : "XyGKPdD-9kw"
+  } ],
+  "Q" : {
+    "-KtBoXYAGPKbyAmQG1Yp" : {
+      "Category" : "D1",
+      "Description" : "程式哪裡下載",
+      "Id" : 1,
+      "TimeStamp" : 1504527395224,
+      "Title" : "FinalCase第二組 薪薪向榮找工作App",
+      "lid" : 2,
+      "uid" : "輸入者"
+    },
+    "-KtHvPSmaUrt0lmUtL1b" : {
+      "Category" : "D1",
+      "Description" : "請在此處輸入問題描述",
+      "Id" : 2,
+      "TimeStamp" : 1504629860553,
+      "Title" : "FinalCase第三組 Swift直通車App",
+      "lid" : 3,
+      "uid" : "輸入者"
+    },
+    "-KtHvYcJGM7-3DUuSuKG" : {
+      "Category" : "D1",
+      "Description" : "iOS is Good！",
+      "Id" : 3,
+      "TimeStamp" : 1504629898026,
+      "Title" : "iOS面試題 MVC ",
+      "lid" : 4,
+      "uid" : "輸入者"
+    },
+    "-KtLtHmqcTyY5kCRXTt3" : {
+      "Category" : "D1",
+      "Description" : "請在此處輸入問題描述",
+      "Id" : 4,
+      "TimeStamp" : 1504696413562,
+      "Title" : "iOS面試題 重要觀念-1",
+      "lid" : 5,
+      "uid" : "輸入者"
+    },
+    "-KtMHQOIfE13Cdz21ARJ" : {
+      "Category" : "D1",
+      "Description" : "請在此處輸入問題描述",
+      "Id" : 5,
+      "TimeStamp" : 1504703002529,
+      "Title" : "iOS面試題 MVC ",
+      "lid" : 4,
+      "uid" : "輸入者"
+    },
+    "-KtfH7qV_W8xBdbbgZp0" : {
+      "Category" : "D1",
+      "Description" : "一一列舉",
+      "Id" : 6,
+      "TimeStamp" : 1505038470777,
+      "Title" : "Swift和Objtitve-C混用",
+      "lid" : 1,
+      "uid" : "輸入者"
+    },
+    "-KumrCXj4tCVOSjsuEe-" : {
+      "Category" : "D1",
+      "Description" : "Test",
+      "Id" : 7,
+      "TimeStamp" : 1506239371627,
+      "Title" : "iOS面試題 MVC ",
+      "lid" : 4,
+      "uid" : "輸入者"
+    },
+    "-KvBW5-VfvdOhN0zJZfu" : {
+      "Category" : "D1",
+      "Description" : "請在此處輸入問題描述",
+      "Id" : 0,
+      "TimeStamp" : 1506669781224,
+      "Title" : "",
+      "lid" : 1,
+      "uid" : "輸入者"
+    },
+    "-KvBW9K9RTcDUWFasGG1" : {
+      "Category" : "D1",
+      "Description" : "請在此處輸入問題描述",
+      "Id" : 1,
+      "TimeStamp" : 1506669798929,
+      "Title" : "Swift和Objtitve-C混用",
+      "lid" : 1,
+      "uid" : "輸入者"
+    },
+    "-KvDBg8eO1DGLU6Q8x6N" : {
+      "Category" : "D1",
+      "Description" : "Chukchi",
+      "Id" : 2,
+      "TimeStamp" : 1506697987637,
+      "Title" : "iOS面試題 重要觀念-3",
+      "lid" : 7,
+      "uid" : "輸入者"
+    },
+    "-KwJgvY2ejy9W9ElUWGh" : {
+      "Category" : "D1",
+      "Description" : "Retry",
+      "Id" : 3,
+      "TimeStamp" : 1507880844011,
+      "Title" : "iOS面試題 重要觀念-3",
+      "lid" : 7,
+      "uid" : "輸入者"
+    },
+    "-KwJsJUttX2AWtQoVKuu" : {
+      "Category" : "D1",
+      "Description" : "Fgghjgggg",
+      "Id" : 4,
+      "TimeStamp" : 1507883829418,
+      "Title" : "iOS面試題 MVC ",
+      "lid" : 4,
+      "uid" : "輸入者"
+    },
+    "-L74tjf6qUi-2hm8peqR" : {
+      "Category" : "D1",
+      "Description" : "Ghjdji",
+      "Id" : 13,
+      "TimeStamp" : 1520517446640,
+      "Title" : "FinalCase第二組 薪薪向榮找工作App",
+      "lid" : 2,
+      "uid" : "輸入者"
+    }
+  },
+  "QA" : [ {
+    "Lecture" : "講座 01",
+    "QAid" : 1,
+    "Response" : "回應1",
+    "Title" : "標題01"
+  }, {
+    "Lecture" : "講座 102",
+    "QAid" : 2,
+    "Response" : "回應2",
+    "Title" : "標題2"
+  }, {
+    "Lecture" : "講座 103",
+    "QAid" : 3,
+    "Response" : "回應3",
+    "Title" : "標題3"
+  }, {
+    "Lecture" : "講座 104",
+    "QAid" : 4,
+    "Response" : "回應4",
+    "Title" : "標題4"
+  }, {
+    "Lecture" : "講座 105",
+    "QAid" : 5,
+    "Response" : "回應5",
+    "Title" : "標題5"
+  } ],
+  "SubTitle" : [ null, [ {
+    "number" : "1",
+    "startTime" : "00:00:03,670",
+    "stopTime" : "00:00:11,929",
+    "text" : "開發iPhone程式的大家"
+  }, {
+    "number" : "2",
+    "startTime" : "00:00:08,029",
+    "stopTime" : "00:00:16,189",
+    "text" : "您是用舊的Objective-C或新的Swift來開發程式呢？"
+  }, {
+    "number" : "3",
+    "startTime" : "00:00:11,929",
+    "stopTime" : "00:00:19,960",
+    "text" : "您知道Swift語言和Objective-C的檔案可以混用嗎？"
+  }, {
+    "number" : "4",
+    "startTime" : "00:00:16,190",
+    "stopTime" : "00:00:23,420",
+    "text" : "這種混用的方法叫"
+  }, {
+    "number" : "5",
+    "startTime" : "00:00:19,960",
+    "stopTime" : "00:00:27,410",
+    "text" : "混合與比對 Mix and Match"
+  }, {
+    "number" : "6",
+    "startTime" : "00:00:23,420",
+    "stopTime" : "00:00:30,680",
+    "text" : "使用混合與比對 Mix and Match"
+  }, {
+    "number" : "7",
+    "startTime" : "00:00:27,410",
+    "stopTime" : "00:00:33,890",
+    "text" : "可以在舊有的Objevtive-C專案中"
+  }, {
+    "number" : "8",
+    "startTime" : "00:00:30,680",
+    "stopTime" : "00:00:38,360",
+    "text" : "加入以Swift程式碼撰寫的新功能"
+  }, {
+    "number" : "9",
+    "startTime" : "00:00:33,890",
+    "stopTime" : "00:00:43,070",
+    "text" : "或是相反Swift專案在中使用舊OC類別"
+  }, {
+    "number" : "10",
+    "startTime" : "00:00:38,360",
+    "stopTime" : "00:00:47,660",
+    "text" : "我來帶大家實際做一遍"
+  }, {
+    "number" : "11",
+    "startTime" : "00:00:43,070",
+    "stopTime" : "00:00:50,690",
+    "text" : "首先我以不同語言"
+  }, {
+    "number" : "12",
+    "startTime" : "00:00:47,660",
+    "stopTime" : "00:00:54,199",
+    "text" : "撰寫的同一類別"
+  }, {
+    "number" : "13",
+    "startTime" : "00:00:50,690",
+    "stopTime" : "00:00:58,190",
+    "text" : "類別裡面都只有一個方法"
+  }, {
+    "number" : "14",
+    "startTime" : "00:00:54,200",
+    "stopTime" : "00:01:02,800",
+    "text" : "接受兩個參數add的方法"
+  }, {
+    "number" : "15",
+    "startTime" : "00:00:58,190",
+    "stopTime" : "00:01:07,249",
+    "text" : "如果是Swift檔案的話，類別的名稱，我命名成Calculator"
+  }, {
+    "number" : "16",
+    "startTime" : "00:01:02,800",
+    "stopTime" : "00:01:12,139",
+    "text" : "呼叫add方法的時候，會印出answer from swift file"
+  }, {
+    "number" : "17",
+    "startTime" : "00:01:07,249",
+    "stopTime" : "00:01:15,229",
+    "text" : "如果是objective-C檔案的話"
+  }, {
+    "number" : "18",
+    "startTime" : "00:01:12,139",
+    "stopTime" : "00:01:19,749",
+    "text" : "類別的名稱，我命名成OBJCCalculator"
+  }, {
+    "number" : "19",
+    "startTime" : "00:01:15,229",
+    "stopTime" : "00:01:23,299",
+    "text" : "呼叫add方法的時候"
+  }, {
+    "number" : "20",
+    "startTime" : "00:01:19,749",
+    "stopTime" : "00:01:28,788",
+    "text" : "會印出answer from objective c file"
+  }, {
+    "number" : "21",
+    "startTime" : "00:01:23,299",
+    "stopTime" : "00:01:32,359",
+    "text" : "首先來看在Swift專案中"
+  }, {
+    "number" : "22",
+    "startTime" : "00:01:28,789",
+    "stopTime" : "00:01:36,529",
+    "text" : "使用objective-c檔案"
+  }, {
+    "number" : "23",
+    "startTime" : "00:01:32,359",
+    "stopTime" : "00:01:40,609",
+    "text" : "這是一個Swift專案，名叫calculator"
+  }, {
+    "number" : "24",
+    "startTime" : "00:01:36,529",
+    "stopTime" : "00:01:44,560",
+    "text" : "我把這兩個objective-c檔案，加入Swift專案"
+  }, {
+    "number" : "25",
+    "startTime" : "00:01:40,609",
+    "stopTime" : "00:01:48,679",
+    "text" : "這個時候會跳出一個對話框"
+  }, {
+    "number" : "26",
+    "startTime" : "00:01:44,560",
+    "stopTime" : "00:01:51,429",
+    "text" : "問是否要加入objective-c"
+  }, {
+    "number" : "27",
+    "startTime" : "00:01:48,679",
+    "stopTime" : "00:01:55,639",
+    "text" : "bridging header 的檔案"
+  }, {
+    "number" : "28",
+    "startTime" : "00:01:51,429",
+    "stopTime" : "00:01:59,719",
+    "text" : "按下這個Create Bridging Header的話"
+  }, {
+    "number" : "29",
+    "startTime" : "00:01:55,639",
+    "stopTime" : "00:02:02,509",
+    "text" : "就會產出以這個專案的名字為首"
+  }, {
+    "number" : "30",
+    "startTime" : "00:01:59,719",
+    "stopTime" : "00:02:06,770",
+    "text" : "以Bridging Header .h結尾的標頭檔"
+  }, {
+    "number" : "31",
+    "startTime" : "00:02:02,509",
+    "stopTime" : "00:02:11,959",
+    "text" : "在這邊"
+  }, {
+    "number" : "32",
+    "startTime" : "00:02:06,770",
+    "stopTime" : "00:02:14,870",
+    "text" : "各位同學，"
+  }, {
+    "number" : "33",
+    "startTime" : "00:02:11,959",
+    "stopTime" : "00:02:16,819",
+    "text" : "不管是在Swift專案中使用"
+  }, {
+    "number" : "34",
+    "startTime" : "00:02:14,870",
+    "stopTime" : "00:02:21,530",
+    "text" : "使用objective-c檔案"
+  }, {
+    "number" : "35",
+    "startTime" : "00:02:16,819",
+    "stopTime" : "00:02:25,339",
+    "text" : "或者是在objective-c中，使用Swift專案"
+  }, {
+    "number" : "36",
+    "startTime" : "00:02:21,530",
+    "stopTime" : "00:02:28,849",
+    "text" : "都需要加入這個objective-c Bridging Header 的檔案"
+  }, {
+    "number" : "37",
+    "startTime" : "00:02:25,340",
+    "stopTime" : "00:02:31,879",
+    "text" : "加入objective-c Bridging Header檔案的方法有兩種"
+  }, {
+    "number" : "38",
+    "startTime" : "00:02:28,849",
+    "stopTime" : "00:02:35,060",
+    "text" : "第一種就是直接由Xcode自動生成"
+  }, {
+    "number" : "39",
+    "startTime" : "00:02:31,879",
+    "stopTime" : "00:02:38,030",
+    "text" : "像我們剛剛做的一樣，拉進objective-c的時候"
+  }, {
+    "number" : "40",
+    "startTime" : "00:02:35,060",
+    "stopTime" : "00:02:41,239",
+    "text" : "按下這個Create Bridging Header"
+  }, {
+    "number" : "41",
+    "startTime" : "00:02:38,030",
+    "stopTime" : "00:02:45,349",
+    "text" : "就生成了這個檔案"
+  }, {
+    "number" : "42",
+    "startTime" : "00:02:41,239",
+    "stopTime" : "00:02:47,840",
+    "text" : "如果剛剛沒有按下Create Bridging Header的話"
+  }, {
+    "number" : "43",
+    "startTime" : "00:02:45,349",
+    "stopTime" : "00:02:50,959",
+    "text" : "也可以手動加入"
+  }, {
+    "number" : "44",
+    "startTime" : "00:02:47,840",
+    "stopTime" : "00:02:54,590",
+    "text" : "objective-c Bridging Header"
+  }, {
+    "number" : "45",
+    "startTime" : "00:02:50,959",
+    "stopTime" : "00:02:59,019",
+    "text" : "作法就是在功能表中，"
+  }, {
+    "number" : "46",
+    "startTime" : "00:02:54,590",
+    "stopTime" : "00:03:07,159",
+    "text" : "點選上面這個File > New > File..."
+  }, {
+    "number" : "47",
+    "startTime" : "00:02:59,019",
+    "stopTime" : "00:03:11,060",
+    "text" : "然後在加入一個標頭檔"
+  }, {
+    "number" : "48",
+    "startTime" : "00:03:07,159",
+    "stopTime" : "00:03:14,989",
+    "text" : "這邊，加入一個Header File"
+  }, {
+    "number" : "49",
+    "startTime" : "00:03:11,060",
+    "stopTime" : "00:03:17,480",
+    "text" : "自己加入一個新的標頭檔也可以"
+  }, {
+    "number" : "50",
+    "startTime" : "00:03:14,989",
+    "stopTime" : "00:03:22,930",
+    "text" : "不管是怎樣加入這個檔案的"
+  }, {
+    "number" : "51",
+    "startTime" : "00:03:17,480",
+    "stopTime" : "00:03:28,159",
+    "text" : "請看這邊"
+  }, {
+    "number" : "52",
+    "startTime" : "00:03:22,930",
+    "stopTime" : "00:03:32,180",
+    "text" : "在專案的Build Settings下面"
+  }, {
+    "number" : "53",
+    "startTime" : "00:03:28,159",
+    "stopTime" : "00:03:35,810",
+    "text" : "跑到最下面，請大家看這邊"
+  }, {
+    "number" : "54",
+    "startTime" : "00:03:32,180",
+    "stopTime" : "00:03:37,609",
+    "text" : "Swift Compiler - Code Generation這一欄"
+  }, {
+    "number" : "55",
+    "startTime" : "00:03:35,810",
+    "stopTime" : "00:03:40,430",
+    "text" : "這一欄裡面，不管你是怎麼樣加入"
+  }, {
+    "number" : "56",
+    "startTime" : "00:03:37,609",
+    "stopTime" : "00:03:44,239",
+    "text" : "剛才的Bridging Header檔案的話"
+  }, {
+    "number" : "57",
+    "startTime" : "00:03:40,430",
+    "stopTime" : "00:03:47,060",
+    "text" : "在這邊，一定要確認這個objective-c Bridging Header的位置"
+  }, {
+    "number" : "58",
+    "startTime" : "00:03:44,239",
+    "stopTime" : "00:03:50,090",
+    "text" : "用第一種方法生成的objective-c Bridging Header檔案"
+  }, {
+    "number" : "59",
+    "startTime" : "00:03:47,060",
+    "stopTime" : "00:03:53,049",
+    "text" : "Xcode會自動幫我們加入"
+  }, {
+    "number" : "60",
+    "startTime" : "00:03:50,090",
+    "stopTime" : "00:03:55,280",
+    "text" : "這邊會自動寫好"
+  }, {
+    "number" : "61",
+    "startTime" : "00:03:53,049",
+    "stopTime" : "00:03:57,530",
+    "text" : "用第二種方式生成（手動生成）的話"
+  }, {
+    "number" : "62",
+    "startTime" : "00:03:55,280",
+    "stopTime" : "00:04:00,379",
+    "text" : "就要在這邊自己標示出檔案的位址"
+  }, {
+    "number" : "63",
+    "startTime" : "00:03:57,530",
+    "stopTime" : "00:04:04,069",
+    "text" : "這個檔案設定完成之後"
+  }, {
+    "number" : "64",
+    "startTime" : "00:04:00,379",
+    "stopTime" : "00:04:06,620",
+    "text" : "請打開新加入的標頭檔"
+  }, {
+    "number" : "65",
+    "startTime" : "00:04:04,069",
+    "stopTime" : "00:04:12,069",
+    "text" : "直接匯入"
+  }, {
+    "number" : "66",
+    "startTime" : "00:04:06,620",
+    "stopTime" : "00:04:15,500",
+    "text" : "所有想要匯入的"
+  }, {
+    "number" : "67",
+    "startTime" : "00:04:12,069",
+    "stopTime" : "00:04:23,139",
+    "text" : "objective-c"
+  }, {
+    "number" : "68",
+    "startTime" : "00:04:15,500",
+    "stopTime" : "00:04:26,139",
+    "text" : "標頭檔"
+  }, {
+    "number" : "69",
+    "startTime" : "00:04:23,139",
+    "stopTime" : "00:04:26,139",
+    "text" : "#impoty \"OBJCCalculator\""
+  }, {
+    "number" : "70",
+    "startTime" : "00:04:28,520",
+    "stopTime" : "00:04:37,169",
+    "text" : "存檔，OK的話，要使用這個類別"
+  }, {
+    "number" : "71",
+    "startTime" : "00:04:33,240",
+    "stopTime" : "00:04:39,740",
+    "text" : "就直接使用Swift語言去呼叫使用"
+  }, {
+    "number" : "72",
+    "startTime" : "00:04:37,170",
+    "stopTime" : "00:04:45,150",
+    "text" : "比方說，在Viewcontroler.swift這邊"
+  }, {
+    "number" : "73",
+    "startTime" : "00:04:39,740",
+    "stopTime" : "00:04:49,470",
+    "text" : "ViewDidLoad這邊，生出一個OBJCCalculator()"
+  }, {
+    "number" : "74",
+    "startTime" : "00:04:45,150",
+    "stopTime" : "00:04:56,789",
+    "text" : "Swift語言去生出來"
+  }, {
+    "number" : "75",
+    "startTime" : "00:04:49,470",
+    "stopTime" : "00:05:02,490",
+    "text" : "直接呼叫add方法"
+  }, {
+    "number" : "76",
+    "startTime" : "00:04:56,790",
+    "stopTime" : "00:05:05,640",
+    "text" : "帶入2跟3"
+  }, {
+    "number" : "77",
+    "startTime" : "00:05:02,490",
+    "stopTime" : "00:05:10,020",
+    "text" : "按下Build就可以看到下面會印出"
+  }, {
+    "number" : "78",
+    "startTime" : "00:05:05,640",
+    "stopTime" : "00:05:13,320",
+    "text" : "answar from objective-c File"
+  }, {
+    "number" : "79",
+    "startTime" : "00:05:10,020",
+    "stopTime" : "00:05:17,580",
+    "text" : "這個就是在Swift專案中，使用objective-c類別的方法"
+  }, {
+    "number" : "80",
+    "startTime" : "00:05:13,320",
+    "stopTime" : "00:05:21,960",
+    "text" : "相反的，如果是一個objective-c的專案"
+  }, {
+    "number" : "81",
+    "startTime" : "00:05:17,580",
+    "stopTime" : "00:05:29,099",
+    "text" : "這邊，我要打開一個objective-c的專案"
+  }, {
+    "number" : "82",
+    "startTime" : "00:05:21,960",
+    "stopTime" : "00:05:33,989",
+    "text" : "我現在來介紹"
+  }, {
+    "number" : "83",
+    "startTime" : "00:05:29,100",
+    "stopTime" : "00:05:38,550",
+    "text" : "在objective-c專案裡面"
+  }, {
+    "number" : "84",
+    "startTime" : "00:05:33,990",
+    "stopTime" : "00:05:46,470",
+    "text" : "使用Swift專案類別的方法"
+  }, {
+    "number" : "85",
+    "startTime" : "00:05:38,550",
+    "stopTime" : "00:05:49,680",
+    "text" : "我來把Swift的檔案拉出來"
+  }, {
+    "number" : "86",
+    "startTime" : "00:05:46,470",
+    "stopTime" : "00:05:55,680",
+    "text" : "我讓Xcode自動產生objective-c Bridging Header的檔案"
+  }, {
+    "number" : "87",
+    "startTime" : "00:05:49,680",
+    "stopTime" : "00:05:58,710",
+    "text" : "如果是在objective-c這個專案裡面"
+  }, {
+    "number" : "88",
+    "startTime" : "00:05:55,680",
+    "stopTime" : "00:06:04,410",
+    "text" : "放進Swift類別的話"
+  }, {
+    "number" : "89",
+    "startTime" : "00:05:58,710",
+    "stopTime" : "00:06:07,710",
+    "text" : "這個objective-c Bridging Header的檔案裡面"
+  }, {
+    "number" : "90",
+    "startTime" : "00:06:04,410",
+    "stopTime" : "00:06:11,310",
+    "text" : "不用import任何的類別"
+  }, {
+    "number" : "91",
+    "startTime" : "00:06:07,710",
+    "stopTime" : "00:06:17,310",
+    "text" : "不用匯入任何的類別，什麼都不用作"
+  }, {
+    "number" : "92",
+    "startTime" : "00:06:11,310",
+    "stopTime" : "00:06:21,830",
+    "text" : "我們在需要使用Swift的檔案的地方，"
+  }, {
+    "number" : "93",
+    "startTime" : "00:06:17,310",
+    "stopTime" : "00:06:21,830",
+    "text" : "然後這邊"
+  }, {
+    "number" : "94",
+    "startTime" : "00:06:27,600",
+    "stopTime" : "00:06:48,850",
+    "text" : "寫入#import \"OldCalculator-Swift.h\""
+  }, {
+    "number" : "95",
+    "startTime" : "00:06:38,070",
+    "stopTime" : "00:06:53,830",
+    "text" : "這樣使用的時候，在最上面"
+  }, {
+    "number" : "96",
+    "startTime" : "00:06:48,850",
+    "stopTime" : "00:06:58,120",
+    "text" : "import一個以專案名為首-Swift.h結尾的標頭檔"
+  }, {
+    "number" : "97",
+    "startTime" : "00:06:53,830",
+    "stopTime" : "00:07:01,120",
+    "text" : "這個範例裡面"
+  }, {
+    "number" : "98",
+    "startTime" : "00:06:58,120",
+    "stopTime" : "00:07:07,810",
+    "text" : "我的objective-c專案叫做old calculator"
+  }, {
+    "number" : "99",
+    "startTime" : "00:07:01,120",
+    "stopTime" : "00:07:11,140",
+    "text" : "所以，這邊"
+  }, {
+    "number" : "100",
+    "startTime" : "00:07:07,810",
+    "stopTime" : "00:07:14,620",
+    "text" : "一開始，我匯入了一個以這個專案名為首"
+  }, {
+    "number" : "101",
+    "startTime" : "00:07:11,140",
+    "stopTime" : "00:07:19,080",
+    "text" : "就是old calculator"
+  }, {
+    "number" : "102",
+    "startTime" : "00:07:14,620",
+    "stopTime" : "00:07:24,940",
+    "text" : "後面加上橫線Swift.h的標頭檔"
+  }, {
+    "number" : "103",
+    "startTime" : "00:07:19,080",
+    "stopTime" : "00:07:28,570",
+    "text" : "OldCalculator-Swift.h"
+  }, {
+    "number" : "104",
+    "startTime" : "00:07:24,940",
+    "stopTime" : "00:07:32,590",
+    "text" : "除此以外，在匯入的Swift類別裡面"
+  }, {
+    "number" : "105",
+    "startTime" : "00:07:28,570",
+    "stopTime" : "00:07:38,580",
+    "text" : "這邊要標注是NS Object的子類別"
+  }, {
+    "number" : "106",
+    "startTime" : "00:07:32,590",
+    "stopTime" : "00:07:43,960",
+    "text" : "加入NSObject就可以使用了"
+  }, {
+    "number" : "107",
+    "startTime" : "00:07:38,580",
+    "stopTime" : "00:07:47,530",
+    "text" : "使用的時候呢，回到這邊"
+  }, {
+    "number" : "108",
+    "startTime" : "00:07:43,960",
+    "stopTime" : "00:07:52,330",
+    "text" : "用objective-c，生成Swift撰寫的類別"
+  }, {
+    "number" : "109",
+    "startTime" : "00:07:47,530",
+    "stopTime" : "00:07:55,289",
+    "text" : "因為我們"
+  }, {
+    "number" : "110",
+    "startTime" : "00:07:52,330",
+    "stopTime" : "00:07:55,289",
+    "text" : "在objective-c的專案"
+  }, {
+    "number" : "111",
+    "startTime" : "00:08:01,030",
+    "stopTime" : "00:08:03,090",
+    "text" : "裡面"
+  }, {
+    "number" : "112",
+    "startTime" : "00:08:09,030",
+    "stopTime" : "00:08:18,580",
+    "text" : "在objective-c的語法"
+  }, {
+    "number" : "113",
+    "startTime" : "00:08:13,260",
+    "stopTime" : "00:08:20,969",
+    "text" : "呼叫Swift類別的方法"
+  }, {
+    "number" : "114",
+    "startTime" : "00:08:18,580",
+    "stopTime" : "00:08:20,969",
+    "text" : "按下Build"
+  }, {
+    "number" : "115",
+    "startTime" : "00:08:27,090",
+    "stopTime" : "00:08:35,140",
+    "text" : "這邊就會印出"
+  }, {
+    "number" : "116",
+    "startTime" : "00:08:30,850",
+    "stopTime" : "00:08:38,080",
+    "text" : "ansewr from Swift file: 5"
+  }, {
+    "number" : "117",
+    "startTime" : "00:08:35,140",
+    "stopTime" : "00:08:40,289",
+    "text" : "使用Swift類別的方法"
+  }, {
+    "number" : "117",
+    "startTime" : "00:08:35,140",
+    "stopTime" : "00:08:40,289",
+    "text" : "使用Swift類別的方法"
+  } ] ]
+}
