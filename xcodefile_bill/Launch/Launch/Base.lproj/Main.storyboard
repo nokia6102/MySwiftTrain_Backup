@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -14,7 +14,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Launch" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Swift直通車" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -99,7 +99,7 @@
         <!--sgPlay-->
         <scene sceneID="nKD-1m-bIw">
             <objects>
-                <viewController title="sgPlay" modalTransitionStyle="flipHorizontal" id="QfB-fg-TpE" customClass="MainViewController" customModule="Launch" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="sgPlay" modalTransitionStyle="flipHorizontal" id="QfB-fg-TpE" customClass="MainViewController" customModule="Swift直通車" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ZaG-qj-JVE"/>
                         <viewControllerLayoutGuide type="bottom" id="Iah-Ta-iL9"/>
@@ -124,15 +124,15 @@
                                 <rect key="frame" x="0.0" y="376" width="414" height="360"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MainCell" rowHeight="62" id="ERI-nb-Obh" customClass="MainTableViewCell" customModule="Launch" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MainCell" rowHeight="62" id="ERI-nb-Obh" customClass="MainTableViewCell" customModule="Swift直通車" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="62"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ERI-nb-Obh" id="bOO-Cm-f7a">
-                                            <rect key="frame" x="0.0" y="0.0" width="381" height="62"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="381" height="61.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xm3-Zv-gij">
-                                                    <rect key="frame" x="13" y="20" width="29" height="21"/>
+                                                    <rect key="frame" x="20" y="23" width="29" height="15"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="29" id="W1a-ZJ-jHK"/>
                                                     </constraints>
@@ -141,13 +141,13 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IOS SWIFT中呼叫OBJETIVE-C" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IAa-Kw-6L2">
-                                                    <rect key="frame" x="53" y="7" width="320" height="22"/>
+                                                    <rect key="frame" x="60" y="10" width="313" height="22"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="視頻- 00:30 分鐘" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l7u-hj-TFI">
-                                                    <rect key="frame" x="53" y="33" width="320" height="21"/>
+                                                    <rect key="frame" x="60" y="36" width="313" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="U4z-4f-rLK"/>
                                                     </constraints>
@@ -257,7 +257,7 @@
         <!--Player Controller-->
         <scene sceneID="LLh-PL-7Qn">
             <objects>
-                <viewController storyboardIdentifier="sbPlayer" modalTransitionStyle="flipHorizontal" id="hNW-Ez-vkm" customClass="PlayerController" customModule="Launch" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="sbPlayer" modalTransitionStyle="flipHorizontal" id="hNW-Ez-vkm" customClass="PlayerController" customModule="Swift直通車" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Jgy-Ls-YMz"/>
                         <viewControllerLayoutGuide type="bottom" id="Ktt-hp-bJq"/>
@@ -308,15 +308,15 @@
                                 <rect key="frame" x="0.0" y="371.33333333333326" width="414" height="364.66666666666674"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PlayerCell" rowHeight="87" id="p6G-mp-tkR" customClass="PlayerTableViewCell" customModule="Launch" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PlayerCell" rowHeight="87" id="p6G-mp-tkR" customClass="PlayerTableViewCell" customModule="Swift直通車" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="87"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="p6G-mp-tkR" id="9fZ-FO-26M">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="86"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="86.666666666666671"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="字幕" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="none" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FkA-vY-QdU">
-                                                    <rect key="frame" x="20" y="0.0" width="377" height="83"/>
+                                                    <rect key="frame" x="27" y="0.0" width="363" height="80.333333333333329"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
@@ -423,7 +423,7 @@
         <!--問答列表(99)-->
         <scene sceneID="UeM-JK-SFP">
             <objects>
-                <viewController storyboardIdentifier="QAnav" id="hNX-7F-F9f" customClass="QAViewController" customModule="Launch" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="QAnav" id="hNX-7F-F9f" customClass="QAViewController" customModule="Swift直通車" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="UPV-H5-qQn"/>
                         <viewControllerLayoutGuide type="bottom" id="jAV-iO-WgS"/>
@@ -446,15 +446,15 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="separatorColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="QACell" rowHeight="148" id="g7h-bC-dEE" customClass="QATableViewCell" customModule="Launch" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="QACell" rowHeight="148" id="g7h-bC-dEE" customClass="QATableViewCell" customModule="Swift直通車" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="148"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="g7h-bC-dEE" id="3BS-an-elR">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="148"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="147.66666666666666"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="也多想想怎樣做才是比較適當的吧！" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pba-v5-MCe">
-                                                    <rect key="frame" x="19" y="6" width="377" height="22"/>
+                                                    <rect key="frame" x="26" y="9" width="363" height="22"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="22" id="fiX-3a-uGW"/>
                                                     </constraints>
@@ -463,7 +463,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1vi-Sz-rMo">
-                                                    <rect key="frame" x="19" y="36" width="377" height="95"/>
+                                                    <rect key="frame" x="26" y="36" width="363" height="95"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="95" id="sgt-tq-adY"/>
                                                     </constraints>
@@ -544,7 +544,7 @@
         <!--提出問題-->
         <scene sceneID="VnN-be-QFc">
             <objects>
-                <viewController modalTransitionStyle="partialCurl" id="hi0-ah-sE1" customClass="TQViewController" customModule="Launch" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="partialCurl" id="hi0-ah-sE1" customClass="TQViewController" customModule="Swift直通車" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="XwO-9u-Im4"/>
                         <viewControllerLayoutGuide type="bottom" id="dbU-Mi-kJ2"/>
@@ -612,12 +612,12 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4I9-7h-Lcz" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="5WQ-2q-UVN" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3555" y="1020"/>
+            <point key="canvasLocation" x="3949" y="1032"/>
         </scene>
         <!--問答-->
         <scene sceneID="Hs2-Ot-t1S">
             <objects>
-                <viewController id="iia-F7-Qim" customClass="QListViewController" customModule="Launch" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="iia-F7-Qim" customClass="QListViewController" customModule="Swift直通車" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="XWM-da-KL9"/>
                         <viewControllerLayoutGuide type="bottom" id="Vn0-sO-7fx"/>
@@ -656,7 +656,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="btM-aM-Y0X">
-                                <rect key="frame" x="20" y="175.99999999999997" width="374" height="193.33333333333329"/>
+                                <rect key="frame" x="20" y="176" width="374" height="193.33333333333337"/>
                                 <string key="text">開發 iPhone 程式的大家，您是用舊的Objective-C語言或是用新的Swift語言開發應用程式呢？您知道Swift跟Objective-C的檔案可以混用嗎？這種混用方法叫做Mix and Match。使用此方法，可以讓您在舊有的Objective-C專案中，加入以Swift程式碼撰寫的新功能；或是相反、讓您能夠在新的Swift專案中使用舊的Objective-C類別。本篇文章就要帶大家</string>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
                                 <nil key="highlightedColor"/>
@@ -665,21 +665,21 @@
                                 <rect key="frame" x="0.0" y="399" width="414" height="337"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="QACell" rowHeight="179" id="a2S-vN-X6f" customClass="QATableViewCell" customModule="Launch" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="QACell" rowHeight="179" id="a2S-vN-X6f" customClass="QATableViewCell" customModule="Swift直通車" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="179"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="a2S-vN-X6f" id="i3d-vX-O1g">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="179"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="178.66666666666666"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avator_female01.png" translatesAutoresizingMaskIntoConstraints="NO" id="n2w-ZF-HIM">
-                                                    <rect key="frame" x="20" y="10" width="50" height="50"/>
+                                                    <rect key="frame" x="27" y="13" width="50" height="50"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="50" id="Cin-3n-KsA"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Viola Houston" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jFK-dg-ENL">
-                                                    <rect key="frame" x="80" y="10" width="126" height="22"/>
+                                                    <rect key="frame" x="87" y="13" width="126" height="22"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="126" id="eJb-eH-YIW"/>
                                                         <constraint firstAttribute="height" constant="22" id="lBV-fe-14f"/>
@@ -688,7 +688,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2017/07/20" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="81v-h5-d8f">
-                                                    <rect key="frame" x="80" y="38" width="126" height="22"/>
+                                                    <rect key="frame" x="87" y="41" width="126" height="22"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="22" id="sW0-Oa-PsE"/>
                                                     </constraints>
@@ -697,7 +697,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="這個方法不錯用" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k3U-rC-aNp">
-                                                    <rect key="frame" x="20" y="70" width="374" height="97"/>
+                                                    <rect key="frame" x="27" y="73" width="360" height="91.333333333333314"/>
                                                     <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -790,12 +790,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aww-Z4-jiD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4319" y="-33"/>
+            <point key="canvasLocation" x="4238" y="-33"/>
         </scene>
         <!--回應問題-->
         <scene sceneID="zNw-Jx-2ya">
             <objects>
-                <viewController id="WAS-WB-XQ4" customClass="AViewController" customModule="Launch" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="WAS-WB-XQ4" customClass="AViewController" customModule="Swift直通車" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8Qt-j2-Wju"/>
                         <viewControllerLayoutGuide type="bottom" id="j41-sX-boU"/>
@@ -907,10 +907,10 @@
         <!--Anav View Controller-->
         <scene sceneID="CL3-kU-Lpd">
             <objects>
-                <navigationController restorationIdentifier="QAnav1" storyboardIdentifier="QAnav1" automaticallyAdjustsScrollViewInsets="NO" id="2fC-RH-g9k" customClass="QAnavViewController" customModule="Launch" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController restorationIdentifier="QAnav1" storyboardIdentifier="QAnav1" automaticallyAdjustsScrollViewInsets="NO" id="2fC-RH-g9k" customClass="QAnavViewController" customModule="Swift直通車" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="qaR-M4-TmB">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -927,16 +927,133 @@
             <objects>
                 <navigationController id="r0I-g0-we2" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="hHh-rk-qyB">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="hNX-7F-F9f" kind="relationship" relationship="rootViewController" id="IfX-CK-dFe"/>
+                        <segue destination="icZ-cI-JgE" kind="relationship" relationship="rootViewController" id="opo-dL-n4N"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XVo-8G-L7C" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2386" y="858"/>
+            <point key="canvasLocation" x="2438" y="832"/>
+        </scene>
+        <!--問答列表(99)-->
+        <scene sceneID="VKV-Dx-FCq">
+            <objects>
+                <viewController storyboardIdentifier="QAnavTotal" id="icZ-cI-JgE" customClass="QAViewController" customModule="Swift直通車" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fS3-ie-AmK"/>
+                        <viewControllerLayoutGuide type="bottom" id="6Wq-dG-DFc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Qv3-zG-mPm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nXO-EJ-d1v">
+                                <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="問答(99)" id="e7x-HJ-8eL"/>
+                                </items>
+                            </navigationBar>
+                            <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="36MBC5.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="I97-y4-dTT">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="148" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wWl-aQ-7Gl">
+                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="separatorColor" white="0.33333333329999998" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="QACell" rowHeight="148" id="02a-ZC-yt2" customClass="QATableViewCell" customModule="Swift直通車" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="148"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="02a-ZC-yt2" id="DIM-Z3-rN1">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="147.66666666666666"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="也多想想怎樣做才是比較適當的吧！" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fnp-7O-ySO">
+                                                    <rect key="frame" x="26" y="9" width="363" height="22"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="22" id="gzb-mV-WJI"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IVo-85-4Cs">
+                                                    <rect key="frame" x="26" y="36" width="363" height="95"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="95" id="MHE-fU-DuA"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dhj-qd-TM7">
+                                                    <rect key="frame" x="20" y="139" width="274" height="0.0"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="dhj-qd-TM7" firstAttribute="top" secondItem="IVo-85-4Cs" secondAttribute="bottom" constant="8" symbolic="YES" id="BJq-q1-HjB"/>
+                                                <constraint firstAttribute="bottom" secondItem="dhj-qd-TM7" secondAttribute="bottom" constant="9" id="IwH-g7-DLA"/>
+                                                <constraint firstAttribute="trailing" secondItem="dhj-qd-TM7" secondAttribute="trailing" constant="120" id="KJa-aw-d9M"/>
+                                                <constraint firstItem="IVo-85-4Cs" firstAttribute="leading" secondItem="fnp-7O-ySO" secondAttribute="leading" id="Kj2-5O-f1y"/>
+                                                <constraint firstItem="IVo-85-4Cs" firstAttribute="trailing" secondItem="fnp-7O-ySO" secondAttribute="trailing" id="L6v-ng-31t"/>
+                                                <constraint firstItem="dhj-qd-TM7" firstAttribute="leading" secondItem="DIM-Z3-rN1" secondAttribute="leading" constant="20" id="LZP-Kz-QKp"/>
+                                                <constraint firstItem="fnp-7O-ySO" firstAttribute="centerX" secondItem="DIM-Z3-rN1" secondAttribute="centerX" id="lbV-am-NzS"/>
+                                                <constraint firstItem="fnp-7O-ySO" firstAttribute="top" secondItem="DIM-Z3-rN1" secondAttribute="topMargin" constant="-2" id="zA7-NG-7ef"/>
+                                                <constraint firstItem="fnp-7O-ySO" firstAttribute="leading" secondItem="DIM-Z3-rN1" secondAttribute="leadingMargin" constant="11" id="zwa-TI-MI5"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="lblDescription" destination="IVo-85-4Cs" id="cID-No-Ygw"/>
+                                            <outlet property="lblResponse" destination="dhj-qd-TM7" id="51I-H2-JIz"/>
+                                            <outlet property="lblTitle" destination="fnp-7O-ySO" id="zGs-pr-hCt"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="icZ-cI-JgE" id="vEA-lx-Nv8"/>
+                                    <outlet property="delegate" destination="icZ-cI-JgE" id="gYE-Ka-yIx"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wWl-aQ-7Gl" firstAttribute="top" secondItem="fS3-ie-AmK" secondAttribute="bottom" id="0E7-RP-lpf"/>
+                            <constraint firstItem="wWl-aQ-7Gl" firstAttribute="top" secondItem="nXO-EJ-d1v" secondAttribute="bottom" id="AX6-Uq-1Vj"/>
+                            <constraint firstItem="I97-y4-dTT" firstAttribute="leading" secondItem="Qv3-zG-mPm" secondAttribute="leading" id="C1c-iP-stV"/>
+                            <constraint firstItem="6Wq-dG-DFc" firstAttribute="top" secondItem="wWl-aQ-7Gl" secondAttribute="bottom" id="TyL-Ls-cFm"/>
+                            <constraint firstItem="wWl-aQ-7Gl" firstAttribute="leading" secondItem="Qv3-zG-mPm" secondAttribute="leading" id="Y8B-Dv-RwG"/>
+                            <constraint firstAttribute="trailing" secondItem="wWl-aQ-7Gl" secondAttribute="trailing" id="YYi-Zo-l38"/>
+                            <constraint firstAttribute="bottom" secondItem="I97-y4-dTT" secondAttribute="bottom" id="glY-Qo-ol7"/>
+                            <constraint firstItem="wWl-aQ-7Gl" firstAttribute="trailing" secondItem="nXO-EJ-d1v" secondAttribute="trailing" id="mMI-La-tfo"/>
+                            <constraint firstAttribute="trailing" secondItem="I97-y4-dTT" secondAttribute="trailing" id="nup-rG-zvW"/>
+                            <constraint firstItem="wWl-aQ-7Gl" firstAttribute="leading" secondItem="nXO-EJ-d1v" secondAttribute="leading" id="nyb-0F-v58"/>
+                            <constraint firstItem="I97-y4-dTT" firstAttribute="top" secondItem="Qv3-zG-mPm" secondAttribute="top" id="plR-nu-Rd9"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="問答列表(99)" id="Kgk-bZ-Juf">
+                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="ykH-rq-sVO">
+                            <connections>
+                                <segue destination="1PF-zd-i9H" kind="unwind" unwindAction="unwindToMainVCWithSegue:" id="IVM-Ky-dad"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="提出問題" id="I58-fp-yEN"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="wWl-aQ-7Gl" id="7U9-Wl-0Zv"/>
+                        <segue destination="iia-F7-Qim" kind="show" id="vL0-eg-vyx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xSj-Jc-pDj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="1PF-zd-i9H" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="3190" y="874"/>
         </scene>
     </scenes>
     <resources>
@@ -948,7 +1065,7 @@
         <image name="video.png" width="375" height="238"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="6Um-Ve-G8F"/>
-        <segue reference="3b0-wA-tRF"/>
+        <segue reference="vL0-eg-vyx"/>
+        <segue reference="noe-aW-nSI"/>
     </inferredMetricsTieBreakers>
 </document>
