@@ -197,8 +197,8 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y6h-is-60O">
-                                <rect key="frame" x="108" y="325" width="96" height="50"/>
-                                <state key="normal" title="問答（99）">
+                                <rect key="frame" x="108" y="325" width="90" height="50"/>
+                                <state key="normal" title="問答（--）">
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -358,8 +358,8 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RKh-ib-qEX">
-                                <rect key="frame" x="89" y="329" width="96" height="34"/>
-                                <state key="normal" title="問答（99）">
+                                <rect key="frame" x="89" y="329" width="90" height="34"/>
+                                <state key="normal" title="問答（--）">
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
