@@ -4,36 +4,43 @@ import Reachability
 import PKHUD
 
 class ViewController: UIViewController {
-
+    let reachability = Reachability()!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         
-        let reachability = Reachability()!
-        
-        reachability.whenReachable = { reachability in
-            if reachability.connection == .wifi {
-                print("Reachable via WiFi")
-            } else {
-                print("Reachable via Cellular")
-            }
-        }
-        reachability.whenUnreachable = { _ in
-            print("Not reachable")
-            PKHUD.sharedHUD.contentView = PKHUDTextView(text: "無網路連接")
-            PKHUD.sharedHUD.show()
-//            PKHUD.sharedHUD.hide(afterDelay: 1.0) { success in
-//                // Completion Handler
-//            }
+    }
 
-        }
-        
-        do {
+    override func viewDidAppear(_ animated: Bool) {
+        NotificationCenter.default.addObserver(self,selector: #selector(self.reachabilityChanged(note:)), name: .reachabilityChanged, object: reachability)
+        do{
             try reachability.startNotifier()
-        } catch {
-            print("Unable to start notifier")
+        }catch{
+            print("could not start reachability notifier")
         }
         
+    }
+    
+    func reachabilityChanged(note: Notification) {
+        
+        let reachability = note.object as! Reachability
+        
+        switch reachability.connection {
+        case .wifi:
+            print("Reachable via WiFi")
+            PKHUD.sharedHUD.hide(afterDelay: 1.0) { success in
+                // Completion Handler
+            }
+        case .cellular:
+            print("Reachable via Cellular")
+            PKHUD.sharedHUD.hide(afterDelay: 1.0) { success in
+                // Completion Handler
+            }
+        case .none:
+            print("Network not reachable")
+            PKHUD.sharedHUD.contentView = PKHUDTextView(text: "無網路連接，請檢查網路")
+            PKHUD.sharedHUD.show()
+            
+        }
     }
 
     override func didReceiveMemoryWarning() {
