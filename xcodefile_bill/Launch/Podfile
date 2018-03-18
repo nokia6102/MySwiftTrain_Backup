@@ -9,4 +9,6 @@ pod 'Firebase/Core'
 pod 'Firebase/Database'	
   # Pods for Launch
 
+pod 'PKHUD', '~> 4.0'
+
 end

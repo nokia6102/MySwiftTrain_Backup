@@ -2,7 +2,7 @@ import UIKit
 import youtube_ios_player_helper
 import Firebase
 import FirebaseDatabase
-
+import PKHUD
 
 class MainViewController: UIViewController,UITableViewDelegate,UITableViewDataSource{
 
@@ -10,7 +10,7 @@ class MainViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     var arrTable = [[String:Any]]()
     var tableOk = false
     var selectLession = 1
-    
+    var loaded = false
   @IBOutlet weak var btnAnswer: UIButton!
     @IBOutlet weak var tableView: UITableView!
     
@@ -19,12 +19,21 @@ class MainViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         ref = Database.database().reference(fromURL: "https://trainforswift-f4067.firebaseio.com/Lesson")
            refQCount = Database.database().reference(fromURL: "https://trainforswift-f4067.firebaseio.com/Counter")
   
-        readLessionList()
-        readCounter()
-     
+//        self.view.alpha = 0.8
+        self.readLessionList()
+        self.readCounter()
+
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        if !loaded
+        {
+            PKHUD.sharedHUD.contentView = PKHUDProgressView()
+            PKHUD.sharedHUD.show()
+        }
+    }
     
+
     
     func readLessionList()
     {
@@ -50,8 +59,7 @@ class MainViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
           self.tableView.selectRow(at: selIndexPath, animated: true, scrollPosition: .middle)
             print("all:\(self.arrTable)")
             print("count:\(self.arrTable.count)")
-        
-            
+
         })
         
     }
@@ -74,6 +82,11 @@ class MainViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
       
       let p = "問答 (\(pNum))"
       self.btnAnswer.setTitle( p, for: .normal)
+        
+        PKHUD.sharedHUD.hide() { success in
+            self.loaded = true
+        }
+
     })
     
   }

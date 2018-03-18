@@ -2,9 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:Swift&#x76f4;&#x901a;&#x8eca;.xcodeproj">
+      location = "group:/Users/nokia6101/MySwiftTrain_Backup/xcodefile_bill/Launch/Launch.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Launch.xcodeproj">
    </FileRef>
 </Workspace>
