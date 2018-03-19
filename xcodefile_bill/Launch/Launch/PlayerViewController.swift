@@ -42,8 +42,8 @@ class PlayerController: UIViewController,UITableViewDelegate,UITableViewDataSour
             
             print ("trustfer selectVide : \(self.selectVideo)")
             let playCode = self.firstVC?.arrTable[selectVideo]["videocode"] as! String
-            ccFlag = (self.firstVC?.arrTable[selectVideo]["cc"] as! String ) ==  "\(ccStyle.cc.rawValue)"
-            openwebFlag = (self.firstVC?.arrTable[selectVideo]["cc"] as! String ) == "\(ccStyle.url.rawValue)"
+//            ccFlag = (self.firstVC?.arrTable[selectVideo]["cc"] as! String ) ==  "\(ccStyle.cc.rawValue)"
+//            openwebFlag = (self.firstVC?.arrTable[selectVideo]["cc"] as! String ) == "\(ccStyle.url.rawValue)"
             playerTitle.text = self.firstVC?.arrTable[selectVideo]["title"] as? String
             let lid = self.firstVC?.arrTable[selectVideo]["lid"] as! String
             self.playerView.load(withVideoId: playCode,playerVars: playerVars)
