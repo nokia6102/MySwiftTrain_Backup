@@ -17,9 +17,8 @@ class MainViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     override func viewDidLoad() {
         super.viewDidLoad()
         ref = Database.database().reference(fromURL: "https://trainforswift-f4067.firebaseio.com/Lesson")
-           refQCount = Database.database().reference(fromURL: "https://trainforswift-f4067.firebaseio.com/Counter")
-  
-//        self.view.alpha = 0.8
+        refQCount = Database.database().reference(fromURL: "https://trainforswift-f4067.firebaseio.com/Counter")
+
         self.readLessionList()
         self.readCounter()
 
@@ -73,14 +72,11 @@ class MainViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
   {
     refQCount.observe(.value, with: { (snapshot) in
       
-      let postDict = snapshot.value as? [String : AnyObject] ?? [:]
-      
-      print ("postDict: \(postDict)")
-      let pNum = postDict["Qcount"] as! Int
-      
-      print ("pNum \(pNum)")
-      
-      let p = "問答 (\(pNum))"
+        let postDict = snapshot.value as? [String : AnyObject] ?? [:]
+        print ("postDict: \(postDict)")
+        let pNum = postDict["Qcount"] as! Int
+        print ("pNum \(pNum)")
+        let p = "問答 (\(pNum))"
       self.btnAnswer.setTitle( p, for: .normal)
         
         PKHUD.sharedHUD.hide() { success in

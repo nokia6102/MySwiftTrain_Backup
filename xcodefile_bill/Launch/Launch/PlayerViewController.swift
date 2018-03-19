@@ -4,6 +4,10 @@ import Firebase
 import FirebaseDatabase
 
 class PlayerController: UIViewController,UITableViewDelegate,UITableViewDataSource,YTPlayerViewDelegate{
+  
+    enum ccStyle: Int {
+        case cc = 1, url
+    }
     
     @IBOutlet weak var playerView: YTPlayerView!
     @IBOutlet weak var btnPlay: UIButton!
@@ -26,6 +30,7 @@ class PlayerController: UIViewController,UITableViewDelegate,UITableViewDataSour
     var selectVideo = 0
 //    var cc = "0"
     var ccFlag = false
+    var openwebFlag = false
                                         //   加uiview中文放                     字幕                  放完不放連結 //                                            一用就會出現youtube水印
     
     override func viewWillAppear(_ animated: Bool) {
@@ -37,7 +42,8 @@ class PlayerController: UIViewController,UITableViewDelegate,UITableViewDataSour
             
             print ("trustfer selectVide : \(self.selectVideo)")
             let playCode = self.firstVC?.arrTable[selectVideo]["videocode"] as! String
-            ccFlag = (self.firstVC?.arrTable[selectVideo]["cc"] as! String ) == "1"
+            ccFlag = (self.firstVC?.arrTable[selectVideo]["cc"] as! String ) ==  "\(ccStyle.cc.rawValue)"
+            openwebFlag = (self.firstVC?.arrTable[selectVideo]["cc"] as! String ) == "\(ccStyle.url.rawValue)"
             playerTitle.text = self.firstVC?.arrTable[selectVideo]["title"] as? String
             let lid = self.firstVC?.arrTable[selectVideo]["lid"] as! String
             self.playerView.load(withVideoId: playCode,playerVars: playerVars)
@@ -59,6 +65,8 @@ class PlayerController: UIViewController,UITableViewDelegate,UITableViewDataSour
         print ("trustfer selectVide : \(self.selectVideo)")
         let playCode = self.firstVC?.arrTable[selectVideo]["videocode"] as! String
         ccFlag = (self.firstVC?.arrTable[selectVideo]["cc"] as! String ) == "1"
+        openwebFlag = (self.firstVC?.arrTable[selectVideo]["cc"] as! String ) == "2"
+        
         playerTitle.text = self.firstVC?.arrTable[selectVideo]["title"] as? String
         let lid = self.firstVC?.arrTable[selectVideo]["lid"] as! String
       
@@ -71,7 +79,11 @@ class PlayerController: UIViewController,UITableViewDelegate,UITableViewDataSour
         self.playerView.delegate = self
        
    
-        if ccFlag
+        if openwebFlag
+        {
+            readDic()
+        }
+        else if ccFlag
         {
             readDic()
         }
@@ -131,10 +143,12 @@ class PlayerController: UIViewController,UITableViewDelegate,UITableViewDataSour
                     self.arrTable.append(dictionary)
                 }
             }
-            let endDic : Dictionary = ["totalStartTime": Float(self.playerView.duration()), "number": 1, "startTime": "00:00:03,670", "stopTime": "00:00:11,929", "text": "* 本片結束 *"
-            ] as [String : Any]
             
+            if self.ccFlag {
+            let endDic : Dictionary = ["totalStartTime": Float(self.playerView.duration()), "number": 1, "startTime": "00:00:03,670", "stopTime": "00:00:11,929", "text": "* 字幕結尾 *"
+            ] as [String : Any]
             self.arrTable.append(endDic)
+            }
             
             print("all:\(self.arrTable)")
             print("count:\(self.arrTable.count)")
@@ -226,25 +240,41 @@ class PlayerController: UIViewController,UITableViewDelegate,UITableViewDataSour
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
       print ("buffer OK:\(bufferOk)")
-        if tableOk && ccFlag && bufferOk
+        if tableOk && bufferOk
         {
-          let lastNumberOfSections = self.tableView.numberOfRows(inSection: 0)
-
-          print ("i:\(indexPath.row) ,lstN:\(lastNumberOfSections)")
-            if indexPath.row >= lastNumberOfSections - 2
+            
+            if ccFlag
             {
-                self.playerView.pauseVideo()
-//                let indexPath = IndexPath(row: 0 , section: 0)
-//                self.tableView.selectRow(at: indexPath, animated: true, scrollPosition: .middle)
-              return
+                let lastNumberOfSections = self.tableView.numberOfRows(inSection: 0)
+                
+                print ("i:\(indexPath.row) ,lstN:\(lastNumberOfSections)")
+                if indexPath.row >= lastNumberOfSections - 2
+                {
+                    self.playerView.pauseVideo()
+                    return
+                }
+                
+                let toTime : Float = arrTable[indexPath.row]["totalStartTime"] as! Float
+                playerView.seek(toSeconds: toTime, allowSeekAhead: true)
+                let indexPath = IndexPath(row: indexPath.row , section: 0)
+                self.tableView.scrollToRow(at: indexPath, at: UITableViewScrollPosition.middle, animated: true)
             }
-          
-          let toTime : Float = arrTable[indexPath.row]["totalStartTime"] as! Float
-          playerView.seek(toSeconds: toTime, allowSeekAhead: true)
-          let indexPath = IndexPath(row: indexPath.row , section: 0)
-          self.tableView.scrollToRow(at: indexPath, at: UITableViewScrollPosition.middle, animated: true)
+            else if openwebFlag
+            {
+                let openurl : String = arrTable[indexPath.row]["text"] as! String
+                guard let url = URL(string: openurl) else {
+                    return //be safe
+                }
+                
+                if #available(iOS 10.0, *) {
+                    UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                } else {
+                    UIApplication.shared.openURL(url)
+                }            }
         }
      }
+    
+    
     
     
     /*

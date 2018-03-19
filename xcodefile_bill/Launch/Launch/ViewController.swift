@@ -3,13 +3,14 @@ import UIKit
 import Reachability
 import PKHUD
 
-class ViewController: UIViewController {
+class ViewController: UIViewController
+    {
     let reachability = Reachability()!
     override func viewDidLoad() {
         super.viewDidLoad()
         
     }
-
+    
     override func viewDidAppear(_ animated: Bool) {
         NotificationCenter.default.addObserver(self,selector: #selector(self.reachabilityChanged(note:)), name: .reachabilityChanged, object: reachability)
         do{
@@ -42,11 +43,11 @@ class ViewController: UIViewController {
             
         }
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
 }
 
