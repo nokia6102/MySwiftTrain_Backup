@@ -8,7 +8,6 @@ class QAViewController: UIViewController,UITableViewDelegate,UITableViewDataSour
     var aDic : [[String:Any]] = []
   var responesDic : [String:Any] = [:]
     var ref,refQ,refCounterResponse,refQcount : DatabaseReference!
-
     var tableOk = false
   var selectQ : Int = 0
   var seleL : Int = 0
