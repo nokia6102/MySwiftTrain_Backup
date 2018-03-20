@@ -15,6 +15,13 @@ class ResetPasswordViewController: UIViewController {
     // Outlets
     @IBOutlet weak var emailTextField: UITextField!
 
+    
+    
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        emailTextField.resignFirstResponder()
+    }
+    
     // Reset Password Action
     @IBAction func submitAction(_ sender: AnyObject) {
         

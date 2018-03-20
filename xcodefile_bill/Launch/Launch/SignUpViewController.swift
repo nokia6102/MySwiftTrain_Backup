@@ -16,6 +16,13 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
+    
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        emailTextField.resignFirstResponder()
+        passwordTextField.resignFirstResponder()
+    }
+    
     //Sign Up Action for email
     @IBAction func createAccountAction(_ sender: AnyObject) {
         if emailTextField.text == "" {
