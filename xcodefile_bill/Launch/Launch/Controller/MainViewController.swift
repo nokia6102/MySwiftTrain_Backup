@@ -3,6 +3,7 @@ import youtube_ios_player_helper
 import Firebase
 import FirebaseDatabase
 import PKHUD
+import FirebaseAuth
 
 class MainViewController: UIViewController,UITableViewDelegate,UITableViewDataSource{
 
@@ -16,6 +17,8 @@ class MainViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+    
         ref = Database.database().reference(fromURL: "https://trainforswift-f4067.firebaseio.com/Lesson")
         refQCount = Database.database().reference(fromURL: "https://trainforswift-f4067.firebaseio.com/Counter")
 
@@ -29,10 +32,26 @@ class MainViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         {
             PKHUD.sharedHUD.contentView = PKHUDProgressView()
             PKHUD.sharedHUD.show()
+            self.loaded = true
         }
     }
     
 
+    @IBAction func goBack(_ sender: UIButton)
+    {
+       
+        performSegue(withIdentifier: "goBackMenu", sender: sender)
+
+        
+//        self.dismiss(animated: true) {
+//            print ("** 回上一頁 有登入的按鍵畫面")
+//            PKHUD.sharedHUD.hide() { success in
+//
+//            }
+//        }
+    }
+    
+    
     
     func readLessionList()
     {
@@ -53,6 +72,8 @@ class MainViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
             }
             self.tableOk = true
             self.tableView.reloadData()
+            self.loaded = true
+            
           //選擇在第一行
           let selIndexPath = IndexPath(row: 0 , section: 0)
           self.tableView.selectRow(at: selIndexPath, animated: true, scrollPosition: .middle)

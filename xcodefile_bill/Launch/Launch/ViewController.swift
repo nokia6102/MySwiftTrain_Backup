@@ -20,6 +20,8 @@ class ViewController: UIViewController
         }
         
     }
+   
+        @IBAction func unwindToMainMenu(segue:UIStoryboardSegue) { print ("回來第一個Menu") }
     
     func reachabilityChanged(note: Notification) {
         

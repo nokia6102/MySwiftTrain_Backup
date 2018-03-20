@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		087A96961F36102A00DD72C2 /* avator_female01.png in Resources */ = {isa = PBXBuildFile; fileRef = 087A96951F36102A00DD72C2 /* avator_female01.png */; };
+		255BCAEF2060B8D600C9F668 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 255BCAEE2060B8D600C9F668 /* SignUpViewController.swift */; };
+		25E772F92060D08B004FEAF5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E772F82060D08B004FEAF5 /* LoginViewController.swift */; };
+		25E772FB2060D123004FEAF5 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E772FA2060D123004FEAF5 /* ResetPasswordViewController.swift */; };
 		5A167C4B1F42C132002FE929 /* QAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A167C4A1F42C132002FE929 /* QAViewController.swift */; };
 		5A167C4D1F42C229002FE929 /* QATableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A167C4C1F42C229002FE929 /* QATableViewCell.swift */; };
 		5A1C9A4F1F43DFCB00F57252 /* TQViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1C9A4E1F43DFCB00F57252 /* TQViewController.swift */; };
@@ -37,6 +40,9 @@
 
 /* Begin PBXFileReference section */
 		087A96951F36102A00DD72C2 /* avator_female01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = avator_female01.png; sourceTree = "<group>"; };
+		255BCAEE2060B8D600C9F668 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		25E772F82060D08B004FEAF5 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		25E772FA2060D123004FEAF5 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		2DF5D2CFACF9A07D8A4CB7A6 /* Pods_Launch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Launch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A167C4A1F42C132002FE929 /* QAViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QAViewController.swift; sourceTree = "<group>"; };
 		5A167C4C1F42C229002FE929 /* QATableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QATableViewCell.swift; sourceTree = "<group>"; };
@@ -80,6 +86,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		255BCAED2060B86300C9F668 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5AC7CBCC1F3C9ACD00946E9B /* MainViewController.swift */,
+				5AA1EB151F4521C70032CBDD /* PlayerViewController.swift */,
+				5A167C4A1F42C132002FE929 /* QAViewController.swift */,
+				5A5F6DEA1F4D64E9004D6AF6 /* QAnavViewController.swift */,
+				5A5F6DE61F4D51C9004D6AF6 /* QListViewController.swift */,
+				5A1C9A4E1F43DFCB00F57252 /* TQViewController.swift */,
+				DB2B9F6E1F5CEE9500721AC4 /* AViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		255BCAF02060B8F100C9F668 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				5AC7CBCE1F3D2C7000946E9B /* MainTableViewCell.swift */,
+				5A167C4C1F42C229002FE929 /* QATableViewCell.swift */,
+				5AA1EB171F4522140032CBDD /* PlayerTableViewCell.swift */,
+				5A5F6DE81F4D525E004D6AF6 /* QListTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		4A9924329B89C6920AE3D7DF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -124,17 +155,11 @@
 				5A8E3E461F301CDD00B96D0F /* Assets.xcassets */,
 				5A8E3E481F301CDD00B96D0F /* LaunchScreen.storyboard */,
 				5A8E3E4B1F301CDD00B96D0F /* Info.plist */,
-				5AC7CBCC1F3C9ACD00946E9B /* MainViewController.swift */,
-				5AA1EB151F4521C70032CBDD /* PlayerViewController.swift */,
-				5A167C4A1F42C132002FE929 /* QAViewController.swift */,
-				5A5F6DEA1F4D64E9004D6AF6 /* QAnavViewController.swift */,
-				5A5F6DE61F4D51C9004D6AF6 /* QListViewController.swift */,
-				5A1C9A4E1F43DFCB00F57252 /* TQViewController.swift */,
-				5AC7CBCE1F3D2C7000946E9B /* MainTableViewCell.swift */,
-				5A167C4C1F42C229002FE929 /* QATableViewCell.swift */,
-				5AA1EB171F4522140032CBDD /* PlayerTableViewCell.swift */,
-				5A5F6DE81F4D525E004D6AF6 /* QListTableViewCell.swift */,
-				DB2B9F6E1F5CEE9500721AC4 /* AViewController.swift */,
+				255BCAED2060B86300C9F668 /* Controller */,
+				255BCAF02060B8F100C9F668 /* Cell */,
+				255BCAEE2060B8D600C9F668 /* SignUpViewController.swift */,
+				25E772F82060D08B004FEAF5 /* LoginViewController.swift */,
+				25E772FA2060D123004FEAF5 /* ResetPasswordViewController.swift */,
 			);
 			path = Launch;
 			sourceTree = "<group>";
@@ -254,6 +279,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Launch/Pods-Launch-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/PKHUD/PKHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework",
@@ -263,6 +289,7 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PKHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
@@ -300,11 +327,14 @@
 				5A1C9A4F1F43DFCB00F57252 /* TQViewController.swift in Sources */,
 				5A5F6DE91F4D525E004D6AF6 /* QListTableViewCell.swift in Sources */,
 				5A5F6DEB1F4D64E9004D6AF6 /* QAnavViewController.swift in Sources */,
+				25E772FB2060D123004FEAF5 /* ResetPasswordViewController.swift in Sources */,
+				25E772F92060D08B004FEAF5 /* LoginViewController.swift in Sources */,
 				5A5F6DE71F4D51C9004D6AF6 /* QListViewController.swift in Sources */,
 				5AA1EB161F4521C70032CBDD /* PlayerViewController.swift in Sources */,
 				5AC7CBCD1F3C9ACD00946E9B /* MainViewController.swift in Sources */,
 				5A167C4D1F42C229002FE929 /* QATableViewCell.swift in Sources */,
 				5A167C4B1F42C132002FE929 /* QAViewController.swift in Sources */,
+				255BCAEF2060B8D600C9F668 /* SignUpViewController.swift in Sources */,
 				5A8E3E421F301CDD00B96D0F /* ViewController.swift in Sources */,
 				5AA1EB181F4522140032CBDD /* PlayerTableViewCell.swift in Sources */,
 				5AC7CBCF1F3D2C7000946E9B /* MainTableViewCell.swift in Sources */,
