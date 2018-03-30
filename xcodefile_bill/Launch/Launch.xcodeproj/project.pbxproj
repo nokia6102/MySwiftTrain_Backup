@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		087A96961F36102A00DD72C2 /* avator_female01.png in Resources */ = {isa = PBXBuildFile; fileRef = 087A96951F36102A00DD72C2 /* avator_female01.png */; };
+		250ADE9F206799F60042F759 /* CompilerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250ADE9E206799F60042F759 /* CompilerViewController.swift */; };
 		255BCAEF2060B8D600C9F668 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 255BCAEE2060B8D600C9F668 /* SignUpViewController.swift */; };
 		25E772F92060D08B004FEAF5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E772F82060D08B004FEAF5 /* LoginViewController.swift */; };
 		25E772FB2060D123004FEAF5 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E772FA2060D123004FEAF5 /* ResetPasswordViewController.swift */; };
@@ -40,6 +41,7 @@
 
 /* Begin PBXFileReference section */
 		087A96951F36102A00DD72C2 /* avator_female01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = avator_female01.png; sourceTree = "<group>"; };
+		250ADE9E206799F60042F759 /* CompilerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompilerViewController.swift; sourceTree = "<group>"; };
 		255BCAEE2060B8D600C9F668 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		25E772F82060D08B004FEAF5 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		25E772FA2060D123004FEAF5 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 				5A5F6DE61F4D51C9004D6AF6 /* QListViewController.swift */,
 				5A1C9A4E1F43DFCB00F57252 /* TQViewController.swift */,
 				DB2B9F6E1F5CEE9500721AC4 /* AViewController.swift */,
+				250ADE9E206799F60042F759 /* CompilerViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -203,7 +206,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = com.USSwiftCoda;
 				TargetAttributes = {
 					5A8E3E3B1F301CDD00B96D0F = {
@@ -333,6 +336,7 @@
 				5AA1EB161F4521C70032CBDD /* PlayerViewController.swift in Sources */,
 				5AC7CBCD1F3C9ACD00946E9B /* MainViewController.swift in Sources */,
 				5A167C4D1F42C229002FE929 /* QATableViewCell.swift in Sources */,
+				250ADE9F206799F60042F759 /* CompilerViewController.swift in Sources */,
 				5A167C4B1F42C132002FE929 /* QAViewController.swift in Sources */,
 				255BCAEF2060B8D600C9F668 /* SignUpViewController.swift in Sources */,
 				5A8E3E421F301CDD00B96D0F /* ViewController.swift in Sources */,
@@ -375,7 +379,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -383,7 +389,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -406,7 +416,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -426,7 +436,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -434,7 +446,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -451,7 +467,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -467,6 +483,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = YT6YT5Z5FB;
 				INFOPLIST_FILE = Launch/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = john.tw.Launch08;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -482,6 +499,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = YT6YT5Z5FB;
 				INFOPLIST_FILE = Launch/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = john.tw.Launch08;
 				PRODUCT_NAME = "$(TARGET_NAME)";
