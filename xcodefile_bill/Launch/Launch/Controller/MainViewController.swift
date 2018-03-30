@@ -18,7 +18,19 @@ class MainViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     override func viewDidLoad() {
         super.viewDidLoad()
         
-    
+      //---網路逾時的偵測
+        Timer.scheduledTimer(withTimeInterval: 7.5, repeats: false) { (timer) in
+            PKHUD.sharedHUD.hide() { success in
+                self.loaded = true
+               if (self.arrTable.count == 0)
+                {
+                    PKHUD.sharedHUD.contentView = PKHUDErrorView(title: "網路逾時", subtitle: "請檢抓不到到網路資料哦\n查網路是否被防火牆擋")
+                    PKHUD.sharedHUD.show()
+                    self.loaded = false
+                }
+            }
+        }
+      //---
         ref = Database.database().reference(fromURL: "https://trainforswift-f4067.firebaseio.com/Lesson")
         refQCount = Database.database().reference(fromURL: "https://trainforswift-f4067.firebaseio.com/Counter")
 

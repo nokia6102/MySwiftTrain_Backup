@@ -63,4 +63,5 @@ fastlane/test_output
 iOSInjectionProject/
 
 #my
-*Index/DataSource*
+*Index/*
+*DataSource*
