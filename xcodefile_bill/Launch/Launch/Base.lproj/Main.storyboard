@@ -1046,9 +1046,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pZw-An-mMP">
-                                <rect key="frame" x="180" y="648" width="55" height="30"/>
+                                <rect key="frame" x="192" y="648" width="31" height="30"/>
                                 <color key="backgroundColor" red="0.2470588235" green="0.67450980390000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Sign Up">
+                                <state key="normal" title="註冊">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -1068,28 +1068,19 @@
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lqh-Vv-BF5">
-                                <rect key="frame" x="188" y="429" width="38" height="30"/>
+                                <rect key="frame" x="192" y="429" width="31" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="Login">
+                                <state key="normal" title="登入">
                                     <color key="titleColor" red="0.2470588235" green="0.67450980390000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="loginAction:" destination="7zS-zn-e45" eventType="touchUpInside" id="Rsd-ng-Sko"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zi2-o1-vzh">
-                                <rect key="frame" x="153" y="686" width="109" height="30"/>
-                                <state key="normal" title="Reset Password">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="8Ok-ST-zFY" kind="show" id="EVD-Up-Epw"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GoZ-kx-Fss">
-                                <rect key="frame" x="184" y="592" width="48" height="30"/>
+                                <rect key="frame" x="193" y="592" width="31" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Logout">
+                                <state key="normal" title="登出">
                                     <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -1103,6 +1094,15 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zi2-o1-vzh">
+                                <rect key="frame" x="177" y="686" width="62" height="30"/>
+                                <state key="normal" title="忘記密碼">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="8Ok-ST-zFY" kind="show" id="EVD-Up-Epw"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
                             <constraint firstItem="ss1-vi-Mhi" firstAttribute="centerX" secondItem="Bqo-X0-Ed2" secondAttribute="centerX" id="4hz-lj-4vV"/>
@@ -1267,9 +1267,8 @@
         <image name="video.png" width="375" height="238"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="R7G-Bt-st8"/>
         <segue reference="TPe-Oo-SpJ"/>
-        <segue reference="EVD-Up-Epw"/>
+        <segue reference="Lrq-Do-eCE"/>
         <segue reference="yHs-UG-Eyf"/>
         <segue reference="noe-aW-nSI"/>
     </inferredMetricsTieBreakers>
