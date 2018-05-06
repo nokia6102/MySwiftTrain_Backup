@@ -19,7 +19,7 @@ class MainViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         super.viewDidLoad()
         
         //iOS; 上的离线功能
-        Database.database().isPersistenceEnabled = true
+//        Database.database().isPersistenceEnabled = true
 
       //---網路逾時的偵測
         Timer.scheduledTimer(withTimeInterval: 7.5, repeats: false) { (timer) in
