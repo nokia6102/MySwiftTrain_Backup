@@ -6,7 +6,7 @@ class MainTableViewCell: UITableViewCell {
     @IBOutlet weak var lblNo: UILabel!
     @IBOutlet weak var lblTitle: UILabel!
     @IBOutlet weak var lblDescription: UILabel!
- 
+    @IBOutlet weak var btnSubtitle: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -132,6 +132,8 @@ class MainViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
       let cell = tableView.dequeueReusableCell(withIdentifier: "MainCell", for: indexPath) as! MainTableViewCell
+        //TODO:ccflag==1 show sub
+        cell.btnSubtitle.isHidden = arrTable[indexPath.row]["cc"] as? String != "1"
         cell.lblNo.text = arrTable[indexPath.row]["lid"] as? String
         cell.lblTitle.text = arrTable[indexPath.row]["title"] as? String
         cell.lblDescription.text = arrTable[indexPath.row]["desc"] as? String
