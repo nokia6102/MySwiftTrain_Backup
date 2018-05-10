@@ -42,6 +42,10 @@ class ViewController: UIViewController
             print("Network not reachable")
             PKHUD.sharedHUD.contentView = PKHUDTextView(text: "無網路連接，請檢查網路")
             PKHUD.sharedHUD.show()
+            Timer.scheduledTimer(withTimeInterval: 5.0, repeats: false){
+                (timer) in
+                PKHUD.sharedHUD.hide()
+            }
             
         }
     }

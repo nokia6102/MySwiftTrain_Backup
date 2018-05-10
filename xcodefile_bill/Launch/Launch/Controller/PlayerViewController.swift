@@ -57,10 +57,11 @@ class PlayerController: UIViewController,UITableViewDelegate,UITableViewDataSour
     override func viewDidLoad()
     {
         super.viewDidLoad()
-//        ccFlag = cc == "1"
-      
+        
+//        Database.database().isPersistenceEnabled = true
+        
         let playerVars: [AnyHashable: Any]  = [ "playsinline": 1 ,"cc_load_policy":1 ,"rel":0,"showinfo":1,"modestbranding":1 , "autoplay":1 ]
-//        self.playerView.load(withVideoId: "3AaTfGSfBmw", playerVars: ["playsinline": 1])
+
        
         print ("trustfer selectVide : \(self.selectVideo)")
         let playCode = self.firstVC?.arrTable[selectVideo]["videocode"] as! String

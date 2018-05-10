@@ -29,6 +29,10 @@ class MainViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
                 {
                     PKHUD.sharedHUD.contentView = PKHUDErrorView(title: "網路逾時", subtitle: "請檢抓不到到網路資料哦\n查網路是否被防火牆擋")
                     PKHUD.sharedHUD.show()
+                    Timer.scheduledTimer(withTimeInterval: 5.0, repeats: false){
+                        (timer) in
+                        PKHUD.sharedHUD.hide()
+                    }
                     self.loaded = false
                 }
             }
