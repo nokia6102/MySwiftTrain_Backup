@@ -9,6 +9,7 @@ class PlayerController: UIViewController,UITableViewDelegate,UITableViewDataSour
         case cc = 1, url
     }
     
+    @IBOutlet weak var progressMovie: UIProgressView!
     @IBOutlet weak var playerView: YTPlayerView!
     @IBOutlet weak var btnPlay: UIButton!
     @IBOutlet weak var durtionTime: UILabel!
@@ -178,7 +179,12 @@ class PlayerController: UIViewController,UITableViewDelegate,UITableViewDataSour
     
     //Mark:- YTPLayerViewDelegate
     func playerView(_ playerView: YTPlayerView, didPlayTime playTime: Float) {
-        print ("playTime :\(playTime)")
+   
+        let nowPlay:Float = Float(playTime)
+        let totoal :Float = Float(self.playerView.duration())
+        let progress:Float = Float(nowPlay / totoal)
+        print ("prgress:\(nowPlay)/\(totoal)=\(progress)")
+        progressMovie.progress = Float(progress)
         
         if (tableOk && ccFlag)
         {
@@ -192,14 +198,25 @@ class PlayerController: UIViewController,UITableViewDelegate,UITableViewDataSour
             if selectedIndexPath < lastNumberOfSections - 1
             {
                 print ("自動slip:\(selectedIndexPath)")
+                let currTime = arrTable[selectedIndexPath]["totalStartTime"] as! Float
                 let nextTime = arrTable[selectedIndexPath+1]["totalStartTime"] as! Float
                 print ("nextTime:\(nextTime)")
+                
              
                 if playTime >= nextTime
                 {
+                    if (playTime - nextTime) <= (nextTime-currTime)
+                        {
                     let indexPath = IndexPath(row: selectedIndexPath+1 , section: 0)
                     self.tableView.selectRow(at: indexPath, animated: true, scrollPosition: .middle)
                     self.tableView.scrollToRow(at: indexPath, at: UITableViewScrollPosition.middle, animated: true)
+                    }
+                    else
+                    {
+                        let indexPath = IndexPath(row: selectedIndexPath , section: 0)
+                        self.tableView.selectRow(at: indexPath, animated: true, scrollPosition: .middle)
+                        self.tableView.scrollToRow(at: indexPath, at: UITableViewScrollPosition.middle, animated: false)
+                    }
                 }
             }
         }
@@ -226,7 +243,7 @@ class PlayerController: UIViewController,UITableViewDelegate,UITableViewDataSour
         }
         
     }
-  
+   
     //Mark:- tableView Delegate
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return arrTable.count

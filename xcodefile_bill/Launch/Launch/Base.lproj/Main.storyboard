@@ -301,6 +301,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ehv-3H-6Ns" customClass="YTPlayerView">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="266"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" red="0.98963934180000002" green="0.77195942399999995" blue="0.43350741269999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="266" id="X3b-k4-qNi"/>
                                 </constraints>
@@ -391,6 +392,15 @@
                                     <segue destination="2fC-RH-g9k" kind="show" id="9b8-L6-Hwa"/>
                                 </connections>
                             </button>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" translatesAutoresizingMaskIntoConstraints="NO" id="rdf-ef-Ywn">
+                                <rect key="frame" x="0.0" y="263" width="414" height="2.6666666666666856"/>
+                                <color key="backgroundColor" red="0.98963934180000002" green="0.77195942399999995" blue="0.43350741269999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1.5" id="ck9-js-O4o"/>
+                                </constraints>
+                                <color key="progressTintColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </progressView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -412,9 +422,11 @@
                             <constraint firstItem="4oh-xB-4Av" firstAttribute="leading" secondItem="vD6-xz-Tio" secondAttribute="leading" constant="20" id="OqB-oL-QKe"/>
                             <constraint firstItem="BBp-ka-7qA" firstAttribute="trailing" secondItem="1RR-PH-IXv" secondAttribute="trailing" id="P4Q-Q8-3Yb"/>
                             <constraint firstItem="9d3-zb-7pz" firstAttribute="top" secondItem="4oh-xB-4Av" secondAttribute="bottom" constant="31.329999999999998" id="PfF-0f-AJf"/>
+                            <constraint firstItem="4oh-xB-4Av" firstAttribute="top" secondItem="rdf-ef-Ywn" secondAttribute="bottom" constant="9.3333333333333144" id="Rt1-Y2-oK5"/>
                             <constraint firstItem="RKh-ib-qEX" firstAttribute="top" secondItem="VPd-Zq-idb" secondAttribute="bottom" constant="4.6666666666666856" id="Sz6-Mg-SXZ"/>
                             <constraint firstItem="VPd-Zq-idb" firstAttribute="top" secondItem="4oh-xB-4Av" secondAttribute="bottom" constant="5" id="Uz3-Sf-RCX"/>
                             <constraint firstItem="4oh-xB-4Av" firstAttribute="top" secondItem="ehv-3H-6Ns" secondAttribute="bottom" constant="8" id="WXt-iW-36V"/>
+                            <constraint firstItem="rdf-ef-Ywn" firstAttribute="leading" secondItem="vD6-xz-Tio" secondAttribute="leading" id="ZYf-mv-n0G"/>
                             <constraint firstItem="VPd-Zq-idb" firstAttribute="leading" secondItem="vD6-xz-Tio" secondAttribute="leadingMargin" id="aBb-a9-8LO"/>
                             <constraint firstAttribute="trailing" secondItem="ehv-3H-6Ns" secondAttribute="trailing" id="dOd-AQ-f8T"/>
                             <constraint firstItem="ehv-3H-6Ns" firstAttribute="leading" secondItem="vD6-xz-Tio" secondAttribute="leading" id="fbc-VG-u9v"/>
@@ -424,6 +436,7 @@
                             <constraint firstItem="BBp-ka-7qA" firstAttribute="top" secondItem="kF7-Xr-RAW" secondAttribute="bottom" id="n3f-Ll-FRA"/>
                             <constraint firstItem="ehv-3H-6Ns" firstAttribute="top" secondItem="vD6-xz-Tio" secondAttribute="top" id="r2a-4P-y7A"/>
                             <constraint firstAttribute="bottom" secondItem="XfF-0j-sO4" secondAttribute="bottom" id="sQt-iE-qyK"/>
+                            <constraint firstAttribute="trailing" secondItem="rdf-ef-Ywn" secondAttribute="trailing" id="t5W-xA-Ehh"/>
                             <constraint firstItem="kF7-Xr-RAW" firstAttribute="top" secondItem="RKh-ib-qEX" secondAttribute="top" constant="-7.6666666666666856" id="tCP-oy-00F"/>
                             <constraint firstItem="BBp-ka-7qA" firstAttribute="leading" secondItem="1RR-PH-IXv" secondAttribute="leading" id="ujL-yb-vFE"/>
                             <constraint firstItem="BBp-ka-7qA" firstAttribute="trailing" secondItem="ehv-3H-6Ns" secondAttribute="trailing" id="xbV-Mu-vQc"/>
@@ -436,6 +449,7 @@
                         <outlet property="durtionTime" destination="VPd-Zq-idb" id="kQt-pi-x7J"/>
                         <outlet property="playerTitle" destination="4oh-xB-4Av" id="XVf-Ue-ncA"/>
                         <outlet property="playerView" destination="ehv-3H-6Ns" id="riN-AD-ETR"/>
+                        <outlet property="progressMovie" destination="rdf-ef-Ywn" id="k3o-CL-mE3"/>
                         <outlet property="subTimeMark" destination="VPd-Zq-idb" id="pbe-DQ-Xj9"/>
                         <outlet property="tableView" destination="BBp-ka-7qA" id="kSc-Z7-BCP"/>
                     </connections>
@@ -443,7 +457,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y9D-er-aif" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="tHB-gq-yvQ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1758" y="-6"/>
+            <point key="canvasLocation" x="1757.9710144927537" y="-6.5217391304347831"/>
         </scene>
         <!--問答列表(99)-->
         <scene sceneID="UeM-JK-SFP">
