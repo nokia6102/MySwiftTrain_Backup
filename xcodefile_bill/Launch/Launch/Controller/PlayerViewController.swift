@@ -255,6 +255,21 @@ class PlayerController: UIViewController,UITableViewDelegate,UITableViewDataSour
         return cell
     }
     
+    func open(scheme: String) {
+        if let url = URL(string: scheme) {
+            if #available(iOS 10, *) {
+                UIApplication.shared.open(url, options: [:],
+                                          completionHandler: {
+                                            (success) in
+                                            print("Open \(scheme): \(success)")
+                })
+            } else {
+                let success = UIApplication.shared.openURL(url)
+                print("Open \(scheme): \(success)")
+            }
+        }
+    }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
       print ("buffer OK:\(bufferOk)")
@@ -280,16 +295,11 @@ class PlayerController: UIViewController,UITableViewDelegate,UITableViewDataSour
             else if openwebFlag
             {
                 let openurl : String = arrTable[indexPath.row]["text"] as! String
-                guard let url = URL(string: openurl) else {
-                    return //be safe
-                }
-                
-                if #available(iOS 10.0, *) {
-                    UIApplication.shared.open(url, options: [:], completionHandler: nil)
-                } else {
-                    UIApplication.shared.openURL(url)
-                }            }
-        }
+//                guard let url = URL(string: openurl) else {
+//                    return //be safe
+//                }
+                open(scheme: openurl)
+            }
      }
     
     
@@ -306,4 +316,5 @@ class PlayerController: UIViewController,UITableViewDelegate,UITableViewDataSour
      */
     
     
+}
 }

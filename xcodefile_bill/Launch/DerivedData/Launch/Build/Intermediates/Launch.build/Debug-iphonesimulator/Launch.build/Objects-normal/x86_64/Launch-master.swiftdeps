@@ -1,6 +1,0 @@
-version: "Apple Swift version 3.1 (swiftlang-802.0.53 clang-802.0.42)"
-options: "6d98f1c0b80d9d5b2166136f343fbc2c"
-build_time: [555647597, 507776000]
-inputs:
-  "/Users/leo/Desktop/\u5C08\u984C_Swift\u76F4\u901A\u8ECA/xcodefile_ui/Launch/Launch/ViewController.swift": !dirty [554899300, 0]
-  "/Users/leo/Desktop/\u5C08\u984C_Swift\u76F4\u901A\u8ECA/xcodefile_ui/Launch/Launch/AppDelegate.swift": !dirty [554899300, 0]
