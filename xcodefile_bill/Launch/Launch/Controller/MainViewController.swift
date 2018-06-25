@@ -9,7 +9,7 @@ class MainViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
 
  
     //紀錄上一頁的執行實體
-    weak var upVC:SearchViewController!
+    weak var upVC:SearchViewController?
     
     var ref,refQCount : DatabaseReference!
     var arrTable = [[String:Any]]()
@@ -23,7 +23,7 @@ class MainViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         super.viewDidLoad()
        
         
-        print ("-->\(upVC.txtSearch.text!)")
+        print ("-->\(upVC?.txtSearch.text! ?? "")")
         //iOS; 上的离线功能
 //        Database.database().isPersistenceEnabled = true
 
@@ -76,6 +76,12 @@ class MainViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
 //        }
     }
     
+    @IBAction func btnBack(_ sender: Any)
+    {
+        self.dismiss(animated: true) {
+            print ("goBack to SearchMenu")
+        }
+    }
     
     
     func readLessionList()
@@ -90,9 +96,27 @@ class MainViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
                 
                 let  myValue = Value.value!
                 
-                if let dictionary  = myValue as? [String : Any]
+                let filterKey = self.upVC?.txtSearch.text ?? ""
+    
+                if filterKey == ""
                 {
-                    self.arrTable.append(dictionary)
+                    if let dictionary  = myValue as? [String : Any]
+                    {
+                                self.arrTable.append(dictionary)
+                    }
+                }
+                else
+                {
+                    if let dictionary  = myValue as? [String : Any]
+                    {
+                        if let title = dictionary["title"] as? String
+                        {
+                           if  title.contains(filterKey)
+                           {
+                              self.arrTable.append(dictionary)
+                            }
+                        }
+                    }
                 }
             }
             self.tableOk = true
