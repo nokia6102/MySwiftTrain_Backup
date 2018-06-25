@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -53,7 +53,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="直接使用" backgroundImage="btn_開始閱讀.png"/>
                                 <connections>
-                                    <segue destination="QfB-fg-TpE" kind="show" identifier="nextPlayer" id="M7g-FJ-upl"/>
+                                    <segue destination="QfB-fg-TpE" kind="presentation" id="bjP-GB-X08"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bIO-eJ-lXP">
@@ -95,7 +95,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="363.768115942029" y="-7.3369565217391308"/>
+            <point key="canvasLocation" x="-194" y="-18"/>
         </scene>
         <!--sgPlay-->
         <scene sceneID="nKD-1m-bIw">
@@ -278,7 +278,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zHs-tU-5RQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="kWl-qB-dbI" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1081" y="-7"/>
+            <point key="canvasLocation" x="1190" y="-33"/>
         </scene>
         <!--Player Controller-->
         <scene sceneID="LLh-PL-7Qn">
@@ -457,7 +457,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y9D-er-aif" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="tHB-gq-yvQ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1757.9710144927537" y="-6.5217391304347831"/>
+            <point key="canvasLocation" x="1886" y="-19"/>
         </scene>
         <!--問答列表(99)-->
         <scene sceneID="UeM-JK-SFP">
@@ -1240,6 +1240,66 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fRS-Aj-igj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-988" y="865"/>
+        </scene>
+        <!--sgPlay-->
+        <scene sceneID="b69-qF-YlR">
+            <objects>
+                <viewController storyboardIdentifier="Search" title="sgPlay" modalTransitionStyle="flipHorizontal" useStoryboardIdentifierAsRestorationIdentifier="YES" id="JEW-jc-AqE" customClass="SearchViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="EEx-xv-uJb"/>
+                        <viewControllerLayoutGuide type="bottom" id="hki-he-bOH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6So-lf-pzB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="36MBC5.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="tUb-32-dC1">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VFU-pp-6OP">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="30"/>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="gKt-r8-7Ca">
+                                <rect key="frame" x="27" y="54" width="367" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="1"/>
+                                    <segment title="2"/>
+                                    <segment title="3"/>
+                                </segments>
+                            </segmentedControl>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="deW-Fe-L5u">
+                                <rect key="frame" x="0.0" y="114" width="414" height="162"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1EU-Wr-5eL">
+                                <rect key="frame" x="109" y="579" width="214" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Search"/>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jVX-GG-bxf">
+                                <rect key="frame" x="73" y="353" width="297" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="VFU-pp-6OP" firstAttribute="leading" secondItem="6So-lf-pzB" secondAttribute="leading" id="8F0-R7-kUO"/>
+                            <constraint firstItem="tUb-32-dC1" firstAttribute="top" secondItem="6So-lf-pzB" secondAttribute="top" id="Asi-NZ-ZPu"/>
+                            <constraint firstItem="tUb-32-dC1" firstAttribute="leading" secondItem="6So-lf-pzB" secondAttribute="leading" id="Bka-Qm-fq1"/>
+                            <constraint firstItem="VFU-pp-6OP" firstAttribute="top" secondItem="6So-lf-pzB" secondAttribute="top" id="FA0-lZ-9Bq"/>
+                            <constraint firstAttribute="trailing" secondItem="VFU-pp-6OP" secondAttribute="trailing" id="d5F-yJ-WbY"/>
+                            <constraint firstItem="hki-he-bOH" firstAttribute="top" secondItem="tUb-32-dC1" secondAttribute="bottom" id="mEE-RQ-itN"/>
+                            <constraint firstAttribute="trailing" secondItem="tUb-32-dC1" secondAttribute="trailing" id="z2Y-hm-fan"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r7P-iF-BRB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="465" y="-744"/>
         </scene>
     </scenes>
     <resources>

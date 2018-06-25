@@ -7,6 +7,7 @@ import FirebaseAuth
 
 class MainViewController: UIViewController,UITableViewDelegate,UITableViewDataSource{
 
+    var upVC: SearchViewController?
     var ref,refQCount : DatabaseReference!
     var arrTable = [[String:Any]]()
     var tableOk = false
@@ -18,6 +19,8 @@ class MainViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        print ("txtSeach:\(upVC?.txtSearch.text)")
+ 
         //iOS; 上的离线功能
 //        Database.database().isPersistenceEnabled = true
 

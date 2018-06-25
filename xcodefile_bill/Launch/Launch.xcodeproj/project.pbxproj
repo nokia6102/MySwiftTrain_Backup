@@ -37,6 +37,7 @@
 		B39AF8B81F315C2F00D04B63 /* checkmark.png in Resources */ = {isa = PBXBuildFile; fileRef = B39AF8B71F315C2F00D04B63 /* checkmark.png */; };
 		DB2B9F6F1F5CEE9500721AC4 /* AViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2B9F6E1F5CEE9500721AC4 /* AViewController.swift */; };
 		DB577DC81F480B630054452E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DB577DC71F480B630054452E /* GoogleService-Info.plist */; };
+		DBCC4CAF20E0D2FA00192101 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCC4CAE20E0D2FA00192101 /* SearchViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +75,7 @@
 		B39AF8B71F315C2F00D04B63 /* checkmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checkmark.png; sourceTree = "<group>"; };
 		DB2B9F6E1F5CEE9500721AC4 /* AViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AViewController.swift; sourceTree = "<group>"; };
 		DB577DC71F480B630054452E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		DBCC4CAE20E0D2FA00192101 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		F1C6D5695E88FA1FC6E18FA4 /* Pods-Launch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Launch.release.xcconfig"; path = "Pods/Target Support Files/Pods-Launch/Pods-Launch.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -100,6 +102,7 @@
 				5A1C9A4E1F43DFCB00F57252 /* TQViewController.swift */,
 				DB2B9F6E1F5CEE9500721AC4 /* AViewController.swift */,
 				250ADE9E206799F60042F759 /* CompilerViewController.swift */,
+				DBCC4CAE20E0D2FA00192101 /* SearchViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -340,6 +343,7 @@
 				250ADE9F206799F60042F759 /* CompilerViewController.swift in Sources */,
 				5A167C4B1F42C132002FE929 /* QAViewController.swift in Sources */,
 				255BCAEF2060B8D600C9F668 /* SignUpViewController.swift in Sources */,
+				DBCC4CAF20E0D2FA00192101 /* SearchViewController.swift in Sources */,
 				5A8E3E421F301CDD00B96D0F /* ViewController.swift in Sources */,
 				5AA1EB181F4522140032CBDD /* PlayerTableViewCell.swift in Sources */,
 				5AC7CBCF1F3D2C7000946E9B /* MainTableViewCell.swift in Sources */,
