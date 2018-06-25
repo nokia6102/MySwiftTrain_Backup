@@ -53,7 +53,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="直接使用" backgroundImage="btn_開始閱讀.png"/>
                                 <connections>
-                                    <segue destination="QfB-fg-TpE" kind="presentation" id="bjP-GB-X08"/>
+                                    <segue destination="JEW-jc-AqE" kind="show" id="GRk-Gu-qKv"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bIO-eJ-lXP">
@@ -97,10 +97,10 @@
             </objects>
             <point key="canvasLocation" x="-194" y="-18"/>
         </scene>
-        <!--sgPlay-->
+        <!--MainViewController-->
         <scene sceneID="nKD-1m-bIw">
             <objects>
-                <viewController storyboardIdentifier="Home" title="sgPlay" modalTransitionStyle="flipHorizontal" useStoryboardIdentifierAsRestorationIdentifier="YES" id="QfB-fg-TpE" customClass="MainViewController" customModule="Launch" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainViewController" title="MainViewController" modalTransitionStyle="flipHorizontal" useStoryboardIdentifierAsRestorationIdentifier="YES" id="QfB-fg-TpE" customClass="MainViewController" customModule="Launch" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ZaG-qj-JVE"/>
                         <viewControllerLayoutGuide type="bottom" id="Iah-Ta-iL9"/>
@@ -278,7 +278,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zHs-tU-5RQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="kWl-qB-dbI" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1190" y="-33"/>
+            <point key="canvasLocation" x="1267" y="-320"/>
         </scene>
         <!--Player Controller-->
         <scene sceneID="LLh-PL-7Qn">
@@ -1241,10 +1241,10 @@
             </objects>
             <point key="canvasLocation" x="-988" y="865"/>
         </scene>
-        <!--sgPlay-->
+        <!--Search-->
         <scene sceneID="b69-qF-YlR">
             <objects>
-                <viewController storyboardIdentifier="Search" title="sgPlay" modalTransitionStyle="flipHorizontal" useStoryboardIdentifierAsRestorationIdentifier="YES" id="JEW-jc-AqE" customClass="SearchViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SearchViewController" title="Search" modalTransitionStyle="flipHorizontal" useStoryboardIdentifierAsRestorationIdentifier="YES" id="JEW-jc-AqE" customClass="SearchViewController" customModule="Launch" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="EEx-xv-uJb"/>
                         <viewControllerLayoutGuide type="bottom" id="hki-he-bOH"/>
@@ -1276,8 +1276,12 @@
                                 <rect key="frame" x="109" y="579" width="214" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Search"/>
+                                <connections>
+                                    <action selector="onClick:" destination="JEW-jc-AqE" eventType="touchUpInside" id="fNt-vx-I66"/>
+                                    <segue destination="QfB-fg-TpE" kind="show" identifier="sgMain" id="e5l-H2-4xY"/>
+                                </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jVX-GG-bxf">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="App" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jVX-GG-bxf">
                                 <rect key="frame" x="73" y="353" width="297" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
@@ -1296,10 +1300,13 @@
                             <constraint firstAttribute="trailing" secondItem="tUb-32-dC1" secondAttribute="trailing" id="z2Y-hm-fan"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="txtSearch" destination="jVX-GG-bxf" id="TNk-QU-puh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r7P-iF-BRB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="465" y="-744"/>
+            <point key="canvasLocation" x="526" y="-320"/>
         </scene>
     </scenes>
     <resources>
