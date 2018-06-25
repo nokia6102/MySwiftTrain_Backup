@@ -138,7 +138,9 @@ class MainViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
                     {
                         if let title = dictionary["title"] as? String
                         {
-                           if  title.contains(filterKey)
+                           var allString = ""
+                            allString += "\(title)  \(dictionary["desc"] as? String ?? "")"
+                           if  allString.contains(filterKey)
                            {
                               self.arrTable.append(dictionary)
                             }

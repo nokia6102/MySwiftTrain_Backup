@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Launch/Controller/MainViewController.swift"
-            timestampString = "551622217.194893"
+            timestampString = "551622778.267131"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "289"
-            endingLineNumber = "289">
+            startingLineNumber = "291"
+            endingLineNumber = "291">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -24,7 +24,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Launch/Controller/SearchViewController.swift"
-            timestampString = "551620243.7597671"
+            timestampString = "551622778.270539"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "39"
@@ -40,7 +40,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Launch/Controller/SearchViewController.swift"
-            timestampString = "551620243.761775"
+            timestampString = "551622778.270739"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "36"
@@ -56,7 +56,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Launch/Controller/SearchViewController.swift"
-            timestampString = "551620243.762073"
+            timestampString = "551622778.270851"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "34"
