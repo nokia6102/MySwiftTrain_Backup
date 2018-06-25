@@ -23,7 +23,7 @@ class LoginViewController: UIViewController {
             do {
                 try Auth.auth().signOut()
  
-                let vc = self.storyboard?.instantiateViewController(withIdentifier: "Home")
+                let vc = self.storyboard?.instantiateViewController(withIdentifier: "MainViewController")
                 self.present(vc!, animated: true, completion: nil)
                 
             } catch let error as NSError {
@@ -61,7 +61,7 @@ class LoginViewController: UIViewController {
                     print("You have successfully logged in")
                     
                     //Go to the HomeViewController if the login is sucessful
-                    let vc = self.storyboard?.instantiateViewController(withIdentifier: "Home")
+                    let vc = self.storyboard?.instantiateViewController(withIdentifier: "MainViewController")
                     self.present(vc!, animated: true, completion: nil)
                     
                 } else {

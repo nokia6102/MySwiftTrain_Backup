@@ -8,6 +8,7 @@ import FirebaseAuth
 class MainViewController: UIViewController,UITableViewDelegate,UITableViewDataSource{
 
  
+    @IBOutlet weak var userName: UILabel!
     //紀錄上一頁的執行實體
     weak var upVC:SearchViewController?
     
@@ -22,11 +23,18 @@ class MainViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     override func viewDidLoad() {
         super.viewDidLoad()
        
+        if let name = Auth.auth().currentUser?.displayName
+        {
+            userName.text = name
+        }
+        else
+        {
+            userName.text = Auth.auth().currentUser?.email
+        }
         
         print ("-->\(upVC?.txtSearch.text! ?? "")")
-        //iOS; 上的离线功能
-//        Database.database().isPersistenceEnabled = true
-
+      //iOS; 上的离线功能
+      // Database.database().isPersistenceEnabled = true
       //---網路逾時的偵測
         Timer.scheduledTimer(withTimeInterval: 7.5, repeats: false) { (timer) in
             PKHUD.sharedHUD.hide() { success in
