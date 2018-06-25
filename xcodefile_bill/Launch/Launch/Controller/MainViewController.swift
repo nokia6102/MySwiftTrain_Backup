@@ -153,6 +153,7 @@ class MainViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
                 let alert = UIAlertController(title: "標題中未找到:", message: "\(filterKey)", preferredStyle: UIAlertControllerStyle.alert)
 //              alert.addAction(UIAlertAction(title: "好", style: UIAlertActionStyle.default, handler: nil))
                 alert.addAction(UIAlertAction(title: "回去篩選", style: UIAlertActionStyle.cancel, handler: { (uialert) in
+                    PKHUD.sharedHUD.hide()
                     self.dismiss(animated: true, completion: nil)
                 }))
               self.present(alert, animated: true, completion: nil)
