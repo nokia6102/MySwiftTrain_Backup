@@ -83,6 +83,33 @@ class MainViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         }
     }
     
+    func readLessionList1()
+    {
+        ref.observe(.value, with: { (snapshot) in
+            
+            self.arrTable.removeAll()
+            for child in snapshot.children
+            {
+                let Value:DataSnapshot = child as! DataSnapshot
+                let  myValue = Value.value!
+                    if let dictionary  = myValue as? [String : Any]
+                    {
+                        self.arrTable.append(dictionary)
+                    }
+            }
+            
+            self.tableOk = true
+            self.tableView.reloadData()
+            self.loaded = true
+            
+            //選擇在第一行
+            let selIndexPath = IndexPath(row: 0 , section: 0)
+            self.tableView.selectRow(at: selIndexPath, animated: true, scrollPosition: .middle)
+            print("all:\(self.arrTable)")
+            print("count:\(self.arrTable.count)")
+            
+        })
+    }
     
     func readLessionList()
     {
@@ -90,14 +117,14 @@ class MainViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         ref.observe(.value, with: { (snapshot) in
             
            self.arrTable.removeAll()
+           let filterKey = self.upVC?.txtSearch.text ?? ""
+           
             for child in snapshot.children
             {
                 let Value:DataSnapshot = child as! DataSnapshot
                 
                 let  myValue = Value.value!
                 
-                let filterKey = self.upVC?.txtSearch.text ?? ""
-    
                 if filterKey == ""
                 {
                     if let dictionary  = myValue as? [String : Any]
@@ -119,6 +146,19 @@ class MainViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
                     }
                 }
             }
+            
+            let count = self.arrTable.count
+            if count == 0
+            {
+                let alert = UIAlertController(title: "標題中未找到:", message: "\(filterKey)", preferredStyle: UIAlertControllerStyle.alert)
+//              alert.addAction(UIAlertAction(title: "好", style: UIAlertActionStyle.default, handler: nil))
+                alert.addAction(UIAlertAction(title: "回去篩選", style: UIAlertActionStyle.cancel, handler: { (uialert) in
+                    self.dismiss(animated: true, completion: nil)
+                }))
+              self.present(alert, animated: true, completion: nil)
+                return
+            }
+            
             self.tableOk = true
             self.tableView.reloadData()
             self.loaded = true
