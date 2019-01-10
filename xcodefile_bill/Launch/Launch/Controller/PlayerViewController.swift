@@ -46,7 +46,7 @@ class PlayerController: UIViewController,UITableViewDelegate,UITableViewDataSour
 //            ccFlag = (self.firstVC?.arrTable[selectVideo]["cc"] as! String ) ==  "\(ccStyle.cc.rawValue)"
 //            openwebFlag = (self.firstVC?.arrTable[selectVideo]["cc"] as! String ) == "\(ccStyle.url.rawValue)"
             playerTitle.text = self.firstVC?.arrTable[selectVideo]["title"] as? String
-            let lid = self.firstVC?.arrTable[selectVideo]["lid"] as! String
+            _ = self.firstVC?.arrTable[selectVideo]["lid"] as! String
             self.playerView.load(withVideoId: playCode,playerVars: playerVars)
 
         }else{
@@ -133,15 +133,16 @@ class PlayerController: UIViewController,UITableViewDelegate,UITableViewDataSour
                 {
                     print(dictionary["number"] ?? "x")
                     let sourceTime = dictionary["startTime"] as! String
-//                    print("s:\(sourceTime)")
+                   print("s:\(sourceTime)")
                     let index = sourceTime.index(sourceTime.startIndex, offsetBy: 8)
+                    let indexSec = sourceTime.suffix(3);                            //.xxx  小數點後3位
                     let time  =  sourceTime.substring(to: index)
-//                    print ("t:\(time)")
+                   print ("t:\(time)")
                     let partsTime = time.components(separatedBy: ":")
-//                    print("p:\(partsTime)")
-                    let totalTime = Int(partsTime[0])! * 3600 + Int(partsTime[1])! * 60 + Int(partsTime[2])!
-                    print ("t:\(totalTime)")
-                    dictionary["totalStartTime"] = Float(totalTime)
+                    var totalTime:String = String(Int(partsTime[0])! * 3600 + Int(partsTime[1])! * 60 + Int(partsTime[2])!);
+                    totalTime = "\(totalTime).\(indexSec)";                        //xxx.xxx
+                    print ("*t:\(totalTime)")
+                    dictionary["totalStartTime"] = Float(totalTime)                //秒.毫秒(3位數)
                     self.arrTable.append(dictionary)
                 }
             }
