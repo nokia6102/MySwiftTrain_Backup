@@ -51,7 +51,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="直接使用" backgroundImage="btn_開始閱讀.png"/>
                                 <connections>
-                                    <segue destination="JEW-jc-AqE" kind="show" id="GRk-Gu-qKv"/>
+                                    <segue destination="QfB-fg-TpE" kind="show" id="Lkv-kI-w3C"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bIO-eJ-lXP">
@@ -304,6 +304,63 @@
                 <exit id="kWl-qB-dbI" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1266.6666666666667" y="-320.38043478260875"/>
+        </scene>
+        <!--Guide View Controller-->
+        <scene sceneID="HXv-8n-rip">
+            <objects>
+                <viewController id="uzj-HS-zNq" customClass="GuideViewController" customModule="Launch" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="umn-YC-yr8"/>
+                        <viewControllerLayoutGuide type="bottom" id="EAv-fT-FWb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ojA-HT-gqw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" allowsBackForwardNavigationGestures="YES" translatesAutoresizingMaskIntoConstraints="NO" id="t0O-gs-cW4">
+                                <rect key="frame" x="0.0" y="95" width="414" height="641"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <imageView userInteractionEnabled="NO" alpha="0.10000000000000001" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="36MBC5.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="OWF-zZ-rzc">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <color key="backgroundColor" white="1" alpha="0.0461440759202454" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BjJ-3p-atI">
+                                <rect key="frame" x="332" y="46" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="上一頁"/>
+                                <connections>
+                                    <action selector="backButtonTapped:" destination="uzj-HS-zNq" eventType="touchUpInside" id="OUV-2b-xW3"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="OWF-zZ-rzc" firstAttribute="top" secondItem="ojA-HT-gqw" secondAttribute="top" id="6bY-JV-cif"/>
+                            <constraint firstAttribute="trailing" secondItem="OWF-zZ-rzc" secondAttribute="trailing" id="AzG-bX-BPf"/>
+                            <constraint firstItem="EAv-fT-FWb" firstAttribute="top" secondItem="OWF-zZ-rzc" secondAttribute="bottom" id="Yuq-Kz-N9e"/>
+                            <constraint firstItem="OWF-zZ-rzc" firstAttribute="leading" secondItem="ojA-HT-gqw" secondAttribute="leading" id="lNv-TN-RfX"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="tRK-bR-Tan">
+                        <barButtonItem key="rightBarButtonItem" title="上一頁" id="b1s-Qd-fbJ">
+                            <connections>
+                                <action selector="backButtonTapped:" destination="uzj-HS-zNq" id="xbE-rY-v7j"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="webView" destination="t0O-gs-cW4" id="vco-3l-yML"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oW9-rN-INF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3123.1884057971015" y="-689.67391304347836"/>
         </scene>
         <!--Player Controller-->
         <scene sceneID="LLh-PL-7Qn">
@@ -1338,7 +1395,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r7P-iF-BRB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="526" y="-320"/>
+            <point key="canvasLocation" x="477" y="-711"/>
         </scene>
     </scenes>
     <resources>
@@ -1350,9 +1407,10 @@
         <image name="video.png" width="375" height="238"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="TPe-Oo-SpJ"/>
+        <segue reference="T1w-df-lhG"/>
         <segue reference="Lrq-Do-eCE"/>
         <segue reference="yHs-UG-Eyf"/>
         <segue reference="noe-aW-nSI"/>
+        <segue reference="Lkv-kI-w3C"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -35,6 +35,7 @@
 		B39AF8B41F31578800D04B63 /* video.png in Resources */ = {isa = PBXBuildFile; fileRef = B39AF8B31F31578800D04B63 /* video.png */; };
 		B39AF8B61F3158B900D04B63 /* tab_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = B39AF8B51F3158B900D04B63 /* tab_bg.png */; };
 		B39AF8B81F315C2F00D04B63 /* checkmark.png in Resources */ = {isa = PBXBuildFile; fileRef = B39AF8B71F315C2F00D04B63 /* checkmark.png */; };
+		CEB0E15D22A1A8600009C7FD /* GuideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB0E15C22A1A8600009C7FD /* GuideViewController.swift */; };
 		DB2B9F6F1F5CEE9500721AC4 /* AViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2B9F6E1F5CEE9500721AC4 /* AViewController.swift */; };
 		DB577DC81F480B630054452E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DB577DC71F480B630054452E /* GoogleService-Info.plist */; };
 		DBCC4CAF20E0D2FA00192101 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCC4CAE20E0D2FA00192101 /* SearchViewController.swift */; };
@@ -73,6 +74,7 @@
 		B39AF8B31F31578800D04B63 /* video.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = video.png; sourceTree = "<group>"; };
 		B39AF8B51F3158B900D04B63 /* tab_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tab_bg.png; sourceTree = "<group>"; };
 		B39AF8B71F315C2F00D04B63 /* checkmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checkmark.png; sourceTree = "<group>"; };
+		CEB0E15C22A1A8600009C7FD /* GuideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideViewController.swift; sourceTree = "<group>"; };
 		DB2B9F6E1F5CEE9500721AC4 /* AViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AViewController.swift; sourceTree = "<group>"; };
 		DB577DC71F480B630054452E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DBCC4CAE20E0D2FA00192101 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 				255BCAEE2060B8D600C9F668 /* SignUpViewController.swift */,
 				25E772F82060D08B004FEAF5 /* LoginViewController.swift */,
 				25E772FA2060D123004FEAF5 /* ResetPasswordViewController.swift */,
+				CEB0E15C22A1A8600009C7FD /* GuideViewController.swift */,
 			);
 			path = Launch;
 			sourceTree = "<group>";
@@ -216,7 +219,6 @@
 				TargetAttributes = {
 					5A8E3E3B1F301CDD00B96D0F = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = YT6YT5Z5FB;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -332,6 +334,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A1C9A4F1F43DFCB00F57252 /* TQViewController.swift in Sources */,
+				CEB0E15D22A1A8600009C7FD /* GuideViewController.swift in Sources */,
 				5A5F6DE91F4D525E004D6AF6 /* QListTableViewCell.swift in Sources */,
 				5A5F6DEB1F4D64E9004D6AF6 /* QAnavViewController.swift in Sources */,
 				25E772FB2060D123004FEAF5 /* ResetPasswordViewController.swift in Sources */,
@@ -494,11 +497,11 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = YT6YT5Z5FB;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Launch/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = john.tw.Launch08;
+				PRODUCT_BUNDLE_IDENTIFIER = john.tw.Launch09;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
@@ -514,11 +517,11 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = YT6YT5Z5FB;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Launch/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = john.tw.Launch08;
+				PRODUCT_BUNDLE_IDENTIFIER = john.tw.Launch09;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
